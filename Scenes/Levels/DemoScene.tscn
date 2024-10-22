@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bk42j1j3o4pct"]
 
 [ext_resource type="Script" path="res://Scripts/Demo_Level_Controller.gd" id="1_q77sp"]
-[ext_resource type="PackedScene" uid="uid://cbepccfer7xkg" path="res://Scenes/Objects/Grass_Ground.tscn" id="2_sgqnj"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/Grass_Ground.tscn" id="2_sgqnj"]
 [ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="3_dm1pj"]
-[ext_resource type="PackedScene" uid="uid://cx3h60houwamb" path="res://Scenes/Objects/Dirt_Ground.tscn" id="3_o7hpa"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/Dirt_Ground.tscn" id="3_o7hpa"]
 
 [sub_resource type="RectangleShape2D" id="3"]
 size = Vector2(64, 608)

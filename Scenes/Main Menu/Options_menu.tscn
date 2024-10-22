@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cggudk2vysh8q"]
+[gd_scene load_steps=5 format=3 uid="uid://jirylqg68w8"]
 
 [ext_resource type="Script" path="res://Scenes/Main Menu/options_menu.gd" id="1_rkwu1"]
 [ext_resource type="Texture2D" uid="uid://c5obju2tx2wal" path="res://Resources/Sprites/Images/Main_menu.png" id="2_c0sgc"]
@@ -19,6 +19,7 @@ grow_vertical = 2
 script = ExtResource("1_rkwu1")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
