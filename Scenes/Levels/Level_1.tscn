@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b8ptnekt4vfm1"]
+[gd_scene load_steps=16 format=3 uid="uid://b8ptnekt4vfm1"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/level_1.gd" id="1_6belh"]
 [ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="2_ki128"]
@@ -12,14 +12,15 @@
 [ext_resource type="PackedScene" uid="uid://ce6yhw3ls5ilt" path="res://Scenes/Objects/Platforms And Ground/Orange_Platform_Small.tscn" id="8_iwfbx"]
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="11_rceal"]
 [ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="12_seek5"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5pb32"]
+[ext_resource type="PackedScene" uid="uid://c5kdkn67gd2w6" path="res://Scenes/Objects/burnable.tscn" id="13_6wsn0"]
+[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="14_ek438"]
+[ext_resource type="Texture2D" uid="uid://6o7ekobii1gc" path="res://Resources/Backgrounds/background_0.png" id="15_j6yns"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_6belh")
 
 [node name="player" parent="." instance=ExtResource("2_ki128")]
-position = Vector2(133, -90)
+position = Vector2(129, -90)
 
 [node name="Borders" type="Node2D" parent="."]
 
@@ -148,12 +149,6 @@ position = Vector2(1056, -224)
 [node name="BrickBlock4" parent="Blocks" instance=ExtResource("5_a126v")]
 position = Vector2(1056, -288)
 
-[node name="BrickBlock5" parent="Blocks" instance=ExtResource("5_a126v")]
-position = Vector2(2336, -96)
-
-[node name="BrickBlock6" parent="Blocks" instance=ExtResource("5_a126v")]
-position = Vector2(2336, -160)
-
 [node name="BrickBlock7" parent="Blocks" instance=ExtResource("5_a126v")]
 position = Vector2(2336, -224)
 
@@ -168,12 +163,6 @@ position = Vector2(3872, -160)
 
 [node name="BrickBlock11" parent="Blocks" instance=ExtResource("5_a126v")]
 position = Vector2(3872, -224)
-
-[node name="BrickBlock12" parent="Blocks" instance=ExtResource("5_a126v")]
-position = Vector2(3872, -288)
-
-[node name="BrickBlock13" parent="Blocks" instance=ExtResource("5_a126v")]
-position = Vector2(3872, -352)
 
 [node name="BrickBlock14" parent="Blocks" instance=ExtResource("5_a126v")]
 position = Vector2(3872, -416)
@@ -359,12 +348,38 @@ position = Vector2(6349, -119)
 
 [node name="Desctructables" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Desctructables"]
-position = Vector2(2306, -122)
-scale = Vector2(32, 32)
-texture = SubResource("PlaceholderTexture2D_5pb32")
+[node name="StaticBody2D" parent="Desctructables" instance=ExtResource("13_6wsn0")]
+position = Vector2(2336, -96)
 
-[node name="Sprite2D2" type="Sprite2D" parent="Desctructables"]
-position = Vector2(3835, -321)
-scale = Vector2(-32, 32)
-texture = SubResource("PlaceholderTexture2D_5pb32")
+[node name="StaticBody2D2" parent="Desctructables" instance=ExtResource("13_6wsn0")]
+position = Vector2(2336, -160)
+
+[node name="StaticBody2D3" parent="Desctructables" instance=ExtResource("13_6wsn0")]
+position = Vector2(3872, -288)
+
+[node name="StaticBody2D4" parent="Desctructables" instance=ExtResource("13_6wsn0")]
+position = Vector2(3872, -352)
+
+[node name="KeyFragment" parent="." instance=ExtResource("14_ek438")]
+position = Vector2(4762, -191)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(1144, -774)
+scale = Vector2(8, 8)
+texture = ExtResource("15_j6yns")
+
+[node name="Background2" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(3448, -774)
+scale = Vector2(8, 8)
+texture = ExtResource("15_j6yns")
+
+[node name="Background3" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(5752, -774)
+scale = Vector2(8, 8)
+texture = ExtResource("15_j6yns")

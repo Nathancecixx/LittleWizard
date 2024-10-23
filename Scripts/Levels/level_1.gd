@@ -4,7 +4,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	player.Set_Clamp(6400, 2000)
+	player.Set_Clamp(6400, 1494)
 	pass # Replace with function body.
 
 
