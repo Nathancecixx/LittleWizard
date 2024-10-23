@@ -8,3 +8,9 @@ func _on_options_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+	
+	
+func _process(delta: float) -> void:
+	if $AudioStreamPlayer2D.playing == false:
+		$AudioStreamPlayer2D.play()
+	pass
