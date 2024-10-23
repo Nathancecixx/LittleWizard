@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b8ptnekt4vfm1"]
+[gd_scene load_steps=16 format=3 uid="uid://xoer4xfgi777"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/level_1.gd" id="1_6belh"]
 [ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="2_ki128"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="11_rceal"]
 [ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="12_seek5"]
 [ext_resource type="PackedScene" uid="uid://c5kdkn67gd2w6" path="res://Scenes/Objects/burnable.tscn" id="13_6wsn0"]
-[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="14_ek438"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="14_ek438"]
 [ext_resource type="Texture2D" uid="uid://6o7ekobii1gc" path="res://Resources/Backgrounds/background_0.png" id="15_j6yns"]
 
 [node name="Level1" type="Node2D"]

@@ -1,0 +1,6 @@
+[signal arg="start_dialog"]
+Do you wish to proceed?
+- Yes
+	[signal arg="enter_level_1"]
+- No
+[signal arg="end_dialog"]

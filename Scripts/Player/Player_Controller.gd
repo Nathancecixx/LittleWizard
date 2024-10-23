@@ -179,21 +179,20 @@ func _ready():
 func _input(_event):
 	acc.x = 0
 
+
 	if (!stop_inputs):
 	
 		## Prevents character from moving if they are holding A and D at the same time
 		if (Input.is_action_pressed(input_right) && Input.is_action_pressed(input_left)):
 			pass
 
-		elif (Input.is_action_pressed(input_right) && !(casting)):
+		elif (Input.is_action_pressed(input_right)):
 			acc.x = max_acceleration
 			direction = "right"
-			animations.play("move_right")
 
-		elif (Input.is_action_pressed(input_left) && !(casting)):
+		elif (Input.is_action_pressed(input_left)):
 			acc.x = -max_acceleration
 			direction = "left"
-			animations.play("move_left")
 
 		if (Input.is_action_just_pressed(input_jump) && !(casting)):
 			holding_jump = true
@@ -208,6 +207,8 @@ func _input(_event):
 		if (Input.is_action_just_pressed(input_fireball) && !(casting) && Global.reputation<0):
 			if (is_on_floor()):
 				Cast_Fireball()
+				
+		
 
 
 func _physics_process(delta):
@@ -420,13 +421,7 @@ func Cast_Fireball():
 	$Fireball_Timer.start()
 	cast.set_frame_and_progress(0,0)
 	casting = true
-
-	if (direction=="right"):
-		animations.play("cast_fireball_right")
-		acc.x=0
-	else:
-		animations.play("cast_fireball_right")
-		acc.x=0
+	acc.x=0
 
 func Create_Fireball():
 
