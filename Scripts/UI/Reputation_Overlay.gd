@@ -10,10 +10,12 @@ func update_title():
 
 	if rep <= -6:
 		title = "The Devil"
-	elif -4.5 <= rep and rep < -3.0:
+	elif -6.0 <= rep and rep < -4.5:
 		title = "Despicable"
-	elif -3.0 <= rep and rep < -1.5:
+	elif -4.5 <= rep and rep < -3.0:
 		title = "Villain"
+	elif -3.0 <= rep and rep < -1.5:
+		title = "Menace"
 	elif -1.5 <= rep and rep < 0.0:
 		title = "Nuisance"
 	elif 0.0 <= rep and rep < 1.5:
