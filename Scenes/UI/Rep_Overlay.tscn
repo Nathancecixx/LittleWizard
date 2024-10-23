@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://deecfmmmmp7i8"]
+
+[ext_resource type="Script" path="res://Scenes/UI/Rep_Overlay.gd" id="1_wjepr"]
+
+[node name="Rep_Overlay" type="Node2D"]
+script = ExtResource("1_wjepr")
+
+[node name="ReputationLabel" type="RichTextLabel" parent="."]
+offset_right = 93.0
+offset_bottom = 47.0
+text = "Tiny Wizard
+<Very Evil>"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 1.0
+offset_right = 125.0
+offset_bottom = 24.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 125.0
+offset_bottom = 27.0
