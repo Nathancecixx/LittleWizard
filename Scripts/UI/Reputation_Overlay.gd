@@ -11,11 +11,11 @@ func update_title():
 	if rep <= -6:
 		title = "The Devil"
 	elif -4.5 <= rep and rep < -3.0:
-		title = "Absolutely Evil"
+		title = "Despicable"
 	elif -3.0 <= rep and rep < -1.5:
-		title = "Very Evil"
+		title = "Villain"
 	elif -1.5 <= rep and rep < 0.0:
-		title = "Evil"
+		title = "Nuisance"
 	elif 0.0 <= rep and rep < 1.5:
 		title = "Reputable"
 	elif 1.5 <= rep and rep < 3.0:
@@ -25,7 +25,7 @@ func update_title():
 	elif 4.5 <= rep and rep < 6.0:
 		title = "Glorious"
 	elif 6.0 <= rep:
-		title = "The Savior"
+		title = "Angelic"
 		
 	var base = "[center]Tiny Wizard\n <$1>[center]"
 	# Replacing $1 with the title

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cav6x5jkkvacs"]
+[gd_scene load_steps=29 format=3 uid="uid://cav6x5jkkvacs"]
 
 [ext_resource type="Script" path="res://Scripts/Player/Player_Controller.gd" id="1_mdvog"]
 [ext_resource type="Texture2D" uid="uid://dndk8b1nl5y58" path="res://Resources/Sprites/Player/Wizard_Idle.png" id="2_bpcuy"]
