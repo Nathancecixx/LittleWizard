@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tiny Wiz"
-run/main_scene="res://Scenes/Main Menu/Main_menu.tscn"
+run/main_scene="res://Scenes/Menus/Pause Menu/1-Player/game_singleplayer.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 

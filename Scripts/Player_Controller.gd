@@ -333,4 +333,3 @@ func Set_Clamp(Max_X, Max_Y):
 	
 	Camera_Instance.Set_Clamp(Max_X, Max_Y)
 	pass
-

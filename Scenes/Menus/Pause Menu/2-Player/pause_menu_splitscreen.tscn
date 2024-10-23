@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj6sgm1e0p35g"]
+
+[ext_resource type="PackedScene" uid="uid://d4hb44prnqmh1" path="res://Scenes/Menus/Pause Menu/pause_menu.tscn" id="1_r8h4b"]
+
+[sub_resource type="SystemFont" id="SystemFont_surwk"]
+font_names = PackedStringArray("Impact")
+
+[node name="PauseMenu" instance=ExtResource("1_r8h4b")]
+
+[node name="Label" parent="ColorRect/CenterContainer/VBoxContainer" index="0"]
+theme_override_fonts/font = SubResource("SystemFont_surwk")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SingleplayerButton" type="Button" parent="ColorRect/CenterContainer/VBoxContainer" index="3"]
+layout_mode = 2
+text = "CHANGE TO 1-PLAYER"
+
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/SingleplayerButton" to="." method="_on_resume_button_pressed"]

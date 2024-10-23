@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://crkpg1i8fy5op"]
+
+[ext_resource type="PackedScene" uid="uid://cm436hxjgl7ws" path="res://Scenes/Menus/Pause Menu/1-Player/pause_menu_singleplayer.tscn" id="1_g12vl"]
+[ext_resource type="PackedScene" uid="uid://bk42j1j3o4pct" path="res://Scenes/Levels/DemoScene.tscn" id="1_ga5rb"]
+
+[node name="Game" type="Node"]
+
+[node name="Starting Room" parent="." instance=ExtResource("1_ga5rb")]
+
+[node name="Player" type="CharacterBody2D" parent="Starting Room"]
+
+[node name="interfaceLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="interfaceLayer" instance=ExtResource("1_g12vl")]

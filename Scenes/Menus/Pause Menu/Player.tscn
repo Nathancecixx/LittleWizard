@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bfplodm8anfsg"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="PlatformDetector" type="RayCast2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]

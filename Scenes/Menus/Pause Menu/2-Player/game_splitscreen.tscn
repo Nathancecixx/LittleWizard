@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnvkum2iyq8dd"]
+
+[ext_resource type="PackedScene" uid="uid://bk42j1j3o4pct" path="res://Scenes/Levels/DemoScene.tscn" id="1_cgxcq"]
+[ext_resource type="PackedScene" uid="uid://cw6nldo3rjyyq" path="res://Scenes/Menus/Pause Menu/ParalaxBackground/parallax_background.tscn" id="1_erndi"]
+[ext_resource type="PackedScene" uid="uid://dj6sgm1e0p35g" path="res://Scenes/Menus/Pause Menu/2-Player/pause_menu_splitscreen.tscn" id="1_p05nn"]
+[ext_resource type="PackedScene" uid="uid://bfplodm8anfsg" path="res://Scenes/Menus/Pause Menu/Player.tscn" id="2_ws3me"]
+[ext_resource type="Script" path="res://Scripts/Player_Init.gd" id="3_ntucm"]
+
+[node name="GameSplitscreen" type="Node"]
+
+[node name="Black" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SplitContainer" type="SplitContainer" parent="Black"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ViewportContainer1" type="SubViewportContainer" parent="Black/SplitContainer"]
+layout_mode = 2
+
+[node name="Viewport1" type="SubViewport" parent="Black/SplitContainer/ViewportContainer1"]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Starting Room" parent="Black/SplitContainer/ViewportContainer1/Viewport1" instance=ExtResource("1_cgxcq")]
+
+[node name="Player1" parent="Black/SplitContainer/ViewportContainer1/Viewport1" instance=ExtResource("2_ws3me")]
+unique_name_in_owner = true
+script = ExtResource("3_ntucm")
+
+[node name="Player2" parent="Black/SplitContainer/ViewportContainer1/Viewport1" instance=ExtResource("2_ws3me")]
+unique_name_in_owner = true
+script = ExtResource("3_ntucm")
+
+[node name="ViewportContainer2" type="SubViewportContainer" parent="Black/SplitContainer"]
+layout_mode = 2
+
+[node name="Viewport2" type="SubViewport" parent="Black/SplitContainer/ViewportContainer2"]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="ParallaxBackground" parent="Black/SplitContainer/ViewportContainer2/Viewport2" instance=ExtResource("1_erndi")]
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("1_p05nn")]
