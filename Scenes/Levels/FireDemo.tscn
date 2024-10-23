@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://d0au5k8houk8p"]
+
+[ext_resource type="Script" path="res://Scripts/Fire_Demo_Level_Controller.gd" id="1_pjcjn"]
+[ext_resource type="PackedScene" uid="uid://cx3h60houwamb" path="res://Scenes/Objects/Platforms And Ground/Dirt_Ground.tscn" id="1_pvpe6"]
+[ext_resource type="PackedScene" uid="uid://cbepccfer7xkg" path="res://Scenes/Objects/Platforms And Ground/Grass_Ground.tscn" id="2_1pq5a"]
+[ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="3_wiebk"]
+[ext_resource type="PackedScene" uid="uid://cqro2d6fo7g2x" path="res://Scenes/Objects/fireball.tscn" id="5_2rf3y"]
+[ext_resource type="PackedScene" uid="uid://c5kdkn67gd2w6" path="res://Scenes/Objects/burnable.tscn" id="6_xhyo6"]
+[ext_resource type="PackedScene" uid="uid://by70h5v81dqg5" path="res://Scenes/Objects/Ignitable.tscn" id="7_0m2ri"]
+[ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="8_7ji8p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ur0vy"]
+size = Vector2(20, 576)
+
+[node name="FireDemo" type="Node2D"]
+position = Vector2(0, 648)
+script = ExtResource("1_pjcjn")
+
+[node name="GrassGround" parent="." instance=ExtResource("1_pvpe6")]
+position = Vector2(0, -100)
+
+[node name="GrassGround2" parent="." instance=ExtResource("2_1pq5a")]
+position = Vector2(1152, -100)
+
+[node name="GrassGround3" parent="." instance=ExtResource("1_pvpe6")]
+position = Vector2(2304, -100)
+
+[node name="Boundaries" type="StaticBody2D" parent="."]
+
+[node name="Boundary_Left" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(-10, -288)
+shape = SubResource("RectangleShape2D_ur0vy")
+
+[node name="Boundary_Right" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(3466, -288)
+shape = SubResource("RectangleShape2D_ur0vy")
+
+[node name="Fireball" parent="." instance=ExtResource("5_2rf3y")]
+position = Vector2(649, -130)
+
+[node name="GrassGround4" parent="." instance=ExtResource("1_pvpe6")]
+position = Vector2(1152, -200)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("6_xhyo6")]
+position = Vector2(1385, -218)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("6_xhyo6")]
+position = Vector2(1421, -218)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("6_xhyo6")]
+position = Vector2(1421, -254)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("6_xhyo6")]
+position = Vector2(350, -118)
+
+[node name="Ignitable" parent="." instance=ExtResource("7_0m2ri")]
+position = Vector2(1661, -247)
+
+[node name="Ignitable2" parent="." instance=ExtResource("7_0m2ri")]
+position = Vector2(2106, -247)
+
+[node name="player" parent="." instance=ExtResource("3_wiebk")]
+position = Vector2(504, -131)
+
+[node name="DialogArea" parent="." instance=ExtResource("8_7ji8p")]
+position = Vector2(401, -133)

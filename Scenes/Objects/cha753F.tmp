@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxjwhx54d0ojn"]
+
+[ext_resource type="Script" path="res://platformer_controller/platformer_controller.gd" id="1_bnemv"]
+[ext_resource type="Texture2D" uid="uid://bssglp02pc5yy" path="res://Resources/Sprites/Player/WizardTest.png" id="2_iuqsg"]
+[ext_resource type="Script" path="res://PlayerCamera.gd" id="3_1beem"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ovgws"]
+radius = 15.0
+height = 54.0
+
+[node name="Charactor" type="Node2D"]
+
+[node name="PlatformerController2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_bnemv")
+max_acceleration = 25000
+friction = 99
+test = true
+
+[node name="icon" type="Sprite2D" parent="PlatformerController2D"]
+texture = ExtResource("2_iuqsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformerController2D"]
+shape = SubResource("CapsuleShape2D_ovgws")
+
+[node name="Camera2D" type="Camera2D" parent="PlatformerController2D"]
+position = Vector2(1, -2)
+limit_left = 0
+limit_bottom = 600
+position_smoothing_speed = 0.0
+script = ExtResource("3_1beem")

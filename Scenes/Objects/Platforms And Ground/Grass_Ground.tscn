@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbepccfer7xkg"]
+
+[ext_resource type="Texture2D" uid="uid://c4621iwxj3xne" path="res://Resources/Forest_Tileset.png" id="1_3anv2"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g40mr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdr5i"]
+atlas = ExtResource("1_3anv2")
+region = Rect2(64, 144, 32, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qd4c0"]
+size = Vector2(256, 64)
+
+[node name="GrassGround" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_g40mr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(128, 32)
+scale = Vector2(8, 8)
+texture = SubResource("AtlasTexture_kdr5i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(128, 32)
+shape = SubResource("RectangleShape2D_qd4c0")

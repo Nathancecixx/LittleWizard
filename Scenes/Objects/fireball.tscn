@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqro2d6fo7g2x"]
+
+[ext_resource type="Script" path="res://Scripts/fireball_Controller.gd" id="1_djiwp"]
+[ext_resource type="Texture2D" uid="uid://drbt78gms70e4" path="res://Resources/Sprites/Objects/fireball_sprites.png" id="2_5xoy1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_usjpc"]
+radius = 14.0357
+
+[sub_resource type="Animation" id="Animation_nhu3i"]
+resource_name = "fireball_animation"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fireball_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_02i0d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fireball_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_yl0bx"]
+resource_name = "fireball_left"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ilbh6"]
+_data = {
+"RESET": SubResource("Animation_02i0d"),
+"fireball_animation": SubResource("Animation_nhu3i"),
+"fireball_left": SubResource("Animation_yl0bx")
+}
+
+[node name="Fireball" type="Area2D" groups=["fireball"]]
+script = ExtResource("1_djiwp")
+
+[node name="Fireball_Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_usjpc")
+debug_color = Color(0.990367, 0, 0.279212, 0.42)
+
+[node name="Fireball_Sprite" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, 4.76837e-07)
+rotation = 4.71239
+scale = Vector2(1.93732, 2.01804)
+texture = ExtResource("2_5xoy1")
+hframes = 8
+
+[node name="Fireball_Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ilbh6")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

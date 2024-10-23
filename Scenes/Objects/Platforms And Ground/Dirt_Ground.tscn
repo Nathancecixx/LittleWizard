@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx3h60houwamb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g40mr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qd4c0"]
+size = Vector2(1152, 100)
+
+[node name="GrassGround" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_g40mr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 100.0
+color = Color(0.211765, 0.14902, 0.054902, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(576, 50)
+shape = SubResource("RectangleShape2D_qd4c0")

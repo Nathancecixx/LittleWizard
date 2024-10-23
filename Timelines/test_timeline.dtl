@@ -1,0 +1,7 @@
+[signal arg="start_dialog"]
+Hello World!
+- Choice1
+	Choice 1 Selected
+- Choice2
+	Choice 2 Selected
+[signal arg="end_dialog"]

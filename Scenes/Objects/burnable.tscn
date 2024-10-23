@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5kdkn67gd2w6"]
+
+[ext_resource type="Texture2D" uid="uid://j5t07yfb2cxg" path="res://Resources/Sprites/Objects/Crate.png" id="1_7uyn7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86id1"]
+size = Vector2(36, 36)
+
+[node name="StaticBody2D" type="StaticBody2D" groups=["burnable"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1.19209e-07)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_7uyn7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_86id1")

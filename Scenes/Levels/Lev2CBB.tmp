@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://cgxnufilggt3b"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/level_selection.gd" id="1_l1eys"]
+[ext_resource type="Texture2D" uid="uid://6o7ekobii1gc" path="res://Resources/Backgrounds/background_0.png" id="2_7i7sk"]
+[ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="2_8lr3s"]
+[ext_resource type="PackedScene" uid="uid://cbepccfer7xkg" path="res://Scenes/Objects/Platforms And Ground/Grass_Ground.tscn" id="3_mf38k"]
+[ext_resource type="Texture2D" uid="uid://c4621iwxj3xne" path="res://Resources/Forest_Tileset.png" id="4_3cbh0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brq78"]
+atlas = ExtResource("4_3cbh0")
+region = Rect2(176, 8, 104, 136)
+
+[node name="LevelSelection" type="Node2D"]
+script = ExtResource("1_l1eys")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1280, -512)
+scale = Vector2(9, 9)
+texture = ExtResource("2_7i7sk")
+
+[node name="GrassGround" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(0, -64)
+
+[node name="GrassGround2" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(0, -576)
+rotation = 1.5708
+
+[node name="GrassGround3" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(512, -64)
+
+[node name="GrassGround4" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(1024, -64)
+
+[node name="GrassGround5" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(1536, -64)
+
+[node name="GrassGround6" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(2048, -64)
+
+[node name="GrassGround7" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(2560, -64)
+rotation = -1.5708
+
+[node name="GrassGround8" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(256, -64)
+
+[node name="GrassGround9" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(768, -64)
+
+[node name="GrassGround10" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(1280, -64)
+
+[node name="GrassGround11" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(1792, -64)
+
+[node name="GrassGround12" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(2304, -64)
+
+[node name="GrassGround13" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(2560, -320)
+rotation = -1.5708
+
+[node name="GrassGround14" parent="." instance=ExtResource("3_mf38k")]
+position = Vector2(0, -320)
+rotation = 1.5708
+
+[node name="Tree" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1797, -404)
+scale = Vector2(5, 5)
+texture = SubResource("AtlasTexture_brq78")
+
+[node name="player" parent="." instance=ExtResource("2_8lr3s")]
+z_index = 30
+position = Vector2(81, -92)
