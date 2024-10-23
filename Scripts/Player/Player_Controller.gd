@@ -28,7 +28,7 @@ const DEFAULT_MIN_JUMP_HEIGHT = 60
 const DEFAULT_DOUBLE_JUMP_HEIGHT = 100
 const DEFAULT_JUMP_DURATION = 0.3
 const CAST_FIREBALL_SPEED = 700
-const ATTACK_DELAY = 0.7
+const ATTACK_DELAY = 0.2
 
 #Reputation
 @export var reputation: int = 0:
@@ -124,6 +124,7 @@ var release_gravity_multiplier : float
 var jumps_left : int
 var holding_jump := false
 var stop_inputs = false
+var casting = false
 
 
 enum JumpType {NONE, GROUND, AIR}
@@ -143,6 +144,7 @@ var acc = Vector2()
 
 @onready var idle : AnimatedSprite2D = $Idle_anim
 @onready var walk : AnimatedSprite2D = $Walk_anim
+@onready var cast : AnimatedSprite2D = $Cast_Fireball_anim
 var walkLeft : bool = false
 
 func _init():
@@ -167,9 +169,11 @@ func _ready():
 		jump_buffer_timer.one_shot = true
 
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+	$Fireball_Timer.wait_time = ATTACK_DELAY
 
 	idle.play()
 	walk.play()
+	cast.play()
 
 
 func _input(_event):
@@ -177,29 +181,31 @@ func _input(_event):
 
 	if (!stop_inputs):
 	
+		## Prevents character from moving if they are holding A and D at the same time
 		if (Input.is_action_pressed(input_right) && Input.is_action_pressed(input_left)):
 			pass
 
-		elif (Input.is_action_pressed(input_right) && !(animations.current_animation=="cast_fireball_right")):
+		elif (Input.is_action_pressed(input_right) && !(casting)):
 			acc.x = max_acceleration
 			direction = "right"
 			animations.play("move_right")
 
-		elif (Input.is_action_pressed(input_left) && !(animations.current_animation=="cast_fireball_right")):
+		elif (Input.is_action_pressed(input_left) && !(casting)):
 			acc.x = -max_acceleration
 			direction = "left"
 			animations.play("move_left")
 
-		if (Input.is_action_just_pressed(input_jump) && !(animations.current_animation=="cast_fireball_right")):
+		if (Input.is_action_just_pressed(input_jump) && !(casting)):
 			holding_jump = true
 			start_jump_buffer_timer()
-			if (not can_hold_jump and can_ground_jump()) or can_double_jump():
+		
+			if (not can_hold_jump and can_ground_jump()) or (can_double_jump() && Global.reputation>0):
 				jump()
 
 		if Input.is_action_just_released(input_jump):
 			holding_jump = false
 
-		if Input.is_action_just_pressed(input_fireball):
+		if (Input.is_action_just_pressed(input_fireball) && !(casting) && Global.reputation<0):
 			if (is_on_floor()):
 				Cast_Fireball()
 
@@ -377,18 +383,32 @@ func calculate_speed(p_max_speed, p_friction):
 var velThresh : int = 30
 
 func determine_animation(velocity):
+	
 	idle.visible = false
 	walk.visible = false
-	# Checks if velocity is below threshhold
-	if (-velThresh <= velocity.x and velocity.x <= velThresh):
-		idle.visible = true
-	elif (velocity.x > velThresh):
-		walkLeft = false
-		walk.visible = true
-	elif (velocity.x < -velThresh):
-		walkLeft = true
-		walk.visible = true
-	walk.flip_h = walkLeft
+	cast.visible = false
+	
+	if (casting):
+		
+		var cast_dir = false
+		cast.visible = true
+		
+		if (direction=="left"):
+			cast_dir = true
+		elif (direction=="right"):
+			cast_dir = false
+		cast.flip_h = cast_dir
+	else:
+		# Checks if velocity is below threshhold
+		if (-velThresh <= velocity.x and velocity.x <= velThresh):
+			idle.visible = true
+		elif (velocity.x > velThresh):
+			walkLeft = false
+			walk.visible = true
+		elif (velocity.x < -velThresh):
+			walkLeft = true
+			walk.visible = true
+		walk.flip_h = walkLeft
 
 func Set_Clamp(Max_X, Max_Y):
 	var Camera_Instance = $Camera2D
@@ -399,6 +419,8 @@ func Set_Clamp(Max_X, Max_Y):
 func Cast_Fireball():
 
 	$Fireball_Timer.start()
+	cast.set_frame_and_progress(0,0)
+	casting = true
 
 	if (direction=="right"):
 		animations.play("cast_fireball_right")
@@ -421,6 +443,7 @@ func Create_Fireball():
 
 func _on_fireball_timer_timeout():
 	$Fireball_Timer.stop()
+	casting=false
 	Create_Fireball()
 
 func _on_dialogic_signal(argument: String):
@@ -432,6 +455,6 @@ func _on_dialogic_signal(argument: String):
 
 	## Arguments for losing/gaining reputation
 	elif (argument=="bad"):
-		pass
+		Global.reputation -= 0.50001
 	elif (argument=="good"):
-		pass
+		Global.reputation += 0.50001

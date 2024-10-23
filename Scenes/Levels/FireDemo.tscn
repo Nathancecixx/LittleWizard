@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://d0au5k8houk8p"]
 
 [ext_resource type="Script" path="res://Scripts/Fire_Demo_Level_Controller.gd" id="1_pjcjn"]
-[ext_resource type="PackedScene" uid="uid://cx3h60houwamb" path="res://Scenes/Objects/Dirt_Ground.tscn" id="1_pvpe6"]
-[ext_resource type="PackedScene" uid="uid://cbepccfer7xkg" path="res://Scenes/Objects/Grass_Ground.tscn" id="2_1pq5a"]
+[ext_resource type="PackedScene" uid="uid://cx3h60houwamb" path="res://Scenes/Objects/Platforms And Ground/Dirt_Ground.tscn" id="1_pvpe6"]
+[ext_resource type="PackedScene" uid="uid://cbepccfer7xkg" path="res://Scenes/Objects/Platforms And Ground/Grass_Ground.tscn" id="2_1pq5a"]
 [ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="3_wiebk"]
 [ext_resource type="PackedScene" uid="uid://cqro2d6fo7g2x" path="res://Scenes/Objects/fireball.tscn" id="5_2rf3y"]
 [ext_resource type="PackedScene" uid="uid://c5kdkn67gd2w6" path="res://Scenes/Objects/burnable.tscn" id="6_xhyo6"]
@@ -13,11 +13,8 @@
 size = Vector2(20, 576)
 
 [node name="FireDemo" type="Node2D"]
-position = Vector2(0, 648)
+position = Vector2(-1, 34)
 script = ExtResource("1_pjcjn")
-
-[node name="GrassGround" parent="." instance=ExtResource("1_pvpe6")]
-position = Vector2(0, -100)
 
 [node name="GrassGround2" parent="." instance=ExtResource("2_1pq5a")]
 position = Vector2(1152, -100)
@@ -38,9 +35,6 @@ shape = SubResource("RectangleShape2D_ur0vy")
 [node name="Fireball" parent="." instance=ExtResource("5_2rf3y")]
 position = Vector2(649, -130)
 
-[node name="GrassGround4" parent="." instance=ExtResource("1_pvpe6")]
-position = Vector2(1152, -200)
-
 [node name="StaticBody2D" parent="." instance=ExtResource("6_xhyo6")]
 position = Vector2(1385, -218)
 
@@ -60,7 +54,16 @@ position = Vector2(1661, -247)
 position = Vector2(2106, -247)
 
 [node name="player" parent="." instance=ExtResource("3_wiebk")]
-position = Vector2(504, -131)
+position = Vector2(401, -133)
 
 [node name="DialogArea" parent="." instance=ExtResource("8_7ji8p")]
 position = Vector2(401, -133)
+
+[node name="GrassGround" parent="." instance=ExtResource("2_1pq5a")]
+position = Vector2(1, -98)
+
+[node name="GrassGround" parent="GrassGround" instance=ExtResource("2_1pq5a")]
+position = Vector2(256, 0)
+
+[node name="GrassGround" parent="GrassGround/GrassGround" instance=ExtResource("2_1pq5a")]
+position = Vector2(255, 0)

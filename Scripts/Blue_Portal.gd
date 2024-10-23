@@ -25,3 +25,4 @@ func _next_scene() -> void:
 
 		print("PLAYER REPUTATION UPDATED:", Global.reputation) 
 		get_tree().change_scene_to_file(target_scene)
+	

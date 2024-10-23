@@ -1,7 +1,7 @@
 extends Node2D
 
-var Level_Height = 340
-var Level_Width = 3304
+var Level_Height = 50000
+var Level_Width = 5000
 
 func _ready():
 	var player = $player

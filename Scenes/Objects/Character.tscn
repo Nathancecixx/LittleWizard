@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://cav6x5jkkvacs"]
+[gd_scene load_steps=16 format=3 uid="uid://cav6x5jkkvacs"]
 
 [ext_resource type="Script" path="res://Scripts/Player/Player_Controller.gd" id="1_mdvog"]
 [ext_resource type="Texture2D" uid="uid://dndk8b1nl5y58" path="res://Resources/Sprites/Player/Wizard_Idle.png" id="2_bpcuy"]
 [ext_resource type="Script" path="res://Scripts/Player/Player_Camera_Controller.gd" id="3_i8mry"]
+[ext_resource type="Texture2D" uid="uid://v10jrh7k4g0e" path="res://Resources/Sprites/Player/Wizard_Cast_Sheet.png" id="3_m2km0"]
 [ext_resource type="Texture2D" uid="uid://csaw3hslv16ok" path="res://Resources/Sprites/Player/Wizard_walk.png" id="3_ybi5h"]
 [ext_resource type="PackedScene" uid="uid://me4ujylfat4x" path="res://Scenes/UI/Reputation_Overlay.tscn" id="5_gcsak"]
 
@@ -78,6 +79,42 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1hhh"]
+atlas = ExtResource("3_m2km0")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_to8cl"]
+atlas = ExtResource("3_m2km0")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbtyj"]
+atlas = ExtResource("3_m2km0")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhwx8"]
+atlas = ExtResource("3_m2km0")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y2gfk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1hhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_to8cl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbtyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhwx8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dcbn6"]
 radius = 16.0
 height = 56.0
@@ -115,13 +152,16 @@ frame_progress = 0.586386
 
 [node name="Walk_anim" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rtpku")
-frame_progress = 0.367852
+frame_progress = 0.14003
+
+[node name="Cast_Fireball_anim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_y2gfk")
+frame = 3
+frame_progress = 0.353684
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
+position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_dcbn6")
-
-[node name="right_fireball_marker" type="Marker2D" parent="."]
-position = Vector2(26, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 editor_draw_limits = true
@@ -140,7 +180,7 @@ libraries = {
 
 [node name="Fireball_Timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 0.7
+wait_time = 0.4
 
 [node name="Dialog_Interaction_Area" type="Area2D" parent="."]
 collision_layer = 2
