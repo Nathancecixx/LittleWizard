@@ -8,13 +8,13 @@ func _ready() -> void:
 		0:
 			target_scene = "res://Scenes/Levels/Level_1.tscn"
 		1:
-			target_scene = "res://Scenes/Levels/Level_2.tscn"
+			target_scene = "res://Scenes/Levels/Level_Selection.tscn"
 		2:
-			target_scene = "res://Scenes/Levels/Level_3.tscn"
+			target_scene = "res://Scenes/Levels/Level_Selection.tscn"
 		3:
-			target_scene = "res://Scenes/Levels/Level_4.tscn"
+			target_scene = "res://Scenes/Levels/Level_Selection.tscn"
 		_:
-			target_scene = "res://Scenes/Levels/Default_Level.tscn" # Fallback in case of unexpected value
+			target_scene = "res://Scenes/Levels/Level_Selection.tscn" # Fallback in case of unexpected value
 
 	print("Target Scene:", target_scene)
 
