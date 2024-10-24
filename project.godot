@@ -30,6 +30,7 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"level_1_interact": "res://Timelines/level_1_interact.dtl",
 "test_timeline": "res://Timelines/test_timeline.dtl"
 }
 layout/style_list=["res://Timelines/style.tres"]
