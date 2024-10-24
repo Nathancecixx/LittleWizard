@@ -3,21 +3,6 @@ var target_scene = "res://Scenes/Levels/Level_Selection.tscn" # Scene to transit
 
 var scene_change_triggered = false  # Flag to track if scene change has been triggered
 
-func _ready() -> void:
-	match Global.portals_entered:
-		0:
-			target_scene = "res://Scenes/Levels/Level_1.tscn"
-		1:
-			target_scene = "res://Scenes/Levels/Level_Selection.tscn"
-		2:
-			target_scene = "res://Scenes/Levels/Level_Selection.tscn"
-		3:
-			target_scene = "res://Scenes/Levels/Level_Selection.tscn"
-		_:
-			target_scene = "res://Scenes/Levels/Level_Selection.tscn" # Fallback in case of unexpected value
-
-	print("Target Scene:", target_scene)
-
 func _on_body_entered(body) -> void:
 	if body.is_in_group("player"):
 		await get_tree().create_timer(0.3).timeout
