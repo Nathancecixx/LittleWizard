@@ -37,4 +37,3 @@ func test_invalid_type_path() -> void:
 	assert(valid_animation_path.is_empty() == false, "Valids animation's path is empty.")
 
 	assert(not invalid_animation == valid_animation_path, "Valid and invalid animation paths are equal.")
-
