@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr3nr7oljd67d"]
+
+[ext_resource type="Texture2D" uid="uid://bpdye53xlk7w1" path="res://Resources/Tilesets/cave_vegetation.png" id="1_kf0ii"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6o62"]
+atlas = ExtResource("1_kf0ii")
+region = Rect2(64, 0, 32, 8)
+
+[node name="PlantDown5" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_l6o62")

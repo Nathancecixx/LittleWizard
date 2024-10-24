@@ -33,7 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://ceibiwdgtuc1k" path="res://Scenes/Objects/Ruins/Ruin_Ext_Top_Right.tscn" id="33_fh70q"]
 [ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="34_tlda0"]
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="35_0gn53"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="36_j7ipk"]
+[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="36_j7ipk"]
 [ext_resource type="PackedScene" uid="uid://oqdthwq8tl54" path="res://Scenes/Objects/Ruins/Ruin_Background_Ceiling_Skulls.tscn" id="37_1dru5"]
 [ext_resource type="PackedScene" uid="uid://r1hkfrypvj5r" path="res://Scenes/Objects/Ruins/Ruin_Background_Ceiling.tscn" id="38_0k2f4"]
 
