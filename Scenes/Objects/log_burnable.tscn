@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckcx4wpapbb4"]
+
+[ext_resource type="Texture2D" uid="uid://ws7qawxxfcds" path="res://Resources/Sprites/Objects/Log.png" id="1_c5hi2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jmmc"]
+size = Vector2(326, 133)
+
+[node name="LogBurnable" type="StaticBody2D" groups=["burnable"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -1.19209e-07)
+scale = Vector2(2.667, 2.667)
+texture = ExtResource("1_c5hi2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -0.5)
+shape = SubResource("RectangleShape2D_8jmmc")
