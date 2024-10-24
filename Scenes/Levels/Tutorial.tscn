@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://yaqc08xiy6xn"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/demo_scene.gd" id="1_50j63"]
+[ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="2_200d1"]
+[ext_resource type="Texture2D" uid="uid://djm7d8dw8nsqn" path="res://Resources/Backgrounds/Castle_BackgroundTwo.png" id="2_il38a"]
+[ext_resource type="Script" path="res://Scripts/Levels/TrainingPortal.gd" id="3_tu50t"]
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(64, 1149)
+
+[node name="Starting Room" type="Node2D"]
+position = Vector2(99, -715)
+script = ExtResource("1_50j63")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(477, 392)
+scale = Vector2(6, 6)
+texture = ExtResource("2_il38a")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(518, 387)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-649, -53)
+shape = SubResource("3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-70, 295)
+rotation = 1.5708
+shape = SubResource("3")
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D3"]
+position = Vector2(395, -92)
+script = ExtResource("3_tu50t")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3/Area2D"]
+position = Vector2(3, 3)
+shape = SubResource("3")
+
+[node name="player" parent="." instance=ExtResource("2_200d1")]
+position = Vector2(-58, 605)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1627, 392)
+scale = Vector2(6, 6)
+texture = ExtResource("2_il38a")

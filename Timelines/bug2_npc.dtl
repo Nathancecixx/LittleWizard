@@ -1,0 +1,9 @@
+[signal arg="start_dialog"]
+We meet again! I see you have a fragment already, bravo!
+- Nice to meet you again, I assume you’re my guide then, thank you. What’s next?
+	Glad to be of help! There’s another key-fragment at deep in this dungeon. Get it, and you’ll have 2/3 fragments. You got this!
+	[signal arg="good"]
+- What the, I thought I was done seeing you, what do you want now
+	It’s not any nicer seeing you. There’s another fragment in this dungeon, break a leg.
+	[signal arg="bad"]
+[signal arg="end_dialog"]

@@ -1,8 +1,8 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
+# Development function to run animation on load
 func _ready():
-	var animationPlayer = $AnimationPlayer
-	
-	animationPlayer.play("Scene2")
+	#var animationPlayer = $AnimationPlayer
+	#animationPlayer.play("Scene2")
+	pass

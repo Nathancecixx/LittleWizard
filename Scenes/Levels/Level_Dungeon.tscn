@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://brben7n0m3jo6"]
+[gd_scene load_steps=43 format=3 uid="uid://brben7n0m3jo6"]
 
 [ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="1_l2gwo"]
 [ext_resource type="PackedScene" uid="uid://dy3qsbj7ropcf" path="res://Scenes/Objects/Ruins/Ruin_Wall_Top.tscn" id="2_uw4e6"]
@@ -33,9 +33,49 @@
 [ext_resource type="PackedScene" uid="uid://ceibiwdgtuc1k" path="res://Scenes/Objects/Ruins/Ruin_Ext_Top_Right.tscn" id="33_fh70q"]
 [ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="34_tlda0"]
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="35_0gn53"]
-[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="36_j7ipk"]
+[ext_resource type="Texture2D" uid="uid://ubu3bskucnw3" path="res://Resources/Sprites/NPCs/NPC_Bug_Idle_Sheet.png" id="36_j5nsy"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="36_j7ipk"]
 [ext_resource type="PackedScene" uid="uid://oqdthwq8tl54" path="res://Scenes/Objects/Ruins/Ruin_Background_Ceiling_Skulls.tscn" id="37_1dru5"]
+[ext_resource type="Script" path="res://Scripts/npc_play_idle.gd" id="37_4petp"]
 [ext_resource type="PackedScene" uid="uid://r1hkfrypvj5r" path="res://Scenes/Objects/Ruins/Ruin_Background_Ceiling.tscn" id="38_0k2f4"]
+[ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="39_qsotv"]
+
+[sub_resource type="Animation" id="Animation_5lbb1"]
+resource_name = "idle"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_fvy3n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gutbx"]
+_data = {
+"RESET": SubResource("Animation_fvy3n"),
+"idle": SubResource("Animation_5lbb1")
+}
 
 [node name="LevelDungeon" type="Node2D"]
 script = ExtResource("29_kah0j")
@@ -2411,5 +2451,19 @@ position = Vector2(4030, -145)
 [node name="Area2D3" parent="." instance=ExtResource("22_0goau")]
 position = Vector2(2871, -87)
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(377, -83)
+texture = ExtResource("36_j5nsy")
+hframes = 4
+script = ExtResource("37_4petp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_gutbx")
+}
+
 [node name="player" parent="." instance=ExtResource("1_l2gwo")]
 position = Vector2(192, -84)
+
+[node name="NPC_Dialog" parent="." instance=ExtResource("39_qsotv")]
+position = Vector2(375, -89)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cgxnufilggt3b"]
+[gd_scene load_steps=17 format=3 uid="uid://cgxnufilggt3b"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/level_selection.gd" id="1_l1eys"]
 [ext_resource type="Texture2D" uid="uid://6o7ekobii1gc" path="res://Resources/Backgrounds/background_0.png" id="2_7i7sk"]
@@ -6,14 +6,52 @@
 [ext_resource type="PackedScene" uid="uid://cbepccfer7xkg" path="res://Scenes/Objects/Platforms And Ground/Grass_Ground.tscn" id="3_mf38k"]
 [ext_resource type="Texture2D" uid="uid://c4621iwxj3xne" path="res://Resources/Forest_Tileset.png" id="4_3cbh0"]
 [ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="6_r4h28"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="7_mdg8j"]
+[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="7_mdg8j"]
 [ext_resource type="Texture2D" uid="uid://da2evg462utta" path="res://Resources/Sprites/Objects/Door.png" id="8_rr0vp"]
 [ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="9_piu7l"]
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="10_ywf5r"]
+[ext_resource type="Texture2D" uid="uid://ciprtelthov22" path="res://Resources/Sprites/NPCs/NPC_Wizard_Idle_Sheet.png" id="11_q6ek0"]
+[ext_resource type="Script" path="res://Scripts/npc_play_idle.gd" id="12_4frrx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_brq78"]
 atlas = ExtResource("4_3cbh0")
 region = Rect2(176, 8, 104, 136)
+
+[sub_resource type="Animation" id="Animation_v2hi2"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_affer"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cejyd"]
+_data = {
+"RESET": SubResource("Animation_affer"),
+"idle": SubResource("Animation_v2hi2")
+}
 
 [node name="LevelSelection" type="Node2D"]
 script = ExtResource("1_l1eys")
@@ -70,6 +108,15 @@ rotation = -1.5708
 position = Vector2(0, -320)
 rotation = 1.5708
 
+[node name="Door3" type="Sprite2D" parent="."]
+position = Vector2(1003, -172)
+scale = Vector2(1.81481, 1.81481)
+texture = ExtResource("8_rr0vp")
+
+[node name="Door" type="Sprite2D" parent="."]
+position = Vector2(623, -171)
+scale = Vector2(1.7963, 1.7963)
+
 [node name="Tree" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1797, -404)
@@ -86,9 +133,10 @@ position = Vector2(121, -185)
 [node name="KeyFragment" parent="." instance=ExtResource("7_mdg8j")]
 position = Vector2(198, -193)
 
-[node name="Door" type="Sprite2D" parent="."]
-position = Vector2(623, -171)
-scale = Vector2(1.7963, 1.7963)
+[node name="Door2" type="Sprite2D" parent="."]
+position = Vector2(622, -172)
+scale = Vector2(1.81481, 1.81481)
+texture = ExtResource("8_rr0vp")
 
 [node name="Level_1_Door_Interaction" parent="." instance=ExtResource("9_piu7l")]
 position = Vector2(622, -104)
@@ -96,15 +144,19 @@ position = Vector2(622, -104)
 [node name="Level_2_Door_Interaction" parent="." instance=ExtResource("9_piu7l")]
 position = Vector2(1003, -96)
 
-[node name="Door2" type="Sprite2D" parent="."]
-position = Vector2(622, -172)
-scale = Vector2(1.81481, 1.81481)
-texture = ExtResource("8_rr0vp")
-
 [node name="Area2D2" parent="." instance=ExtResource("10_ywf5r")]
 position = Vector2(308, -232)
 
-[node name="Door3" type="Sprite2D" parent="."]
-position = Vector2(1003, -172)
-scale = Vector2(1.81481, 1.81481)
-texture = ExtResource("8_rr0vp")
+[node name="Wizard_NPC" type="Sprite2D" parent="."]
+position = Vector2(387, -91)
+texture = ExtResource("11_q6ek0")
+hframes = 4
+script = ExtResource("12_4frrx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Wizard_NPC"]
+libraries = {
+"": SubResource("AnimationLibrary_cejyd")
+}
+
+[node name="NPC_Dialog" parent="." instance=ExtResource("9_piu7l")]
+position = Vector2(385, -96)

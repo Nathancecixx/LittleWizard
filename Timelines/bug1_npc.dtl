@@ -1,0 +1,12 @@
+[signal arg="start_dialog"]
+Why hello! Who might you be?
+- I'm Little Wizard, can you help me on my journey to return to my normal size?
+	Of course I can. The Enlargement Potion is locked behind a big fancy door at the end of your journey.
+	You’re going to have to collect all its key fragments and join them to make the big key for the door.
+	I can sense the presense of one of the key fragments around here somewhere, but I can't seem to find it.
+	Hopfully you will be able to find it, Good luck!
+- None of your business, now are you going to help me return to my normal size?
+	How RUDE! I’ll help you but not because I want to! The Potion is locked behind a big door at the end of your journey. 
+	You’re going to have to collect all its key fragments and join them to make the big key for the door. 
+	There should be a key fragment around here somewhere, well Now go away!
+[signal arg="end_dialog"]
