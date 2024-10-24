@@ -35,10 +35,11 @@
 [ext_resource type="PackedScene" uid="uid://ceibiwdgtuc1k" path="res://Scenes/Objects/Ruins/Ruin_Ext_Top_Right.tscn" id="33_fh70q"]
 [ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="34_tlda0"]
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="35_0gn53"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="36_j7ipk"]
+[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="36_j7ipk"]
 [ext_resource type="PackedScene" uid="uid://drhhqd625g1ke" path="res://Scenes/Objects/Ruins/Giant_Background.tscn" id="37_v1mmn"]
 
 [node name="LevelDungeon" type="Node2D"]
+texture_filter = 1
 script = ExtResource("29_kah0j")
 
 [node name="RuinWallTop" parent="." instance=ExtResource("2_uw4e6")]

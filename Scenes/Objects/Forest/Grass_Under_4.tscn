@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bobklk284k8u3"]
+
+[ext_resource type="Texture2D" uid="uid://c4621iwxj3xne" path="res://Resources/Forest_Tileset.png" id="1_2nu0p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vng1"]
+atlas = ExtResource("1_2nu0p")
+region = Rect2(16, 32, 16, 16)
+
+[node name="GrassUnder4" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_2vng1")
