@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://gt6a1033pv3g"]
 
-[ext_resource type="PackedScene" uid="uid://1qq0r5s0iqnt" path="res://Scenes/Objects/Platforms And Ground/Platform_Floating.tscn" id="1_4i2bg"]
-[ext_resource type="PackedScene" uid="uid://b10r14lbqcwh4" path="res://Scenes/Objects/Platforms And Ground/Platform_Floating_Edge.tscn" id="2_pimyb"]
+[ext_resource type="PackedScene" uid="uid://1qq0r5s0iqnt" path="res://Scenes/Objects/Forest/Platform_Floating.tscn" id="1_4i2bg"]
+[ext_resource type="PackedScene" uid="uid://b10r14lbqcwh4" path="res://Scenes/Objects/Forest/Platform_Floating_Edge.tscn" id="2_pimyb"]
 
 [node name="OrangePlatformLarge" type="Node2D"]
 

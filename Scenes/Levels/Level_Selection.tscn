@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cgxnufilggt3b"]
+[gd_scene load_steps=13 format=3 uid="uid://cgxnufilggt3b"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/level_selection.gd" id="1_l1eys"]
 [ext_resource type="Texture2D" uid="uid://6o7ekobii1gc" path="res://Resources/Backgrounds/background_0.png" id="2_7i7sk"]
@@ -10,12 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://da2evg462utta" path="res://Resources/Sprites/Objects/Door.png" id="8_rr0vp"]
 [ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="9_piu7l"]
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="10_ywf5r"]
+[ext_resource type="PackedScene" uid="uid://bb1kkke8ltdc4" path="res://Scenes/Objects/Forest/Grass_Over_1.tscn" id="11_e3da2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_brq78"]
 atlas = ExtResource("4_3cbh0")
 region = Rect2(176, 8, 104, 136)
 
 [node name="LevelSelection" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_l1eys")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -104,7 +106,21 @@ texture = ExtResource("8_rr0vp")
 [node name="Area2D2" parent="." instance=ExtResource("10_ywf5r")]
 position = Vector2(308, -232)
 
+<<<<<<< HEAD
+[node name="GrassOver1" parent="." instance=ExtResource("11_e3da2")]
+position = Vector2(888, -80)
+
+[node name="GrassOver2" parent="." instance=ExtResource("11_e3da2")]
+position = Vector2(1419, -80)
+
+[node name="GrassOver3" parent="." instance=ExtResource("11_e3da2")]
+position = Vector2(2225, -79)
+
+[node name="GrassOver4" parent="." instance=ExtResource("11_e3da2")]
+position = Vector2(248, -79)
+=======
 [node name="Door3" type="Sprite2D" parent="."]
 position = Vector2(1003, -172)
 scale = Vector2(1.81481, 1.81481)
 texture = ExtResource("8_rr0vp")
+>>>>>>> master

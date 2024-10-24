@@ -10,6 +10,7 @@ size = Vector2(58, 18.0904)
 script = ExtResource("1_fyure")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-3.72529e-07, -3.71859e-07)
 scale = Vector2(3.625, 3.625)
 texture = ExtResource("1_f0rn0")

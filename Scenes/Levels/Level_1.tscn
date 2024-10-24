@@ -1,22 +1,38 @@
-[gd_scene load_steps=16 format=3 uid="uid://dhqjewca2bevq"]
+[gd_scene load_steps=28 format=3 uid="uid://xoer4xfgi777"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/level_1.gd" id="1_6belh"]
 [ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="2_ki128"]
 [ext_resource type="PackedScene" uid="uid://cbepccfer7xkg" path="res://Scenes/Objects/Platforms And Ground/Grass_Ground.tscn" id="3_6qf0s"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Platforms And Ground/Grass_Orange.tscn" id="4_xcefh"]
-[ext_resource type="PackedScene" uid="uid://bjfjwfwtiyvtu" path="res://Scenes/Objects/Platforms And Ground/Brick_Block.tscn" id="5_a126v"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Platforms And Ground/Orange_Platform_Medium.tscn" id="6_3opqi"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Platforms And Ground/Platform_Floating.tscn" id="6_ud3jb"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Platforms And Ground/Platform_Floating_Edge.tscn" id="7_suinm"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Platforms And Ground/Orange_Platform_Large.tscn" id="8_7jysa"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Platforms And Ground/Orange_Platform_Small.tscn" id="8_iwfbx"]
+[ext_resource type="PackedScene" uid="uid://dq85vl7ao8qiw" path="res://Scenes/Objects/Forest/Grass_Orange.tscn" id="4_xcefh"]
+[ext_resource type="PackedScene" uid="uid://cdhvc54gcfv7x" path="res://Scenes/Objects/Platforms And Ground/Brick_Block.tscn" id="5_a126v"]
+[ext_resource type="PackedScene" uid="uid://pc4sps4tdym0" path="res://Scenes/Objects/Forest/Orange_Platform_Medium.tscn" id="6_3opqi"]
+[ext_resource type="PackedScene" uid="uid://1qq0r5s0iqnt" path="res://Scenes/Objects/Forest/Platform_Floating.tscn" id="6_ud3jb"]
+[ext_resource type="PackedScene" uid="uid://b10r14lbqcwh4" path="res://Scenes/Objects/Forest/Platform_Floating_Edge.tscn" id="7_suinm"]
+[ext_resource type="PackedScene" uid="uid://gt6a1033pv3g" path="res://Scenes/Objects/Forest/Orange_Platform_Large.tscn" id="8_7jysa"]
+[ext_resource type="PackedScene" uid="uid://ce6yhw3ls5ilt" path="res://Scenes/Objects/Forest/Orange_Platform_Small.tscn" id="8_iwfbx"]
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="11_rceal"]
 [ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="12_seek5"]
 [ext_resource type="PackedScene" uid="uid://c5kdkn67gd2w6" path="res://Scenes/Objects/burnable.tscn" id="13_6wsn0"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="14_ek438"]
+[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="14_ek438"]
 [ext_resource type="Texture2D" uid="uid://6o7ekobii1gc" path="res://Resources/Backgrounds/background_0.png" id="15_j6yns"]
+[ext_resource type="Texture2D" uid="uid://c4621iwxj3xne" path="res://Resources/Forest_Tileset.png" id="16_h3vgo"]
+[ext_resource type="PackedScene" uid="uid://cqdglkm0c0qjv" path="res://Scenes/Objects/Forest/Bush_Small.tscn" id="17_2nv8d"]
+[ext_resource type="PackedScene" uid="uid://c8b51q2qpso6h" path="res://Scenes/Objects/Forest/Bush_Large.tscn" id="18_y45kr"]
+[ext_resource type="PackedScene" uid="uid://hupmm75t6vea" path="res://Scenes/Objects/Forest/Grass_Under_1.tscn" id="19_53wyc"]
+[ext_resource type="PackedScene" uid="uid://ctpobwl35pidg" path="res://Scenes/Objects/Forest/Grass_Under_2.tscn" id="20_n71b6"]
+[ext_resource type="PackedScene" uid="uid://ckatw65mbquiw" path="res://Scenes/Objects/Forest/Grass_Under_3.tscn" id="21_r5vy0"]
+[ext_resource type="PackedScene" uid="uid://bobklk284k8u3" path="res://Scenes/Objects/Forest/Grass_Under_4.tscn" id="22_gtnup"]
+[ext_resource type="PackedScene" uid="uid://bxmvryei73omi" path="res://Scenes/Objects/Forest/Grass_Under_5.tscn" id="23_31jrn"]
+[ext_resource type="PackedScene" uid="uid://bms21hcff31ep" path="res://Scenes/Objects/Forest/Rock_Large.tscn" id="24_jnmvg"]
+[ext_resource type="PackedScene" uid="uid://bk68fusogfc8g" path="res://Scenes/Objects/Forest/Rock_Small.tscn" id="25_dpaph"]
+[ext_resource type="PackedScene" uid="uid://bb1kkke8ltdc4" path="res://Scenes/Objects/Forest/Grass_Over_1.tscn" id="26_aj5y7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufvkk"]
+atlas = ExtResource("16_h3vgo")
+region = Rect2(176, 8, 104, 136)
 
 [node name="Level1" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_6belh")
 
 [node name="player" parent="." instance=ExtResource("2_ki128")]
@@ -363,23 +379,201 @@ position = Vector2(3872, -352)
 [node name="KeyFragment" parent="." instance=ExtResource("14_ek438")]
 position = Vector2(4762, -191)
 
-[node name="Background" type="Sprite2D" parent="."]
-z_index = -1
+[node name="Backgrounds" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Backgrounds"]
+z_index = -2
 texture_filter = 1
 position = Vector2(1144, -774)
 scale = Vector2(8, 8)
 texture = ExtResource("15_j6yns")
 
-[node name="Background2" type="Sprite2D" parent="."]
-z_index = -1
+[node name="Background2" type="Sprite2D" parent="Backgrounds"]
+z_index = -2
 texture_filter = 1
 position = Vector2(3448, -774)
 scale = Vector2(8, 8)
 texture = ExtResource("15_j6yns")
 
-[node name="Background3" type="Sprite2D" parent="."]
+[node name="Background3" type="Sprite2D" parent="Backgrounds"]
 z_index = -1
 texture_filter = 1
 position = Vector2(5752, -774)
 scale = Vector2(8, 8)
 texture = ExtResource("15_j6yns")
+
+[node name="Decorations" type="Node2D" parent="."]
+
+[node name="Tree" type="Sprite2D" parent="Decorations"]
+z_index = -1
+texture_filter = 1
+position = Vector2(1797, -404)
+scale = Vector2(5, 5)
+texture = SubResource("AtlasTexture_ufvkk")
+
+[node name="Tree2" type="Sprite2D" parent="Decorations"]
+z_index = -1
+texture_filter = 1
+position = Vector2(3426, -402)
+scale = Vector2(5, 5)
+texture = SubResource("AtlasTexture_ufvkk")
+
+[node name="Tree3" type="Sprite2D" parent="Decorations"]
+z_index = -1
+texture_filter = 1
+position = Vector2(5239, -901)
+scale = Vector2(5, 5)
+texture = SubResource("AtlasTexture_ufvkk")
+
+[node name="Bush_1" parent="Decorations" instance=ExtResource("17_2nv8d")]
+position = Vector2(607, -104)
+
+[node name="Bush_3" parent="Decorations" instance=ExtResource("17_2nv8d")]
+position = Vector2(2664, -104)
+
+[node name="BushLarge" parent="Decorations" instance=ExtResource("18_y45kr")]
+position = Vector2(4088, -615)
+
+[node name="BushLarge2" parent="Decorations" instance=ExtResource("18_y45kr")]
+position = Vector2(5859, -103)
+
+[node name="BushLarge3" parent="Decorations" instance=ExtResource("18_y45kr")]
+position = Vector2(1307, -100)
+
+[node name="GrassUnder1" parent="Decorations" instance=ExtResource("19_53wyc")]
+position = Vector2(310, -366)
+
+[node name="GrassUnder2" parent="Decorations" instance=ExtResource("20_n71b6")]
+position = Vector2(530, -467)
+
+[node name="GrassUnder3" parent="Decorations" instance=ExtResource("21_r5vy0")]
+position = Vector2(788, -460)
+
+[node name="GrassUnder4" parent="Decorations" instance=ExtResource("22_gtnup")]
+position = Vector2(846, -491)
+
+[node name="GrassUnder5" parent="Decorations" instance=ExtResource("23_31jrn")]
+position = Vector2(423, -159)
+
+[node name="GrassUnder6" parent="Decorations" instance=ExtResource("23_31jrn")]
+position = Vector2(530, -270)
+
+[node name="GrassUnder7" parent="Decorations" instance=ExtResource("22_gtnup")]
+position = Vector2(582, -263)
+
+[node name="GrassUnder8" parent="Decorations" instance=ExtResource("19_53wyc")]
+position = Vector2(1344, -315)
+
+[node name="GrassUnder9" parent="Decorations" instance=ExtResource("20_n71b6")]
+position = Vector2(1510, -467)
+
+[node name="GrassUnder10" parent="Decorations" instance=ExtResource("21_r5vy0")]
+position = Vector2(1560, -456)
+
+[node name="GrassUnder11" parent="Decorations" instance=ExtResource("22_gtnup")]
+position = Vector2(1119, -147)
+
+[node name="GrassUnder12" parent="Decorations" instance=ExtResource("22_gtnup")]
+position = Vector2(2242, -279)
+
+[node name="GrassUnder13" parent="Decorations" instance=ExtResource("20_n71b6")]
+position = Vector2(2601, -231)
+
+[node name="GrassUnder14" parent="Decorations" instance=ExtResource("19_53wyc")]
+position = Vector2(2667, -243)
+
+[node name="GrassUnder15" parent="Decorations" instance=ExtResource("20_n71b6")]
+position = Vector2(2926, -481)
+
+[node name="GrassUnder16" parent="Decorations" instance=ExtResource("22_gtnup")]
+position = Vector2(2689, -624)
+
+[node name="GrassUnder17" parent="Decorations" instance=ExtResource("23_31jrn")]
+position = Vector2(2872, -740)
+
+[node name="GrassUnder18" parent="Decorations" instance=ExtResource("22_gtnup")]
+position = Vector2(2935, -734)
+
+[node name="GrassUnder19" parent="Decorations" instance=ExtResource("20_n71b6")]
+position = Vector2(3110, -1052)
+
+[node name="GrassUnder20" parent="Decorations" instance=ExtResource("21_r5vy0")]
+position = Vector2(3020, -834)
+
+[node name="GrassUnder21" parent="Decorations" instance=ExtResource("19_53wyc")]
+position = Vector2(3085, -867)
+
+[node name="GrassUnder22" parent="Decorations" instance=ExtResource("20_n71b6")]
+position = Vector2(2817, -973)
+
+[node name="GrassUnder23" parent="Decorations" instance=ExtResource("19_53wyc")]
+position = Vector2(3640, -909)
+
+[node name="GrassUnder24" parent="Decorations" instance=ExtResource("23_31jrn")]
+position = Vector2(2863, -993)
+
+[node name="RockLarge" parent="Decorations" instance=ExtResource("24_jnmvg")]
+position = Vector2(2179, -89)
+
+[node name="RockSmall" parent="Decorations" instance=ExtResource("25_dpaph")]
+position = Vector2(2627, -319)
+
+[node name="RockLarge2" parent="Decorations" instance=ExtResource("24_jnmvg")]
+position = Vector2(4650, -615)
+
+[node name="RockSmall2" parent="Decorations" instance=ExtResource("25_dpaph")]
+position = Vector2(4893, -1274)
+
+[node name="GrassUnder25" parent="Decorations" instance=ExtResource("23_31jrn")]
+position = Vector2(4449, -1048)
+
+[node name="GrassUnder26" parent="Decorations" instance=ExtResource("20_n71b6")]
+position = Vector2(4510, -1025)
+
+[node name="GrassUnder27" parent="Decorations" instance=ExtResource("21_r5vy0")]
+position = Vector2(4678, -833)
+
+[node name="RockSmall3" parent="Decorations" instance=ExtResource("25_dpaph")]
+position = Vector2(1298, -745)
+
+[node name="GrassUnder28" parent="Decorations" instance=ExtResource("20_n71b6")]
+position = Vector2(1605, -799)
+
+[node name="GrassUnder29" parent="Decorations" instance=ExtResource("22_gtnup")]
+position = Vector2(1960, -831)
+
+[node name="GrassUnder30" parent="Decorations" instance=ExtResource("23_31jrn")]
+position = Vector2(2156, -574)
+
+[node name="GrassUnder31" parent="Decorations" instance=ExtResource("19_53wyc")]
+position = Vector2(2239, -559)
+
+[node name="RockLarge3" parent="Decorations" instance=ExtResource("24_jnmvg")]
+position = Vector2(4153, -94)
+
+[node name="GrassOver1" parent="Decorations" instance=ExtResource("26_aj5y7")]
+position = Vector2(4550, -79)
+
+[node name="Bush_Small" parent="Decorations" instance=ExtResource("17_2nv8d")]
+position = Vector2(5036, -92)
+
+[node name="GrassUnder32" parent="Decorations" instance=ExtResource("20_n71b6")]
+position = Vector2(4260, -483)
+
+[node name="GrassUnder33" parent="Decorations" instance=ExtResource("22_gtnup")]
+position = Vector2(5142, -501)
+
+[node name="GrassUnder34" parent="Decorations" instance=ExtResource("21_r5vy0")]
+position = Vector2(5839, -484)
+
+[node name="GrassUnder35" parent="Decorations" instance=ExtResource("20_n71b6")]
+position = Vector2(4614, -485)
+
+[node name="GrassUnder36" parent="Decorations" instance=ExtResource("23_31jrn")]
+position = Vector2(3972, -506)
+
+[node name="GrassUnder37" parent="Decorations" instance=ExtResource("22_gtnup")]
+position = Vector2(4876, -502)
+
+[node name="GrassUnder38" parent="Decorations" instance=ExtResource("23_31jrn")]
+position = Vector2(5422, -506)

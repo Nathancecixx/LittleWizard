@@ -1,11 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1xw00yh40buw"]
 
-[ext_resource type="Texture2D" path="res://Resources/Ruins_Tileset.png" id="1_s75mi"]
+[ext_resource type="Texture2D" uid="uid://bscc8pq5tl64q" path="res://Resources/Ruins_Tileset.png" id="1_s75mi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fhgtj"]
 size = Vector2(58, 58.2912)
 
 [node name="RuinWindow" type="StaticBody2D"]
+texture_filter = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(29, 29)

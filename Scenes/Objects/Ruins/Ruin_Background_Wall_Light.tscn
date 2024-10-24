@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dj3u57x0akgyg"]
 
-[ext_resource type="Texture2D" path="res://Resources/Ruins_Tileset.png" id="1_1oa1d"]
+[ext_resource type="Texture2D" uid="uid://bscc8pq5tl64q" path="res://Resources/Ruins_Tileset.png" id="1_1oa1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yovf0"]
 size = Vector2(58, 58.2912)
@@ -14,6 +14,7 @@ shape = SubResource("RectangleShape2D_yovf0")
 disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+texture_filter = 1
 position = Vector2(0, 9.53674e-07)
 scale = Vector2(3.625, 3.6432)
 texture = ExtResource("1_1oa1d")

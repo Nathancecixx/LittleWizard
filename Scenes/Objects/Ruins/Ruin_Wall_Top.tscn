@@ -8,6 +8,7 @@ size = Vector2(58, 58.2912)
 [node name="RuinWallTop" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-3.72529e-07, -3.71859e-07)
 scale = Vector2(3.625, 3.625)
 texture = ExtResource("1_sai6u")

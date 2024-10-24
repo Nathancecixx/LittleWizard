@@ -13,6 +13,7 @@ scale = Vector2(1, 0.995005)
 shape = SubResource("RectangleShape2D_k06yh")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+texture_filter = 1
 position = Vector2(-3.72529e-07, -1.3411e-07)
 scale = Vector2(3.625, 3.6432)
 texture = ExtResource("1_jemgv")
