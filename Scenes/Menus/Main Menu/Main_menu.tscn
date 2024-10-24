@@ -1,15 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://jegusr8d6hti"]
 
-[ext_resource type="Script" path="res://Scenes/Menus/Main Menu/main_menu.gd" id="1_7d1jr"]
-[ext_resource type="Texture2D" uid="uid://bpeaddxamoa7u" path="res://Resources/Sprites/Images/main_menu.png" id="2_hicvw"]
+[ext_resource type="Script" path="res://Scenes/Menus/Main Menu/main_menu.gd" id="1_cutok"]
+[ext_resource type="Texture2D" uid="uid://bpeaddxamoa7u" path="res://Resources/Sprites/Images/main_menu.png" id="2_hmvx2"]
 
 [sub_resource type="SystemFont" id="SystemFont_jvhe2"]
 font_names = PackedStringArray("Impact")
-subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_54dyd"]
 font_names = PackedStringArray("Impact")
-subpixel_positioning = 0
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -18,7 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_7d1jr")
+script = ExtResource("1_cutok")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -34,7 +32,7 @@ offset_top = -188.0
 offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hicvw")
+texture = ExtResource("2_hmvx2")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -102,6 +100,8 @@ theme_override_fonts/font = SubResource("SystemFont_54dyd")
 theme_override_font_sizes/font_size = 24
 text = "Quit
 "
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="pressed" from="MarginContainer2/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer2/HBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

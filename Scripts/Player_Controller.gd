@@ -13,6 +13,8 @@ signal hit_ground()
 @export var input_right : String = "move_right"
 ## Name of input action to jump.
 @export var input_jump : String = "jump"
+## Name of input action to pause
+@export var input_pause : String = "pause"
 
 
 const DEFAULT_MAX_JUMP_HEIGHT = 150
@@ -159,6 +161,7 @@ func _input(_event):
 
 
 func _physics_process(delta):
+	## velocity = Input.get_vector("")
 	if is_coyote_timer_running() or current_jump_type == JumpType.NONE:
 		jumps_left = max_jump_amount
 	if is_feet_on_ground() and current_jump_type == JumpType.NONE:

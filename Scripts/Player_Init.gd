@@ -20,6 +20,8 @@ const TERMINAL_VELOCITY = 700
 ## The player listens for input actions appended with this suffix.[br]
 ## Used to separate controls for multiple players in splitscreen.
 @export var action_suffix := ""
+@export var fade_in_duration := 0.3
+@export var fade_out_duration := 0.2
 
 var gravity: int = ProjectSettings.get("physics/2d/default_gravity")
 @onready var platform_detector := $PlatformDetector as RayCast2D
@@ -28,7 +30,33 @@ var gravity: int = ProjectSettings.get("physics/2d/default_gravity")
 @onready var sprite := $Sprite2D as Sprite2D
 @onready var jump_sound := $Jump as AudioStreamPlayer2D
 @onready var camera := $Camera as Camera2D
+@onready var resume_button := $ColorRect/CenterContainer/VBoxContainer/ResumeButton as Button
+
 var _double_jump_charged := false
+
+@export var input_pause : String = "pause"
+
+func _process(delta):
+	if Input.is_action_just_pressed(input_pause):
+		if visible:
+			close()
+		else:
+			open()
+
+func close() -> void:
+	# Code to close the pause menu
+	var tween := create_tween()
+	get_tree().paused = false
+	tween.tween_property(self, "modulate:a", 0.0, fade_out_duration)
+	tween.tween_callback(hide)
+
+func open() -> void:
+	# Code to open the pause menu
+	show()
+	resume_button.grab_focus()
+	modulate.a = 0.0
+	var tween := create_tween()
+	tween.tween_property(self, "modulate:a", 1.0, fade_in_duration)
 
 
 func _physics_process(delta: float) -> void:

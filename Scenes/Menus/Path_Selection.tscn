@@ -1,0 +1,233 @@
+[gd_scene load_steps=30 format=3 uid="uid://16bq8k31f3ie"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/path_selection_script.gd" id="1_cp17r"]
+[ext_resource type="Texture2D" path="res://Resources/MenuTextItems/ChooseWisely.png" id="3_8lh5w"]
+[ext_resource type="Texture2D" path="res://Resources/MenuTextItems/Wizard_Decision_Sheet.png" id="3_xmwjd"]
+[ext_resource type="Texture2D" path="res://Resources/MenuTextItems/Choice_Good.png" id="4_kunff"]
+[ext_resource type="Script" path="res://Scripts/Menus/button_good.gd" id="5_676w1"]
+[ext_resource type="Texture2D" path="res://Resources/MenuTextItems/Choice_Evil.png" id="6_idmeg"]
+[ext_resource type="Texture2D" path="res://Resources/MenuTextItems/cloud_main.png" id="7_nk448"]
+[ext_resource type="Script" path="res://Scripts/Menus/button_evil.gd" id="7_op5mh"]
+[ext_resource type="Texture2D" path="res://Resources/MenuTextItems/Castle_Background.png" id="9_0kf4t"]
+[ext_resource type="Texture2D" path="res://Resources/MenuTextItems/fire_main.png" id="10_q83d7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi4ku"]
+atlas = ExtResource("3_xmwjd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnk4a"]
+atlas = ExtResource("3_xmwjd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lt6ig"]
+atlas = ExtResource("3_xmwjd")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjeld"]
+atlas = ExtResource("3_xmwjd")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2oi86"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi4ku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnk4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lt6ig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjeld")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2map"]
+atlas = ExtResource("7_nk448")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrs2h"]
+atlas = ExtResource("7_nk448")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ku1bp"]
+atlas = ExtResource("7_nk448")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hifgj"]
+atlas = ExtResource("7_nk448")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3hffy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2map")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrs2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ku1bp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hifgj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wrna"]
+atlas = ExtResource("10_q83d7")
+region = Rect2(0, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8v0i"]
+atlas = ExtResource("10_q83d7")
+region = Rect2(24, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2qu5"]
+atlas = ExtResource("10_q83d7")
+region = Rect2(48, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lmf1"]
+atlas = ExtResource("10_q83d7")
+region = Rect2(72, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ppuk"]
+atlas = ExtResource("10_q83d7")
+region = Rect2(96, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbx7c"]
+atlas = ExtResource("10_q83d7")
+region = Rect2(120, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcfe3"]
+atlas = ExtResource("10_q83d7")
+region = Rect2(144, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vs5as"]
+atlas = ExtResource("10_q83d7")
+region = Rect2(168, 0, 24, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ot50e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wrna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8v0i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2qu5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lmf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ppuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbx7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcfe3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vs5as")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Path_Selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cp17r")
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("9_0kf4t")
+
+[node name="Wizard" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 392)
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_2oi86")
+frame_progress = 0.239378
+
+[node name="Choose_Wisely" type="TextureRect" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 227.0
+offset_top = 40.0
+offset_right = 925.0
+offset_bottom = 110.0
+texture = ExtResource("3_8lh5w")
+
+[node name="Button_Good" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 180.0
+offset_top = 260.0
+offset_right = 391.0
+offset_bottom = 338.0
+mouse_default_cursor_shape = 2
+icon = ExtResource("4_kunff")
+flat = true
+script = ExtResource("5_676w1")
+
+[node name="Good_Animation" type="AnimatedSprite2D" parent="Button_Good"]
+z_index = 2
+position = Vector2(246, 109)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_3hffy")
+frame_progress = 0.055493
+
+[node name="Button_Evil" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 761.0
+offset_top = 260.0
+offset_right = 972.0
+offset_bottom = 338.0
+mouse_default_cursor_shape = 2
+icon = ExtResource("6_idmeg")
+flat = true
+script = ExtResource("7_op5mh")
+
+[node name="Evil_Animation" type="AnimatedSprite2D" parent="Button_Evil"]
+z_index = 2
+texture_filter = 1
+position = Vector2(-41, 52)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_ot50e")
+frame_progress = 0.106828
+
+[connection signal="ready" from="." to="." method="_onready"]
+[connection signal="mouse_entered" from="Button_Good" to="." method="_on_good_hovered"]
+[connection signal="mouse_exited" from="Button_Good" to="." method="_on_good_exited"]
+[connection signal="pressed" from="Button_Good" to="Button_Good" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button_Evil" to="." method="_on_evil_hovered"]
+[connection signal="mouse_entered" from="Button_Evil" to="Button_Evil" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button_Evil" to="." method="_on_evil_exited"]
+[connection signal="pressed" from="Button_Evil" to="Button_Evil" method="_on_pressed"]

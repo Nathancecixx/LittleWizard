@@ -1,24 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://jirylqg68w8"]
+[gd_scene load_steps=7 format=3 uid="uid://jirylqg68w8"]
 
-[ext_resource type="Script" path="res://Scenes/Menus/Main Menu/options_menu.gd" id="1_rkwu1"]
-[ext_resource type="Texture2D" uid="uid://bpeaddxamoa7u" path="res://Resources/Sprites/Images/main_menu.png" id="2_17q8b"]
+[ext_resource type="Script" path="res://Scenes/Menus/Main Menu/Option Menu/options_menu.gd" id="1_ob35v"]
+[ext_resource type="Texture2D" uid="uid://bpeaddxamoa7u" path="res://Resources/Sprites/Images/main_menu.png" id="2_2gsa1"]
+[ext_resource type="AudioStream" uid="uid://puamtptrujss" path="res://deja-vu.mp3" id="3_pb1tm"]
 
 [sub_resource type="SystemFont" id="SystemFont_e4vsw"]
 font_names = PackedStringArray("Impact")
 subpixel_positioning = 0
 
+[sub_resource type="SystemFont" id="SystemFont_ni6fl"]
+font_names = PackedStringArray("Impact")
+
 [sub_resource type="SystemFont" id="SystemFont_qnanv"]
 font_names = PackedStringArray("Impact")
 subpixel_positioning = 0
 
-[node name="Main Menu" type="Control"]
+[node name="Option Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rkwu1")
+script = ExtResource("1_ob35v")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -34,7 +38,7 @@ offset_top = -188.0
 offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_17q8b")
+texture = ExtResource("2_2gsa1")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -79,12 +83,30 @@ alignment = 1
 [node name="Seperator2" type="Control" parent="MarginContainer2/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Volume" type="Button" parent="MarginContainer2/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(120, 32)
+[node name="Volume" type="Label" parent="MarginContainer2/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_qnanv")
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 12
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("SystemFont_e4vsw")
 theme_override_font_sizes/font_size = 24
 text = "Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Volume2" type="HSlider" parent="MarginContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Mute" type="CheckBox" parent="MarginContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_fonts/font = SubResource("SystemFont_ni6fl")
+theme_override_font_sizes/font_size = 24
+text = "Mute"
+alignment = 1
 
 [node name="Back" type="Button" parent="MarginContainer2/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
@@ -94,4 +116,9 @@ theme_override_font_sizes/font_size = 24
 text = "Back
 "
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_pb1tm")
+
+[connection signal="value_changed" from="MarginContainer2/HBoxContainer/VBoxContainer/Volume2" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="MarginContainer2/HBoxContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
 [connection signal="pressed" from="MarginContainer2/HBoxContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
