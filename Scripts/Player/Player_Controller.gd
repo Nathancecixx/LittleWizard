@@ -304,6 +304,7 @@ func is_feet_on_ground():
 
 ## Perform a ground jump, or a double jump if the character is in the air.
 func jump():
+	$Jump_SFX.play()
 	if can_double_jump():
 		double_jump()
 	else:
@@ -422,6 +423,7 @@ func Cast_Fireball():
 	cast.set_frame_and_progress(0,0)
 	casting = true
 	acc.x=0
+	$Fire_Ball_SFX.play()
 
 func Create_Fireball():
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cggudk2vysh8q"]
 
 [ext_resource type="Script" path="res://Scenes/Main Menu/options_menu.gd" id="1_rkwu1"]
-[ext_resource type="Texture2D" uid="uid://c6mo4hj7xjatb" path="res://Resources/Sprites/Images/main_menu.png" id="2_17q8b"]
+[ext_resource type="Texture2D" uid="uid://bpeaddxamoa7u" path="res://Resources/Sprites/Images/main_menu.png" id="2_17q8b"]
 
 [sub_resource type="SystemFont" id="SystemFont_e4vsw"]
 font_names = PackedStringArray("Impact")
