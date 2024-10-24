@@ -38,7 +38,7 @@ func _on_area_exited(area: Area2D) -> void:
 	
 func _input(event):
 	
-	if (event.is_action_pressed("interact") && is_active==true && !dialog_has_been_activated):
+	if (event.is_action_pressed("interact") && is_active==true && !dialog_has_been_activated && Global.is_talking==false):
 		Dialogic.start(timeline)
 	
 func _on_dialogic_signal(argument: String):

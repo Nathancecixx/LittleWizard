@@ -6,4 +6,5 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "player":
-		get_tree().change_scene_to_file("res://Scenes/Levels/Level_Selection.tscn")
+		#get_tree().change_scene_to_file("res://Scenes/Levels/Level_Selection.tscn")
+		pass
