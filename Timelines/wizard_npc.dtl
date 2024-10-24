@@ -1,0 +1,15 @@
+[signal arg="start_dialog"]
+Welcome friend! It’s been some time since we’ve had a new face around here, how do you do?
+- Where am I?
+You’re in Little World. I assume you would like to get back to your original size. We’ve got just the thing for you my friend.
+But first let me remind you of your powers.
+Wizards that follow the path of righteousness are able to double jump while in the air with [Space].
+Wizard that follow the evil path are able to cast fireballs with [Ctrl] or [Shift].
+Now, you may use the magic doors on my right to continue your journey my friend, I wish you luck.
+- Thank you!
+	[signal arg="good"]
+- Don't tell me what to do!
+	[signal arg="bad"]
+- Ok
+[signal arg="end_wizard_intro"]
+[signal arg="end_dialog"]

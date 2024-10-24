@@ -1,0 +1,3 @@
+[signal arg="start_dialog"]
+There's a key fragment deep in this dungeon somewhere!
+[signal arg="end_dialog"]

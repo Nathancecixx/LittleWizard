@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Main Menu/main_menu.gd" id="1_7d1jr"]
 [ext_resource type="Texture2D" uid="uid://c0656hmte7hc1" path="res://Resources/Backgrounds/MenuBackground.png" id="2_7kese"]
 [ext_resource type="AudioStream" uid="uid://iedju3ep3okg" path="res://Resources/AudioFiles/TinyWizGame.mp3" id="3_naax7"]
+[ext_resource type="AudioStream" uid="uid://birexq1kf5iyg" path="res://Resources/AudioFiles/click.wav" id="4_ggcut"]
 
 [sub_resource type="SystemFont" id="SystemFont_jvhe2"]
 font_names = PackedStringArray("Impact")
@@ -1916,6 +1917,10 @@ text = "Quit
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_naax7")
+
+[node name="Menu_Click_SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ggcut")
+volume_db = 8.914
 
 [connection signal="pressed" from="MarginContainer2/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer2/HBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
