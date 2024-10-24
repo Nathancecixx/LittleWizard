@@ -44,7 +44,7 @@ jobs:
         run: mkdir -v -p build/web
 
       - name: Build
-        run: godot --headless --verbose --export-release "Web" build/web/index.html project/project.godot
+        run: godot --headless --verbose --export-release "Web1" build/web/index.html project/project.godot
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
