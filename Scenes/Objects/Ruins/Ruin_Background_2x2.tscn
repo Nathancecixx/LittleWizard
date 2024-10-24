@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://8x1uexq7bff0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgv3y"]
+size = Vector2(116, 116.582)
+
+[node name="RuinBackground2x2" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.90735e-06, -5.96046e-08)
+scale = Vector2(1, 0.995005)
+shape = SubResource("RectangleShape2D_hgv3y")
+disabled = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -58.0
+offset_top = -58.0
+offset_right = 58.0
+offset_bottom = 58.0
+color = Color(0, 0, 0, 1)

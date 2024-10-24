@@ -1,0 +1,170 @@
+[gd_scene load_steps=13 format=3 uid="uid://b8ptnekt4vfm1"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/level_1.gd" id="1_6belh"]
+[ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="2_ki128"]
+[ext_resource type="PackedScene" uid="uid://cbepccfer7xkg" path="res://Scenes/Objects/Platforms And Ground/Grass_Ground.tscn" id="3_6qf0s"]
+[ext_resource type="PackedScene" uid="uid://dq85vl7ao8qiw" path="res://Scenes/Objects/Platforms And Ground/Grass_Orange.tscn" id="4_xcefh"]
+[ext_resource type="PackedScene" uid="uid://cdhvc54gcfv7x" path="res://Scenes/Objects/Platforms And Ground/Brick_Block.tscn" id="5_a126v"]
+[ext_resource type="PackedScene" uid="uid://pc4sps4tdym0" path="res://Scenes/Objects/Platforms And Ground/Orange_Platform_Medium.tscn" id="6_3opqi"]
+[ext_resource type="PackedScene" uid="uid://1qq0r5s0iqnt" path="res://Scenes/Objects/Platforms And Ground/Platform_Floating.tscn" id="6_ud3jb"]
+[ext_resource type="PackedScene" uid="uid://b10r14lbqcwh4" path="res://Scenes/Objects/Platforms And Ground/Platform_Floating_Edge.tscn" id="7_suinm"]
+[ext_resource type="PackedScene" uid="uid://gt6a1033pv3g" path="res://Scenes/Objects/Platforms And Ground/Orange_Platform_Large.tscn" id="8_7jysa"]
+[ext_resource type="PackedScene" uid="uid://ce6yhw3ls5ilt" path="res://Scenes/Objects/Platforms And Ground/Orange_Platform_Small.tscn" id="8_iwfbx"]
+[ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="11_rceal"]
+[ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="12_seek5"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_6belh")
+
+[node name="player" parent="." instance=ExtResource("2_ki128")]
+position = Vector2(188, -104)
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="Left Border" parent="Borders" instance=ExtResource("3_6qf0s")]
+position = Vector2(0, -2560)
+rotation = 1.5708
+scale = Vector2(10, 1)
+
+[node name="Right Border" parent="Borders" instance=ExtResource("3_6qf0s")]
+position = Vector2(4672, -2560)
+rotation = 1.5708
+scale = Vector2(10, 1)
+
+[node name="Ground" type="Node2D" parent="."]
+
+[node name="GrassOrange" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(128, -32)
+
+[node name="GrassOrange2" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(384, -32)
+
+[node name="GrassOrange3" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(640, -32)
+
+[node name="GrassOrange4" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(896, -32)
+
+[node name="GrassOrange5" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(1152, -32)
+
+[node name="GrassOrange6" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(1408, -32)
+
+[node name="GrassOrange7" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(1664, -32)
+
+[node name="GrassOrange8" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(1920, -32)
+
+[node name="GrassOrange9" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(2176, -32)
+
+[node name="GrassOrange10" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(2432, -32)
+
+[node name="GrassOrange11" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(2688, -32)
+
+[node name="GrassOrange12" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(2944, -32)
+
+[node name="GrassOrange13" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(3200, -32)
+
+[node name="GrassOrange14" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(3456, -32)
+
+[node name="GrassOrange15" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(3712, -32)
+
+[node name="GrassOrange16" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(3968, -32)
+
+[node name="GrassOrange17" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(4224, -32)
+
+[node name="GrassOrange18" parent="Ground" instance=ExtResource("4_xcefh")]
+position = Vector2(4480, -32)
+
+[node name="Blocks" type="Node2D" parent="."]
+
+[node name="BrickBlock2" parent="Blocks" instance=ExtResource("5_a126v")]
+position = Vector2(1056, -96)
+
+[node name="BrickBlock3" parent="Blocks" instance=ExtResource("5_a126v")]
+position = Vector2(1056, -160)
+
+[node name="BrickBlock4" parent="Blocks" instance=ExtResource("5_a126v")]
+position = Vector2(1056, -224)
+
+[node name="BrickBlock5" parent="Blocks" instance=ExtResource("5_a126v")]
+position = Vector2(1056, -288)
+
+[node name="Floating_Platforms" type="Node2D" parent="."]
+
+[node name="1" parent="Floating_Platforms" instance=ExtResource("6_3opqi")]
+position = Vector2(392, -197)
+
+[node name="2" parent="Floating_Platforms" instance=ExtResource("6_3opqi")]
+position = Vector2(513, -307)
+
+[node name="3" parent="Floating_Platforms" instance=ExtResource("6_3opqi")]
+position = Vector2(288, -418)
+
+[node name="4" parent="Floating_Platforms" instance=ExtResource("8_iwfbx")]
+position = Vector2(500, -529)
+
+[node name="5" parent="Floating_Platforms" instance=ExtResource("8_7jysa")]
+position = Vector2(754, -533)
+
+[node name="6" parent="Floating_Platforms" instance=ExtResource("8_iwfbx")]
+position = Vector2(336, -645)
+
+[node name="7 - NPC" type="Node2D" parent="Floating_Platforms"]
+
+[node name="PlatformFloatingEdge" parent="Floating_Platforms/7 - NPC" instance=ExtResource("7_suinm")]
+position = Vector2(8, -728)
+
+[node name="PlatformFloating" parent="Floating_Platforms/7 - NPC" instance=ExtResource("6_ud3jb")]
+position = Vector2(32, -728)
+
+[node name="PlatformFloating2" parent="Floating_Platforms/7 - NPC" instance=ExtResource("6_ud3jb")]
+position = Vector2(64, -728)
+
+[node name="PlatformFloating3" parent="Floating_Platforms/7 - NPC" instance=ExtResource("6_ud3jb")]
+position = Vector2(96, -728)
+
+[node name="PlatformFloating4" parent="Floating_Platforms/7 - NPC" instance=ExtResource("6_ud3jb")]
+position = Vector2(128, -728)
+
+[node name="PlatformFloating5" parent="Floating_Platforms/7 - NPC" instance=ExtResource("6_ud3jb")]
+position = Vector2(160, -728)
+
+[node name="PlatformFloatingEdge2" parent="Floating_Platforms/7 - NPC" instance=ExtResource("7_suinm")]
+position = Vector2(184, -728)
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="8" parent="Floating_Platforms" instance=ExtResource("8_iwfbx")]
+position = Vector2(1088, -192)
+
+[node name="BrickBlock" parent="Floating_Platforms" instance=ExtResource("5_a126v")]
+position = Vector2(3872, -96)
+
+[node name="BrickBlock2" parent="Floating_Platforms" instance=ExtResource("5_a126v")]
+position = Vector2(3872, -160)
+
+[node name="BrickBlock3" parent="Floating_Platforms" instance=ExtResource("5_a126v")]
+position = Vector2(3872, -224)
+
+[node name="BrickBlock4" parent="Floating_Platforms" instance=ExtResource("5_a126v")]
+position = Vector2(3872, -288)
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="Red Portal" parent="Portals" instance=ExtResource("11_rceal")]
+position = Vector2(4557, -119)
+
+[node name="Blue Portal" parent="Portals" instance=ExtResource("12_seek5")]
+position = Vector2(188, -783)

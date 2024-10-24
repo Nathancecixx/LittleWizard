@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq85vl7ao8qiw"]
+
+[ext_resource type="Texture2D" uid="uid://c07g2pv1o1aqn" path="res://Resources/desert-ruins.png" id="1_g6b24"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u5j6"]
+atlas = ExtResource("1_g6b24")
+region = Rect2(24, 128, 32, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sd6gs"]
+size = Vector2(256, 64)
+
+[node name="GrassOrange" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(8, 8)
+texture = SubResource("AtlasTexture_2u5j6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sd6gs")

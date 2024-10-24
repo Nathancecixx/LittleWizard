@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Main Menu/Main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+general/text_to_speech=true
+
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
@@ -26,6 +30,7 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"level_1_interact": "res://Timelines/level_1_interact.dtl",
 "test_timeline": "res://Timelines/test_timeline.dtl"
 }
 layout/style_list=["res://Timelines/style.tres"]
@@ -60,6 +65,10 @@ window/stretch/mode="canvas_items"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[global_group]
+
+burnable=""
 
 [input]
 

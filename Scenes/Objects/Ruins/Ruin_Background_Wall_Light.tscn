@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj3u57x0akgyg"]
+
+[ext_resource type="Texture2D" path="res://Resources/Ruins_Tileset.png" id="1_1oa1d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yovf0"]
+size = Vector2(58, 58.2912)
+
+[node name="RuinBackgroundWallLight" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.27374e-13, 1.19209e-07)
+scale = Vector2(1, 0.995005)
+shape = SubResource("RectangleShape2D_yovf0")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(0, 9.53674e-07)
+scale = Vector2(3.625, 3.6432)
+texture = ExtResource("1_1oa1d")
+hframes = 16
+vframes = 16
+frame = 69

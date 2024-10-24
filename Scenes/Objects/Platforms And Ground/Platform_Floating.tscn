@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://1qq0r5s0iqnt"]
+
+[ext_resource type="Texture2D" uid="uid://c07g2pv1o1aqn" path="res://Resources/desert-ruins.png" id="1_qvk0i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nspmf"]
+atlas = ExtResource("1_qvk0i")
+region = Rect2(32, 176, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3yx5"]
+size = Vector2(32, 32)
+
+[node name="PlatformFloating" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_nspmf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t3yx5")

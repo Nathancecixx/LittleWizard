@@ -16,6 +16,7 @@ physics_material_override = SubResource("PhysicsMaterial_g40mr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+texture_repeat = 2
 position = Vector2(128, 32)
 scale = Vector2(8, 8)
 texture = SubResource("AtlasTexture_kdr5i")

@@ -8,6 +8,12 @@ var dialog_has_been_activated = false
 		return timeline
 	set(value):
 		timeline = value
+		
+@export var remove_timeline_signal = "remove_dialog_area":
+	get:
+		return remove_timeline_signal
+	set(value):
+		remove_timeline_signal = value
 
 
 func _ready() -> void:
@@ -34,5 +40,5 @@ func _input(event):
 	
 func _on_dialogic_signal(argument: String):
 	
-	if (argument=="start_dialog"):
+	if (argument==remove_timeline_signal):
 		dialog_has_been_activated = true

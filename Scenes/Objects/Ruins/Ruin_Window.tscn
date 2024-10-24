@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1xw00yh40buw"]
+
+[ext_resource type="Texture2D" path="res://Resources/Ruins_Tileset.png" id="1_s75mi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhgtj"]
+size = Vector2(58, 58.2912)
+
+[node name="RuinWindow" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(29, 29)
+scale = Vector2(3.625, 3.625)
+texture = ExtResource("1_s75mi")
+hframes = 16
+vframes = 16
+frame = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(29, 29)
+scale = Vector2(1, 0.995005)
+shape = SubResource("RectangleShape2D_fhgtj")
+disabled = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-29, 29)
+scale = Vector2(3.625, 3.625)
+texture = ExtResource("1_s75mi")
+hframes = 16
+vframes = 16
+frame = 99
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-29, 29)
+scale = Vector2(1, 0.995005)
+shape = SubResource("RectangleShape2D_fhgtj")
+disabled = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(29, -29)
+scale = Vector2(3.625, 3.625)
+texture = ExtResource("1_s75mi")
+hframes = 16
+vframes = 16
+frame = 84
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(29, -29)
+scale = Vector2(1, 0.995005)
+shape = SubResource("RectangleShape2D_fhgtj")
+disabled = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(-29, -29)
+scale = Vector2(3.625, 3.625)
+texture = ExtResource("1_s75mi")
+hframes = 16
+vframes = 16
+frame = 83
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-29, -29)
+scale = Vector2(1, 0.995005)
+shape = SubResource("RectangleShape2D_fhgtj")
+disabled = true

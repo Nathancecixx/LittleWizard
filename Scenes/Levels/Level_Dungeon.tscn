@@ -1,0 +1,1259 @@
+[gd_scene load_steps=38 format=3 uid="uid://dgaucwfdjhwa6"]
+
+[ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="1_l2gwo"]
+[ext_resource type="PackedScene" uid="uid://dy3qsbj7ropcf" path="res://Scenes/Objects/Ruins/Ruin_Wall_Top.tscn" id="2_uw4e6"]
+[ext_resource type="PackedScene" uid="uid://cnp7xwsemti84" path="res://Scenes/Objects/Ruins/Ruin_Middle_Right.tscn" id="3_0iiex"]
+[ext_resource type="PackedScene" uid="uid://8x1uexq7bff0" path="res://Scenes/Objects/Ruins/Ruin_Background_2x2.tscn" id="4_8sdq7"]
+[ext_resource type="PackedScene" uid="uid://cdl1xdx202vro" path="res://Scenes/Objects/Ruins/Ruin_Ext_Bottom_Left.tscn" id="4_t0hoe"]
+[ext_resource type="PackedScene" uid="uid://clar2ilw81rrx" path="res://Scenes/Objects/Ruins/Ruin_Ext_Bottom_Right.tscn" id="5_n7a7r"]
+[ext_resource type="PackedScene" uid="uid://rtbqg5ibt24a" path="res://Scenes/Objects/Ruins/Ruin_Wall_Top_Left.tscn" id="6_kms60"]
+[ext_resource type="PackedScene" uid="uid://cc8eim3d5rrf4" path="res://Scenes/Objects/Ruins/Ruin_Wall_Bottom.tscn" id="7_i5j16"]
+[ext_resource type="PackedScene" uid="uid://k5vou84fearp" path="res://Scenes/Objects/Ruins/Ruin_Background_Fragment_Top_Right.tscn" id="8_lcwe0"]
+[ext_resource type="PackedScene" uid="uid://cwecigmyly8e6" path="res://Scenes/Objects/Ruins/Ruin_Background_Fragment_Bottom_Left.tscn" id="9_pr2mf"]
+[ext_resource type="PackedScene" uid="uid://cppanmvwxsnky" path="res://Scenes/Objects/Ruins/Ruin_Background_Fragment_Bottom_Right.tscn" id="10_p3r0n"]
+[ext_resource type="PackedScene" uid="uid://domv32l3y2xvx" path="res://Scenes/Objects/Ruins/Ruin_Background_Fragment_Top_Left.tscn" id="11_bcbe8"]
+[ext_resource type="PackedScene" uid="uid://c33e0ngcwnalb" path="res://Scenes/Objects/Ruins/Ruin_Background_Wall2.tscn" id="12_p74mg"]
+[ext_resource type="PackedScene" uid="uid://cmteu8352bxsh" path="res://Scenes/Objects/Ruins/Ruin_Backgroun_Wall1.tscn" id="13_q4qbl"]
+[ext_resource type="PackedScene" uid="uid://b7pk5hpxjmvl1" path="res://Scenes/Objects/Ruins/Ruin_Background_1x1.tscn" id="14_k6br5"]
+[ext_resource type="PackedScene" uid="uid://jfyymyux8b1q" path="res://Scenes/Objects/Ruins/Ruin_Wall_Bottom_Left.tscn" id="16_5ue0v"]
+[ext_resource type="PackedScene" uid="uid://bo8iyojf5x3nx" path="res://Scenes/Objects/Ruins/Ruin_Wall_Top_Right.tscn" id="17_5ix47"]
+[ext_resource type="PackedScene" uid="uid://gbxxxmka8o3c" path="res://Scenes/Objects/Ruins/Ruin_Skulls1.tscn" id="18_bf6pg"]
+[ext_resource type="PackedScene" uid="uid://dpbxwh53sxwgy" path="res://Scenes/Objects/Ruins/Ruin_Wall_Middle_Left.tscn" id="18_pq2jg"]
+[ext_resource type="PackedScene" uid="uid://dvkfglolxu284" path="res://Scenes/Objects/Ruins/Ruin_Wall_Middle_Right.tscn" id="20_ylv3m"]
+[ext_resource type="PackedScene" uid="uid://dxmgy377l18dm" path="res://Scenes/Objects/Ruins/Ruin_Ext_Bottom.tscn" id="21_fagvj"]
+[ext_resource type="PackedScene" uid="uid://dkdt7laxsgj5u" path="res://Scenes/Objects/Ruins/Ruin_Spikes.tscn" id="22_0goau"]
+[ext_resource type="PackedScene" uid="uid://bemxeqgvqoy" path="res://Scenes/Objects/Ruins/Ruin_Skulls2.tscn" id="22_2rbvf"]
+[ext_resource type="PackedScene" uid="uid://bx5x0j6seoc45" path="res://Scenes/Objects/Ruins/Ruin_Wall_Bottom_Right.tscn" id="24_osggs"]
+[ext_resource type="PackedScene" uid="uid://u70xmy6y00xb" path="res://Scenes/Objects/Ruins/Ruin_Ext_Top_Left.tscn" id="25_fsapu"]
+[ext_resource type="PackedScene" uid="uid://baro380kyeep5" path="res://Scenes/Objects/Ruins/Ruin_Chain1.tscn" id="26_w0fgw"]
+[ext_resource type="PackedScene" uid="uid://lp0tot21sovr" path="res://Scenes/Objects/Ruins/Ruin_Chain2.tscn" id="27_pgdki"]
+[ext_resource type="PackedScene" uid="uid://b1xw00yh40buw" path="res://Scenes/Objects/Ruins/Ruin_Window.tscn" id="28_s1xtm"]
+[ext_resource type="Script" path="res://Scripts/Levels/level_dungeon_controller.gd" id="29_kah0j"]
+[ext_resource type="PackedScene" uid="uid://ckcx4wpapbb4" path="res://Scenes/Objects/log_burnable.tscn" id="30_hdwrp"]
+[ext_resource type="PackedScene" uid="uid://c5kdkn67gd2w6" path="res://Scenes/Objects/burnable.tscn" id="31_rsvpj"]
+[ext_resource type="PackedScene" uid="uid://dmli1s4iixak5" path="res://Scenes/Objects/Ruins/Ruin_Ext_Middle_Right.tscn" id="32_b30u8"]
+[ext_resource type="PackedScene" uid="uid://ceibiwdgtuc1k" path="res://Scenes/Objects/Ruins/Ruin_Ext_Top_Right.tscn" id="33_fh70q"]
+[ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="34_tlda0"]
+[ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="35_0gn53"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="36_j7ipk"]
+[ext_resource type="PackedScene" uid="uid://drhhqd625g1ke" path="res://Scenes/Objects/Ruins/Giant_Background.tscn" id="37_v1mmn"]
+
+[node name="LevelDungeon" type="Node2D"]
+script = ExtResource("29_kah0j")
+
+[node name="RuinWallTop" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(87, -29)
+
+[node name="RuinWallTop2" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(145, -29)
+
+[node name="RuinWallTop3" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(203, -29)
+
+[node name="RuinWallTop4" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(261, -29)
+
+[node name="RuinMiddleRight" parent="." instance=ExtResource("3_0iiex")]
+position = Vector2(29, -87)
+
+[node name="RuinExtBottomLeft" parent="." instance=ExtResource("4_t0hoe")]
+position = Vector2(29, -29)
+
+[node name="RuinWallTop5" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(319, -29)
+
+[node name="RuinWallTop6" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(377, -29)
+
+[node name="RuinWallTop7" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(435, -29)
+
+[node name="RuinWallTop8" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(493, -29)
+
+[node name="RuinWallTop" parent="RuinWallTop8" instance=ExtResource("2_uw4e6")]
+position = Vector2(58, 0)
+
+[node name="RuinWallTop2" parent="RuinWallTop8" instance=ExtResource("2_uw4e6")]
+position = Vector2(116, 0)
+
+[node name="RuinWallTop2" parent="RuinWallTop8/RuinWallTop2" instance=ExtResource("2_uw4e6")]
+position = Vector2(232, -58)
+
+[node name="RuinWallTop3" parent="RuinWallTop8/RuinWallTop2" instance=ExtResource("2_uw4e6")]
+position = Vector2(290, -58)
+
+[node name="RuinWallTop4" parent="RuinWallTop8/RuinWallTop2" instance=ExtResource("2_uw4e6")]
+position = Vector2(348, -58)
+
+[node name="RuinWallTop3" parent="RuinWallTop8" instance=ExtResource("2_uw4e6")]
+position = Vector2(174, 0)
+
+[node name="RuinWallTop4" parent="RuinWallTop8" instance=ExtResource("2_uw4e6")]
+position = Vector2(232, 0)
+
+[node name="RuinWallTop5" parent="RuinWallTop8" instance=ExtResource("2_uw4e6")]
+position = Vector2(522, -348)
+
+[node name="RuinWallTop6" parent="RuinWallTop8" instance=ExtResource("2_uw4e6")]
+position = Vector2(638, -58)
+
+[node name="RuinWallTop7" parent="RuinWallTop8" instance=ExtResource("2_uw4e6")]
+position = Vector2(696, -58)
+
+[node name="RuinBackground2x2" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(116, -116)
+
+[node name="RuinBackground2x3" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(232, -116)
+
+[node name="RuinBackground2x4" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(116, -232)
+
+[node name="RuinBackground2x5" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(232, -232)
+
+[node name="RuinBackground2x5" parent="RuinBackground2x5" instance=ExtResource("4_8sdq7")]
+position = Vector2(-116, -348)
+
+[node name="RuinBackground2x6" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(348, -116)
+
+[node name="RuinBackground2x7" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(464, -116)
+
+[node name="RuinBackground2x8" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(348, -232)
+
+[node name="RuinBackground2x9" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(464, -232)
+
+[node name="RuinMiddleRight2" parent="." instance=ExtResource("3_0iiex")]
+position = Vector2(29, -145)
+
+[node name="RuinMiddleRight3" parent="." instance=ExtResource("3_0iiex")]
+position = Vector2(29, -203)
+
+[node name="RuinMiddleRight4" parent="." instance=ExtResource("3_0iiex")]
+position = Vector2(29, -261)
+
+[node name="RuinMiddleRight5" parent="." instance=ExtResource("3_0iiex")]
+position = Vector2(29, -319)
+
+[node name="RuinMiddleRight6" parent="." instance=ExtResource("3_0iiex")]
+position = Vector2(29, -377)
+
+[node name="RuinExtBottomRight" parent="." instance=ExtResource("5_n7a7r")]
+position = Vector2(783, -29)
+
+[node name="RuinWallTop9" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(493, -203)
+
+[node name="RuinWallTop10" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(551, -203)
+
+[node name="RuinWallTop11" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(609, -203)
+
+[node name="RuinWallBottom" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(957, -261)
+
+[node name="RuinBackgroundFragmentTopRight" parent="." instance=ExtResource("8_lcwe0")]
+position = Vector2(957, -203)
+
+[node name="RuinBackgroundFragmentBottomLeft" parent="." instance=ExtResource("9_pr2mf")]
+position = Vector2(899, -145)
+
+[node name="RuinBackgroundFragmentBottomRight" parent="." instance=ExtResource("10_p3r0n")]
+position = Vector2(957, -145)
+
+[node name="RuinBackgroundFragmentTopLeft" parent="." instance=ExtResource("11_bcbe8")]
+position = Vector2(899, -203)
+
+[node name="RuinBackgroundWall3" parent="." instance=ExtResource("12_p74mg")]
+position = Vector2(783, -145)
+
+[node name="RuinBackgrounWall1" parent="." instance=ExtResource("13_q4qbl")]
+position = Vector2(783, -203)
+
+[node name="RuinBackground1x1" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(841, -203)
+
+[node name="RuinBackground1x2" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(1015, -145)
+
+[node name="RuinBackgroundFragmentBottomLeft2" parent="." instance=ExtResource("9_pr2mf")]
+position = Vector2(1015, -203)
+
+[node name="RuinBackgroundWall4" parent="." instance=ExtResource("12_p74mg")]
+position = Vector2(1073, -203)
+
+[node name="RuinBackgrounWall2" parent="." instance=ExtResource("13_q4qbl")]
+position = Vector2(1073, -145)
+
+[node name="RuinBackgroundFragmentTopRight2" parent="." instance=ExtResource("8_lcwe0")]
+position = Vector2(841, -145)
+
+[node name="RuinWallBottom2" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1015, -261)
+
+[node name="RuinWallBottom3" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1073, -261)
+
+[node name="RuinWallTop12" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(1015, -87)
+
+[node name="RuinWallTop13" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(1073, -87)
+
+[node name="RuinWallTopLeft" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(783, -87)
+
+[node name="RuinWallBottom4" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(899, -261)
+
+[node name="RuinWallBottomLeft" parent="." instance=ExtResource("16_5ue0v")]
+position = Vector2(841, -261)
+
+[node name="RuinWallTopLeft2" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(841, -377)
+
+[node name="RuinWallTop14" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(899, -377)
+
+[node name="RuinWallTop15" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(957, -377)
+
+[node name="RuinExtBottomRight2" parent="." instance=ExtResource("5_n7a7r")]
+position = Vector2(1073, -377)
+
+[node name="RuinWallMiddleLeft" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(1073, -435)
+
+[node name="RuinWallMiddleLeft2" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(841, -319)
+
+[node name="RuinBackground1x3" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(899, -319)
+
+[node name="RuinBackground1x4" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(957, -319)
+
+[node name="RuinBackground1x5" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(1015, -319)
+
+[node name="RuinBackground1x6" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(1073, -319)
+
+[node name="RuinWallTopLeft3" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(1247, -145)
+
+[node name="RuinWallTopLeft4" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(1305, -203)
+
+[node name="RuinExtBottomRight3" parent="." instance=ExtResource("5_n7a7r")]
+position = Vector2(1247, -87)
+
+[node name="RuinExtBottomRight4" parent="." instance=ExtResource("5_n7a7r")]
+position = Vector2(1305, -145)
+
+[node name="RuinSkulls1" parent="." instance=ExtResource("18_bf6pg")]
+position = Vector2(667, -87)
+
+[node name="RuinWallTop16" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(1363, -203)
+
+[node name="RuinWallTopRight" parent="." instance=ExtResource("17_5ix47")]
+position = Vector2(1421, -203)
+
+[node name="RuinWallMiddleRight" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(1421, -145)
+
+[node name="RuinWallMiddleRight2" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(1421, -87)
+
+[node name="RuinExtBottomLeft2" parent="." instance=ExtResource("4_t0hoe")]
+position = Vector2(1421, -29)
+
+[node name="RuinExtBottomRight5" parent="." instance=ExtResource("5_n7a7r")]
+position = Vector2(1653, -29)
+
+[node name="RuinExtBottom" parent="." instance=ExtResource("21_fagvj")]
+position = Vector2(1479, -29)
+
+[node name="RuinWallMiddleLeft3" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(1653, -87)
+
+[node name="RuinWallMiddleLeft4" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(1653, -145)
+
+[node name="RuinWallTopLeft5" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(1653, -203)
+
+[node name="RuinWallTopRight2" parent="." instance=ExtResource("17_5ix47")]
+position = Vector2(1711, -203)
+
+[node name="RuinWallMiddleRight3" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(1711, -145)
+
+[node name="RuinWallMiddleRight4" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(1711, -87)
+
+[node name="RuinExtBottomRight6" parent="." instance=ExtResource("5_n7a7r")]
+position = Vector2(1943, -29)
+
+[node name="RuinExtBottomLeft3" parent="." instance=ExtResource("4_t0hoe")]
+position = Vector2(1711, -29)
+
+[node name="RuinExtBottom3" parent="." instance=ExtResource("21_fagvj")]
+position = Vector2(1769, -29)
+
+[node name="RuinWallMiddleLeft5" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(1943, -87)
+
+[node name="RuinWallMiddleLeft6" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(1943, -145)
+
+[node name="RuinWallTopLeft6" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(1943, -203)
+
+[node name="RuinSkulls2" parent="." instance=ExtResource("18_bf6pg")]
+position = Vector2(1653, -261)
+
+[node name="RuinSkulls3" parent="." instance=ExtResource("22_2rbvf")]
+position = Vector2(1943, -261)
+
+[node name="RuinSkulls4" parent="." instance=ExtResource("22_2rbvf")]
+position = Vector2(1711, -261)
+
+[node name="RuinSpikes" parent="." instance=ExtResource("22_0goau")]
+position = Vector2(1479, -87)
+
+[node name="RuinSpikes2" parent="." instance=ExtResource("22_0goau")]
+position = Vector2(1537, -87)
+
+[node name="RuinSpikes3" parent="." instance=ExtResource("22_0goau")]
+position = Vector2(1595, -87)
+
+[node name="RuinExtBottom5" parent="." instance=ExtResource("21_fagvj")]
+position = Vector2(1595, -29)
+
+[node name="RuinExtBottom6" parent="." instance=ExtResource("21_fagvj")]
+position = Vector2(1885, -29)
+
+[node name="RuinSpikes4" parent="." instance=ExtResource("22_0goau")]
+position = Vector2(1769, -87)
+
+[node name="RuinSpikes5" parent="." instance=ExtResource("22_0goau")]
+position = Vector2(1827, -87)
+
+[node name="RuinSpikes6" parent="." instance=ExtResource("22_0goau")]
+position = Vector2(1885, -87)
+
+[node name="RuinWallTop17" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(1537, -29)
+
+[node name="RuinWallTop18" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(1827, -29)
+
+[node name="RuinWallBottomRight" parent="." instance=ExtResource("24_osggs")]
+position = Vector2(1131, -261)
+
+[node name="RuinWallMiddleRight5" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(1131, -319)
+
+[node name="RuinWallMiddleRight6" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(1131, -377)
+
+[node name="RuinWallMiddleRight7" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(1131, -435)
+
+[node name="RuinChain2" parent="." instance=ExtResource("26_w0fgw")]
+position = Vector2(1537, -377)
+
+[node name="RuinChain3" parent="." instance=ExtResource("26_w0fgw")]
+position = Vector2(1537, -319)
+
+[node name="RuinChain4" parent="." instance=ExtResource("27_pgdki")]
+position = Vector2(1537, -261)
+
+[node name="RuinChain6" parent="." instance=ExtResource("26_w0fgw")]
+position = Vector2(1827, -377)
+
+[node name="RuinChain7" parent="." instance=ExtResource("26_w0fgw")]
+position = Vector2(1827, -319)
+
+[node name="RuinChain8" parent="." instance=ExtResource("27_pgdki")]
+position = Vector2(1827, -261)
+
+[node name="RuinChain10" parent="." instance=ExtResource("26_w0fgw")]
+position = Vector2(551, -261)
+
+[node name="RuinWallMiddleRight8" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(29, -435)
+
+[node name="RuinWallMiddleRight9" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(29, -493)
+
+[node name="RuinWallMiddleRight10" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(29, -551)
+
+[node name="RuinWallMiddleRight11" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(29, -609)
+
+[node name="RuinExtTopLeft2" parent="." instance=ExtResource("25_fsapu")]
+position = Vector2(29, -667)
+
+[node name="RuinWallBottom19" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(87, -667)
+
+[node name="RuinWallBottom20" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(145, -667)
+
+[node name="RuinWallBottom21" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(203, -667)
+
+[node name="RuinWallBottom22" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(261, -667)
+
+[node name="RuinWallBottom23" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(319, -667)
+
+[node name="RuinWallBottom24" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(377, -667)
+
+[node name="RuinWallBottom25" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(435, -667)
+
+[node name="RuinWallBottom26" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(493, -667)
+
+[node name="RuinWallBottom27" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(551, -667)
+
+[node name="RuinWallBottom28" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(609, -667)
+
+[node name="RuinWallBottom29" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(667, -667)
+
+[node name="RuinWallBottom30" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(725, -667)
+
+[node name="RuinWallBottom31" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(783, -667)
+
+[node name="RuinWallBottom32" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(841, -667)
+
+[node name="RuinWallBottom33" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(899, -667)
+
+[node name="RuinWallBottom34" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(957, -667)
+
+[node name="RuinWallBottom35" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1015, -667)
+
+[node name="RuinWallBottom36" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1073, -667)
+
+[node name="RuinWallBottom37" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1131, -667)
+
+[node name="RuinWallBottom38" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1189, -667)
+
+[node name="RuinWallBottom39" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1247, -667)
+
+[node name="RuinWallBottom40" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1305, -667)
+
+[node name="RuinWallBottom41" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1363, -667)
+
+[node name="RuinWallBottom42" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1421, -667)
+
+[node name="RuinWallBottom43" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1479, -667)
+
+[node name="RuinWallBottom44" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1537, -667)
+
+[node name="RuinWallBottom45" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1595, -667)
+
+[node name="RuinWallBottom46" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1653, -667)
+
+[node name="RuinWallBottom47" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1711, -667)
+
+[node name="RuinWallBottom48" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1769, -667)
+
+[node name="RuinWallBottom49" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1827, -667)
+
+[node name="RuinWallTopLeft7" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(1073, -493)
+
+[node name="RuinWallTopRight3" parent="." instance=ExtResource("17_5ix47")]
+position = Vector2(1131, -493)
+
+[node name="RuinWallTop19" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(1537, -435)
+
+[node name="RuinWallTopLeft8" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(1479, -435)
+
+[node name="RuinWallTopRight4" parent="." instance=ExtResource("17_5ix47")]
+position = Vector2(1595, -435)
+
+[node name="RuinWallTopRight5" parent="." instance=ExtResource("17_5ix47")]
+position = Vector2(1885, -435)
+
+[node name="RuinWallTopLeft9" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(1769, -435)
+
+[node name="RuinWallTop20" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(1827, -435)
+
+[node name="RuinWindow" parent="." instance=ExtResource("28_s1xtm")]
+position = Vector2(1682, -579)
+
+[node name="RuinWindow2" parent="." instance=ExtResource("28_s1xtm")]
+position = Vector2(1392, -579)
+
+[node name="RuinWallTop21" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2001, -203)
+
+[node name="RuinWallTop22" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2059, -203)
+
+[node name="RuinWallTop23" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2117, -203)
+
+[node name="RuinWallTop24" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2175, -203)
+
+[node name="LogBurnable" parent="." instance=ExtResource("30_hdwrp")]
+position = Vector2(2419, -399)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("31_rsvpj")]
+position = Vector2(549, -90)
+
+[node name="RuinExtBottomRight7" parent="." instance=ExtResource("5_n7a7r")]
+position = Vector2(2233, -203)
+
+[node name="RuinWallMiddleLeft7" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(2233, -261)
+
+[node name="RuinWallTopLeft10" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(2233, -319)
+
+[node name="RuinWallMiddleRight12" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2291, -261)
+
+[node name="RuinWallTopRight6" parent="." instance=ExtResource("17_5ix47")]
+position = Vector2(2291, -319)
+
+[node name="RuinWallMiddleRight13" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2291, -203)
+
+[node name="RuinWallMiddleRight14" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2291, -145)
+
+[node name="RuinWallTopLeft14" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(2523, -319)
+
+[node name="RuinWallMiddleLeft8" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(2523, -261)
+
+[node name="RuinWallBottomLeft2" parent="." instance=ExtResource("16_5ue0v")]
+position = Vector2(2523, -203)
+
+[node name="RuinWallBottom5" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2581, -203)
+
+[node name="RuinWallTop25" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2581, -319)
+
+[node name="RuinWallTop26" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2639, -319)
+
+[node name="RuinExtBottomRight8" parent="." instance=ExtResource("5_n7a7r")]
+position = Vector2(2697, -319)
+
+[node name="RuinWallMiddleRight15" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2291, -87)
+
+[node name="RuinExtBottomLeft4" parent="." instance=ExtResource("4_t0hoe")]
+position = Vector2(2291, -29)
+
+[node name="RuinWallTop27" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2349, -29)
+
+[node name="RuinWallTop28" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2407, -29)
+
+[node name="RuinWallTop29" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2465, -29)
+
+[node name="RuinWallTop30" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2523, -29)
+
+[node name="RuinSpikes7" parent="." instance=ExtResource("22_0goau")]
+position = Vector2(2407, -87)
+
+[node name="RuinWallTopLeft11" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(2059, -608)
+
+[node name="RuinWallTop32" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2117, -608)
+
+[node name="RuinWallTopRight7" parent="." instance=ExtResource("17_5ix47")]
+position = Vector2(2175, -608)
+
+[node name="RuinWindow3" parent="." instance=ExtResource("28_s1xtm")]
+position = Vector2(1972, -579)
+
+[node name="RuinWallBottomRight2" parent="." instance=ExtResource("24_osggs")]
+position = Vector2(1885, -667)
+
+[node name="RuinWallMiddleRight16" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(1885, -725)
+
+[node name="RuinWallMiddleLeft9" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(2697, -377)
+
+[node name="RuinWallMiddleLeft10" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(2697, -435)
+
+[node name="RuinWallMiddleLeft11" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(2697, -493)
+
+[node name="RuinWallMiddleLeft12" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(2697, -551)
+
+[node name="RuinWallMiddleLeft13" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(2697, -609)
+
+[node name="RuinWallMiddleLeft14" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(2697, -667)
+
+[node name="RuinWallMiddleLeft15" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(2697, -725)
+
+[node name="RuinWallMiddleLeft16" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(2697, -783)
+
+[node name="RuinWallTop34" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2407, -724)
+
+[node name="RuinWallTopLeft12" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(2349, -724)
+
+[node name="RuinWallTopRight9" parent="." instance=ExtResource("17_5ix47")]
+position = Vector2(2465, -724)
+
+[node name="RuinWallTop35" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2581, -29)
+
+[node name="RuinWallTop36" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2639, -29)
+
+[node name="RuinWallTop37" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2697, -29)
+
+[node name="RuinWallBottom6" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2639, -203)
+
+[node name="RuinWallBottom7" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2697, -203)
+
+[node name="RuinWallBottom8" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2755, -203)
+
+[node name="RuinWallTop38" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2755, -29)
+
+[node name="RuinWallTop39" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2813, -29)
+
+[node name="RuinWallBottom9" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2813, -203)
+
+[node name="RuinSpikes8" parent="." instance=ExtResource("22_0goau")]
+position = Vector2(2697, -87)
+
+[node name="RuinSpikes9" parent="." instance=ExtResource("22_0goau")]
+position = Vector2(2813, -145)
+rotation = 3.14159
+
+[node name="RuinWallTop40" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2871, -29)
+
+[node name="RuinWallTop41" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2929, -29)
+
+[node name="RuinExtBottomRight9" parent="." instance=ExtResource("5_n7a7r")]
+position = Vector2(2987, -29)
+
+[node name="RuinWallTopLeft13" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(2987, -87)
+
+[node name="RuinWallTop42" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3045, -87)
+
+[node name="RuinWallTop43" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3103, -87)
+
+[node name="RuinWallTopRight10" parent="." instance=ExtResource("17_5ix47")]
+position = Vector2(3161, -87)
+
+[node name="RuinExtBottomLeft5" parent="." instance=ExtResource("4_t0hoe")]
+position = Vector2(3161, -29)
+
+[node name="RuinWallTop44" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3219, -29)
+
+[node name="RuinWallTop45" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3277, -29)
+
+[node name="RuinWallTop46" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3335, -29)
+
+[node name="RuinWallTop47" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3393, -29)
+
+[node name="RuinWallTop48" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3451, -29)
+
+[node name="RuinWallTop49" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3509, -29)
+
+[node name="RuinExtBottomRight10" parent="." instance=ExtResource("5_n7a7r")]
+position = Vector2(3567, -29)
+
+[node name="RuinExtMiddleRight" parent="." instance=ExtResource("32_b30u8")]
+position = Vector2(3567, -87)
+
+[node name="RuinExtMiddleRight2" parent="." instance=ExtResource("32_b30u8")]
+position = Vector2(3567, -145)
+
+[node name="LogBurnable2" parent="." instance=ExtResource("30_hdwrp")]
+position = Vector2(3082, -143)
+scale = Vector2(0.6, 0.6)
+
+[node name="RuinWallBottom10" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2871, -203)
+
+[node name="RuinWallBottom11" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2929, -203)
+
+[node name="RuinWallBottom12" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2987, -203)
+
+[node name="RuinWallBottom13" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3045, -203)
+
+[node name="RuinWallBottom14" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3103, -203)
+
+[node name="RuinWallBottom15" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3161, -203)
+
+[node name="RuinWallBottom16" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3219, -203)
+
+[node name="RuinWallBottom17" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3277, -203)
+
+[node name="RuinWallBottom18" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3335, -203)
+
+[node name="RuinWallBottom50" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3393, -203)
+
+[node name="RuinWallBottom51" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3451, -203)
+
+[node name="RuinWallBottom52" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3509, -203)
+
+[node name="RuinExtTopRight" parent="." instance=ExtResource("33_fh70q")]
+position = Vector2(3567, -203)
+
+[node name="Area2D" parent="." instance=ExtResource("34_tlda0")]
+position = Vector2(2776, -1319)
+
+[node name="Area2D2" parent="." instance=ExtResource("35_0gn53")]
+position = Vector2(3486, -113)
+
+[node name="KeyFragment" parent="." instance=ExtResource("36_j7ipk")]
+position = Vector2(2629, -378)
+
+[node name="RuinBackground2x10" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(2262, -695)
+
+[node name="RuinWallTop50" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2755, -841)
+
+[node name="RuinWallTopLeft15" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(2697, -841)
+
+[node name="RuinWallTopRight11" parent="." instance=ExtResource("17_5ix47")]
+position = Vector2(2813, -841)
+
+[node name="RuinWallTop31" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3045, -1015)
+
+[node name="RuinWallMiddleRight17" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2813, -783)
+
+[node name="RuinExtBottomLeft6" parent="." instance=ExtResource("4_t0hoe")]
+position = Vector2(2813, -725)
+
+[node name="RuinWallTop33" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2871, -725)
+
+[node name="RuinBackground2x11" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(2900, -928)
+
+[node name="RuinBackground1x7" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(2987, -1015)
+
+[node name="RuinBackground2x12" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(3132, -1101)
+
+[node name="RuinBackground2x13" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(3248, -1101)
+
+[node name="RuinWallTop51" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3335, -1072)
+
+[node name="RuinWallTop52" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3103, -1188)
+
+[node name="RuinWallTop53" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2697, -1247)
+
+[node name="RuinWallTopLeft16" parent="." instance=ExtResource("6_kms60")]
+position = Vector2(2639, -1247)
+
+[node name="RuinWallTopRight12" parent="." instance=ExtResource("17_5ix47")]
+position = Vector2(2755, -1247)
+
+[node name="RuinBackground2x14" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(2900, -1102)
+
+[node name="RuinBackground1x8" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(2813, -1189)
+
+[node name="RuinWallTop54" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2929, -725)
+
+[node name="RuinWallTop55" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(2987, -725)
+
+[node name="RuinWallTop56" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3045, -725)
+
+[node name="RuinWallTop57" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3103, -725)
+
+[node name="RuinWallTop58" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3161, -725)
+
+[node name="RuinWallTop59" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3219, -725)
+
+[node name="RuinWallTop60" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3277, -725)
+
+[node name="RuinWallTop61" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3335, -725)
+
+[node name="RuinWallTop62" parent="." instance=ExtResource("2_uw4e6")]
+position = Vector2(3393, -725)
+
+[node name="RuinExtBottomRight11" parent="." instance=ExtResource("5_n7a7r")]
+position = Vector2(3451, -725)
+
+[node name="RuinWallMiddleLeft17" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -783)
+
+[node name="RuinWallMiddleLeft18" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -841)
+
+[node name="RuinWallMiddleLeft19" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -899)
+
+[node name="RuinWallMiddleLeft20" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -957)
+
+[node name="RuinWallMiddleLeft21" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -1015)
+
+[node name="RuinWallMiddleLeft22" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -1073)
+
+[node name="RuinWallMiddleLeft23" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -1131)
+
+[node name="RuinWallMiddleLeft24" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -1189)
+
+[node name="RuinWallMiddleLeft25" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -1247)
+
+[node name="RuinWallMiddleLeft26" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -1305)
+
+[node name="RuinWallMiddleLeft27" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -1363)
+
+[node name="RuinWallMiddleLeft28" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -1421)
+
+[node name="RuinWallMiddleLeft29" parent="." instance=ExtResource("18_pq2jg")]
+position = Vector2(3451, -1479)
+
+[node name="RuinExtTopRight2" parent="." instance=ExtResource("33_fh70q")]
+position = Vector2(3451, -1537)
+
+[node name="RuinWallBottom53" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3393, -1537)
+
+[node name="RuinWallBottom54" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2523, -1537)
+
+[node name="RuinWallBottom55" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2581, -1537)
+
+[node name="RuinWallBottom56" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2639, -1537)
+
+[node name="RuinWallBottom57" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2697, -1537)
+
+[node name="RuinWallBottom58" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2755, -1537)
+
+[node name="RuinWallBottom59" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2813, -1537)
+
+[node name="RuinWallBottom60" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2871, -1537)
+
+[node name="RuinWallBottom61" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2929, -1537)
+
+[node name="RuinWallBottom62" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2987, -1537)
+
+[node name="RuinWallBottom63" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3045, -1537)
+
+[node name="RuinWallBottom64" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3103, -1537)
+
+[node name="RuinWallBottom65" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3161, -1537)
+
+[node name="RuinWallBottom66" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3219, -1537)
+
+[node name="RuinWallBottom67" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3277, -1537)
+
+[node name="RuinWallBottom68" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(3335, -1537)
+
+[node name="RuinExtTopLeft" parent="." instance=ExtResource("25_fsapu")]
+position = Vector2(2465, -1537)
+
+[node name="RuinWallMiddleRight18" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(1885, -957)
+
+[node name="RuinWallMiddleRight19" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(1885, -899)
+
+[node name="RuinWallMiddleRight20" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(1885, -841)
+
+[node name="RuinWallMiddleRight21" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(1885, -783)
+
+[node name="RuinExtTopLeft3" parent="." instance=ExtResource("25_fsapu")]
+position = Vector2(1885, -1015)
+
+[node name="RuinWallBottom69" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(1943, -1015)
+
+[node name="RuinWallBottom70" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2001, -1015)
+
+[node name="RuinWallBottom71" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2059, -1015)
+
+[node name="RuinWallBottom72" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2117, -1015)
+
+[node name="RuinWallBottom73" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2175, -1015)
+
+[node name="RuinWallBottom74" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2233, -1015)
+
+[node name="RuinWallBottom75" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2291, -1015)
+
+[node name="RuinWallBottom76" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2349, -1015)
+
+[node name="RuinWallBottom77" parent="." instance=ExtResource("7_i5j16")]
+position = Vector2(2407, -1015)
+
+[node name="RuinWallMiddleRight22" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2465, -1247)
+
+[node name="RuinWallMiddleRight23" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2465, -1479)
+
+[node name="RuinWallMiddleRight24" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2465, -1421)
+
+[node name="RuinWallMiddleRight25" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2465, -1363)
+
+[node name="RuinWallMiddleRight26" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2465, -1305)
+
+[node name="RuinWallMiddleRight27" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2465, -1073)
+
+[node name="RuinWallMiddleRight28" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2465, -1189)
+
+[node name="RuinWallMiddleRight29" parent="." instance=ExtResource("20_ylv3m")]
+position = Vector2(2465, -1131)
+
+[node name="RuinWallBottomRight3" parent="." instance=ExtResource("24_osggs")]
+position = Vector2(2465, -1015)
+
+[node name="RuinBackground2x15" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(2610, -928)
+
+[node name="RuinBackground1x9" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(2523, -957)
+
+[node name="RuinBackground2x16" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(116, -348)
+
+[node name="RuinBackground2x17" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(232, -348)
+
+[node name="RuinBackground2x18" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(116, -464)
+
+[node name="RuinBackground2x19" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(232, -464)
+
+[node name="RuinBackground2x20" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(232, -580)
+
+[node name="RuinBackground2x21" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(348, -116)
+
+[node name="RuinBackground2x22" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(464, -116)
+
+[node name="RuinBackground2x23" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(348, -232)
+
+[node name="RuinBackground2x25" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(348, -348)
+
+[node name="RuinBackground2x26" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(464, -348)
+
+[node name="RuinBackground2x27" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(348, -464)
+
+[node name="RuinBackground2x28" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(464, -464)
+
+[node name="RuinBackground2x29" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(464, -580)
+
+[node name="player" parent="." instance=ExtResource("1_l2gwo")]
+position = Vector2(231, -96)
+
+[node name="RuinBackground2x24" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(348, -580)
+
+[node name="GiantBackground" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(1624, -928)
+
+[node name="GiantBackground2" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(1160, -928)
+
+[node name="GiantBackground3" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(696, -928)
+
+[node name="GiantBackground4" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(232, -928)
+
+[node name="GiantBackground5" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(2204, -1276)
+
+[node name="GiantBackground6" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(1740, -1276)
+
+[node name="GiantBackground7" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(2204, -1740)
+
+[node name="GiantBackground8" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(1740, -1740)
+
+[node name="GiantBackground9" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(2668, -1798)
+
+[node name="GiantBackground10" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(3132, -1798)
+
+[node name="GiantBackground11" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(1289, -1356)
+
+[node name="GiantBackground12" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(3596, -1798)
+
+[node name="GiantBackground13" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(4054, -1798)
+
+[node name="GiantBackground14" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(3712, -1334)
+
+[node name="GiantBackground15" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(3712, -872)
+
+[node name="GiantBackground16" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(3712, -464)
+
+[node name="GiantBackground17" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(3828, -232)
+
+[node name="GiantBackground18" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(3248, -464)
+
+[node name="GiantBackground19" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(2958, -464)
+
+[node name="RuinBackground1x10" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(2581, -261)
+
+[node name="RuinBackground1x11" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(2639, -261)
+
+[node name="RuinBackground1x12" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(2697, -261)
+
+[node name="RuinBackground1x13" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(2755, -725)
+
+[node name="RuinBackground1x14" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(2755, -783)
+
+[node name="RuinBackground1x15" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(3045, -29)
+
+[node name="RuinBackground1x16" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(3103, -29)
+
+[node name="RuinBackground2x30" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(2030, -116)
+
+[node name="RuinBackground2x31" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(2146, -116)
+
+[node name="RuinBackground2x32" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(2204, -116)
+
+[node name="RuinBackground2x33" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(2030, -58)
+
+[node name="RuinBackground2x34" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(2146, -58)
+
+[node name="RuinBackground1x17" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(2233, -29)
+
+[node name="RuinBackground2x35" parent="." instance=ExtResource("4_8sdq7")]
+position = Vector2(1334, -58)
+
+[node name="RuinBackground1x18" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(1363, -145)
+
+[node name="RuinBackground1x19" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(1247, -29)
+
+[node name="RuinBackground1x20" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(1189, -29)
+
+[node name="RuinBackground1x21" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(1131, -29)
+
+[node name="RuinBackground1x22" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(1073, -29)
+
+[node name="RuinBackground1x23" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(1015, -29)
+
+[node name="RuinBackground1x24" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(957, -29)
+
+[node name="RuinBackground1x25" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(841, -29)
+
+[node name="RuinBackground1x26" parent="." instance=ExtResource("14_k6br5")]
+position = Vector2(899, -29)
+
+[node name="GiantBackground20" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(4138, -1353)
+
+[node name="GiantBackground21" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(4144, -913)
+
+[node name="GiantBackground22" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(4146, -481)
+
+[node name="GiantBackground23" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(4264, -229)
+
+[node name="GiantBackground24" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(1363, -1728)
+
+[node name="GiantBackground25" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(1525, -2052)
+
+[node name="GiantBackground26" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(1955, -2177)
+
+[node name="GiantBackground27" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(2423, -2188)
+
+[node name="GiantBackground28" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(2861, -2177)
+
+[node name="GiantBackground29" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(3318, -2173)
+
+[node name="GiantBackground30" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(3707, -2140)
+
+[node name="GiantBackground31" parent="." instance=ExtResource("37_v1mmn")]
+position = Vector2(4134, -2120)
