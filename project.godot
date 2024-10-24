@@ -31,9 +31,15 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Level_2_interact": "res://Timelines/Level_2_interact.dtl",
+"bug1_npc": "res://Timelines/bug1_npc.dtl",
+"bug1_retalk": "res://Timelines/bug1_retalk.dtl",
+"bug2_npc": "res://Timelines/bug2_npc.dtl",
+"bug2_retalk": "res://Timelines/bug2_retalk.dtl",
 "cant_enter": "res://Timelines/cant_enter.dtl",
 "level_1_interact": "res://Timelines/level_1_interact.dtl",
-"test_timeline": "res://Timelines/test_timeline.dtl"
+"test_timeline": "res://Timelines/test_timeline.dtl",
+"wizard_npc": "res://Timelines/wizard_npc.dtl",
+"wizard_retalk": "res://Timelines/wizard_retalk.dtl"
 }
 layout/style_list=["res://Timelines/style.tres"]
 layout/default_style="res://Timelines/style.tres"
