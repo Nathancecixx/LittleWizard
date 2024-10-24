@@ -36,5 +36,5 @@ func update_title():
 	#print(formatted_string)
 	reputation_label.text = formatted_string
 
-func _process(delta):
+func _process(_delta):
 	update_title()

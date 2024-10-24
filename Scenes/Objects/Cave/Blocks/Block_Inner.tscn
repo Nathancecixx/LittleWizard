@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c62ngykqavyls"]
+
+[ext_resource type="Texture2D" uid="uid://c4i7ullbbsgrn" path="res://Resources/Tilesets/cave_tileset.png" id="1_viv5w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ls6e3"]
+atlas = ExtResource("1_viv5w")
+region = Rect2(48, 16, 16, 16)
+
+[node name="BlockInner" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_ls6e3")
