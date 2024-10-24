@@ -30,6 +30,8 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Level_2_interact": "res://Timelines/Level_2_interact.dtl",
+"cant_enter": "res://Timelines/cant_enter.dtl",
 "level_1_interact": "res://Timelines/level_1_interact.dtl",
 "test_timeline": "res://Timelines/test_timeline.dtl"
 }
@@ -114,5 +116,6 @@ interact={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

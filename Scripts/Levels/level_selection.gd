@@ -4,6 +4,10 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	print()
+	print(Global.level_1_complete)
+	print(Global.level_2_complete)
+	print()
 	player.Set_Clamp(2560, 10000)
 	$Level_1_Door_Interaction.timeline = "cant_enter"
 	$Level_1_Door_Interaction.remove_timeline_signal = "null"
