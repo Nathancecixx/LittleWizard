@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://drl8fdnyhb35k"]
+
+[ext_resource type="Script" path="res://Scripts/Animations/IntroManager.gd" id="1_noer4"]
+
+[node name="IntroManager" type="Node2D"]
+script = ExtResource("1_noer4")

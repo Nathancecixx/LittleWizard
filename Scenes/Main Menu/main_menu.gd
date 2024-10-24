@@ -2,11 +2,12 @@ extends Control
 
 var isBgOn = true
 func _on_play_pressed() -> void:
+
 	$AudioStreamPlayer2D.stop()
 	isBgOn = false
 	$Menu_Click_SFX.play()
 	await get_tree().create_timer(1, false, false, true).timeout
-	get_tree().change_scene_to_file("res://Scenes/Menus/Path_Selection.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Animations/IntroManager.tscn")
 
 func _on_options_pressed() -> void:
 	$AudioStreamPlayer2D.stop()
