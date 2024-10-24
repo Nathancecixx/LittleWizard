@@ -426,7 +426,7 @@ tracks/17/keys = {
 
 [sub_resource type="Animation" id="Animation_gnkqi"]
 resource_name = "Scene2"
-length = 15.0
+length = 13.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
