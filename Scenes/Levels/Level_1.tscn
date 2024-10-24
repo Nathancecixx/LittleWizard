@@ -440,140 +440,140 @@ position = Vector2(5859, -103)
 [node name="BushLarge3" parent="Decorations" instance=ExtResource("18_y45kr")]
 position = Vector2(1307, -100)
 
-[node name="GrassUnder1" parent="." instance=ExtResource("19_53wyc")]
+[node name="GrassUnder1" parent="Decorations" instance=ExtResource("19_53wyc")]
 position = Vector2(310, -366)
 
-[node name="GrassUnder2" parent="." instance=ExtResource("20_n71b6")]
+[node name="GrassUnder2" parent="Decorations" instance=ExtResource("20_n71b6")]
 position = Vector2(530, -467)
 
-[node name="GrassUnder3" parent="." instance=ExtResource("21_r5vy0")]
+[node name="GrassUnder3" parent="Decorations" instance=ExtResource("21_r5vy0")]
 position = Vector2(788, -460)
 
-[node name="GrassUnder4" parent="." instance=ExtResource("22_gtnup")]
+[node name="GrassUnder4" parent="Decorations" instance=ExtResource("22_gtnup")]
 position = Vector2(846, -491)
 
-[node name="GrassUnder5" parent="." instance=ExtResource("23_31jrn")]
+[node name="GrassUnder5" parent="Decorations" instance=ExtResource("23_31jrn")]
 position = Vector2(423, -159)
 
-[node name="GrassUnder6" parent="." instance=ExtResource("23_31jrn")]
+[node name="GrassUnder6" parent="Decorations" instance=ExtResource("23_31jrn")]
 position = Vector2(530, -270)
 
-[node name="GrassUnder7" parent="." instance=ExtResource("22_gtnup")]
+[node name="GrassUnder7" parent="Decorations" instance=ExtResource("22_gtnup")]
 position = Vector2(582, -263)
 
-[node name="GrassUnder8" parent="." instance=ExtResource("19_53wyc")]
+[node name="GrassUnder8" parent="Decorations" instance=ExtResource("19_53wyc")]
 position = Vector2(1344, -315)
 
-[node name="GrassUnder9" parent="." instance=ExtResource("20_n71b6")]
+[node name="GrassUnder9" parent="Decorations" instance=ExtResource("20_n71b6")]
 position = Vector2(1510, -467)
 
-[node name="GrassUnder10" parent="." instance=ExtResource("21_r5vy0")]
+[node name="GrassUnder10" parent="Decorations" instance=ExtResource("21_r5vy0")]
 position = Vector2(1560, -456)
 
-[node name="GrassUnder11" parent="." instance=ExtResource("22_gtnup")]
+[node name="GrassUnder11" parent="Decorations" instance=ExtResource("22_gtnup")]
 position = Vector2(1119, -147)
 
-[node name="GrassUnder12" parent="." instance=ExtResource("22_gtnup")]
+[node name="GrassUnder12" parent="Decorations" instance=ExtResource("22_gtnup")]
 position = Vector2(2242, -279)
 
-[node name="GrassUnder13" parent="." instance=ExtResource("20_n71b6")]
+[node name="GrassUnder13" parent="Decorations" instance=ExtResource("20_n71b6")]
 position = Vector2(2601, -231)
 
-[node name="GrassUnder14" parent="." instance=ExtResource("19_53wyc")]
+[node name="GrassUnder14" parent="Decorations" instance=ExtResource("19_53wyc")]
 position = Vector2(2667, -243)
 
-[node name="GrassUnder15" parent="." instance=ExtResource("20_n71b6")]
+[node name="GrassUnder15" parent="Decorations" instance=ExtResource("20_n71b6")]
 position = Vector2(2926, -481)
 
-[node name="GrassUnder16" parent="." instance=ExtResource("22_gtnup")]
+[node name="GrassUnder16" parent="Decorations" instance=ExtResource("22_gtnup")]
 position = Vector2(2689, -624)
 
-[node name="GrassUnder17" parent="." instance=ExtResource("23_31jrn")]
+[node name="GrassUnder17" parent="Decorations" instance=ExtResource("23_31jrn")]
 position = Vector2(2872, -740)
 
-[node name="GrassUnder18" parent="." instance=ExtResource("22_gtnup")]
+[node name="GrassUnder18" parent="Decorations" instance=ExtResource("22_gtnup")]
 position = Vector2(2935, -734)
 
-[node name="GrassUnder19" parent="." instance=ExtResource("20_n71b6")]
+[node name="GrassUnder19" parent="Decorations" instance=ExtResource("20_n71b6")]
 position = Vector2(3110, -1052)
 
-[node name="GrassUnder20" parent="." instance=ExtResource("21_r5vy0")]
+[node name="GrassUnder20" parent="Decorations" instance=ExtResource("21_r5vy0")]
 position = Vector2(3020, -834)
 
-[node name="GrassUnder21" parent="." instance=ExtResource("19_53wyc")]
+[node name="GrassUnder21" parent="Decorations" instance=ExtResource("19_53wyc")]
 position = Vector2(3085, -867)
 
-[node name="GrassUnder22" parent="." instance=ExtResource("20_n71b6")]
+[node name="GrassUnder22" parent="Decorations" instance=ExtResource("20_n71b6")]
 position = Vector2(2817, -973)
 
-[node name="GrassUnder23" parent="." instance=ExtResource("19_53wyc")]
+[node name="GrassUnder23" parent="Decorations" instance=ExtResource("19_53wyc")]
 position = Vector2(3640, -909)
 
-[node name="GrassUnder24" parent="." instance=ExtResource("23_31jrn")]
+[node name="GrassUnder24" parent="Decorations" instance=ExtResource("23_31jrn")]
 position = Vector2(2863, -993)
 
-[node name="RockLarge" parent="." instance=ExtResource("24_jnmvg")]
+[node name="RockLarge" parent="Decorations" instance=ExtResource("24_jnmvg")]
 position = Vector2(2179, -89)
 
-[node name="RockSmall" parent="." instance=ExtResource("25_dpaph")]
+[node name="RockSmall" parent="Decorations" instance=ExtResource("25_dpaph")]
 position = Vector2(2627, -319)
 
-[node name="RockLarge2" parent="." instance=ExtResource("24_jnmvg")]
+[node name="RockLarge2" parent="Decorations" instance=ExtResource("24_jnmvg")]
 position = Vector2(4650, -615)
 
-[node name="RockSmall2" parent="." instance=ExtResource("25_dpaph")]
+[node name="RockSmall2" parent="Decorations" instance=ExtResource("25_dpaph")]
 position = Vector2(4893, -1274)
 
-[node name="GrassUnder25" parent="." instance=ExtResource("23_31jrn")]
+[node name="GrassUnder25" parent="Decorations" instance=ExtResource("23_31jrn")]
 position = Vector2(4449, -1048)
 
-[node name="GrassUnder26" parent="." instance=ExtResource("20_n71b6")]
+[node name="GrassUnder26" parent="Decorations" instance=ExtResource("20_n71b6")]
 position = Vector2(4510, -1025)
 
-[node name="GrassUnder27" parent="." instance=ExtResource("21_r5vy0")]
+[node name="GrassUnder27" parent="Decorations" instance=ExtResource("21_r5vy0")]
 position = Vector2(4678, -833)
 
-[node name="RockSmall3" parent="." instance=ExtResource("25_dpaph")]
+[node name="RockSmall3" parent="Decorations" instance=ExtResource("25_dpaph")]
 position = Vector2(1298, -745)
 
-[node name="GrassUnder28" parent="." instance=ExtResource("20_n71b6")]
+[node name="GrassUnder28" parent="Decorations" instance=ExtResource("20_n71b6")]
 position = Vector2(1605, -799)
 
-[node name="GrassUnder29" parent="." instance=ExtResource("22_gtnup")]
+[node name="GrassUnder29" parent="Decorations" instance=ExtResource("22_gtnup")]
 position = Vector2(1960, -831)
 
-[node name="GrassUnder30" parent="." instance=ExtResource("23_31jrn")]
+[node name="GrassUnder30" parent="Decorations" instance=ExtResource("23_31jrn")]
 position = Vector2(2156, -574)
 
-[node name="GrassUnder31" parent="." instance=ExtResource("19_53wyc")]
+[node name="GrassUnder31" parent="Decorations" instance=ExtResource("19_53wyc")]
 position = Vector2(2239, -559)
 
-[node name="RockLarge3" parent="." instance=ExtResource("24_jnmvg")]
+[node name="RockLarge3" parent="Decorations" instance=ExtResource("24_jnmvg")]
 position = Vector2(4153, -94)
 
-[node name="GrassOver1" parent="." instance=ExtResource("26_aj5y7")]
+[node name="GrassOver1" parent="Decorations" instance=ExtResource("26_aj5y7")]
 position = Vector2(4550, -79)
 
-[node name="Bush_Small" parent="." instance=ExtResource("17_2nv8d")]
+[node name="Bush_Small" parent="Decorations" instance=ExtResource("17_2nv8d")]
 position = Vector2(5036, -92)
 
-[node name="GrassUnder32" parent="." instance=ExtResource("20_n71b6")]
+[node name="GrassUnder32" parent="Decorations" instance=ExtResource("20_n71b6")]
 position = Vector2(4260, -483)
 
-[node name="GrassUnder33" parent="." instance=ExtResource("22_gtnup")]
+[node name="GrassUnder33" parent="Decorations" instance=ExtResource("22_gtnup")]
 position = Vector2(5142, -501)
 
-[node name="GrassUnder34" parent="." instance=ExtResource("21_r5vy0")]
+[node name="GrassUnder34" parent="Decorations" instance=ExtResource("21_r5vy0")]
 position = Vector2(5839, -484)
 
-[node name="GrassUnder35" parent="." instance=ExtResource("20_n71b6")]
+[node name="GrassUnder35" parent="Decorations" instance=ExtResource("20_n71b6")]
 position = Vector2(4614, -485)
 
-[node name="GrassUnder36" parent="." instance=ExtResource("23_31jrn")]
+[node name="GrassUnder36" parent="Decorations" instance=ExtResource("23_31jrn")]
 position = Vector2(3972, -506)
 
-[node name="GrassUnder37" parent="." instance=ExtResource("22_gtnup")]
+[node name="GrassUnder37" parent="Decorations" instance=ExtResource("22_gtnup")]
 position = Vector2(4876, -502)
 
-[node name="GrassUnder38" parent="." instance=ExtResource("23_31jrn")]
+[node name="GrassUnder38" parent="Decorations" instance=ExtResource("23_31jrn")]
 position = Vector2(5422, -506)

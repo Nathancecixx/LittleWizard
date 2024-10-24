@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cbepccfer7xkg" path="res://Scenes/Objects/Platforms And Ground/Grass_Ground.tscn" id="3_mf38k"]
 [ext_resource type="Texture2D" uid="uid://c4621iwxj3xne" path="res://Resources/Forest_Tileset.png" id="4_3cbh0"]
 [ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="6_r4h28"]
-[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="7_mdg8j"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="7_mdg8j"]
 [ext_resource type="Texture2D" uid="uid://da2evg462utta" path="res://Resources/Sprites/Objects/Door.png" id="8_rr0vp"]
 [ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="9_piu7l"]
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="10_ywf5r"]
@@ -95,8 +95,8 @@ scale = Vector2(1.7963, 1.7963)
 [node name="Level_1_Door_Interaction" parent="." instance=ExtResource("9_piu7l")]
 position = Vector2(622, -104)
 
-[node name="test_dialog" parent="." instance=ExtResource("9_piu7l")]
-position = Vector2(840, -102)
+[node name="Level_2_Door_Interaction" parent="." instance=ExtResource("9_piu7l")]
+position = Vector2(1003, -96)
 
 [node name="Door2" type="Sprite2D" parent="."]
 position = Vector2(622, -172)
@@ -106,6 +106,7 @@ texture = ExtResource("8_rr0vp")
 [node name="Area2D2" parent="." instance=ExtResource("10_ywf5r")]
 position = Vector2(308, -232)
 
+<<<<<<< HEAD
 [node name="GrassOver1" parent="." instance=ExtResource("11_e3da2")]
 position = Vector2(888, -80)
 
@@ -117,3 +118,9 @@ position = Vector2(2225, -79)
 
 [node name="GrassOver4" parent="." instance=ExtResource("11_e3da2")]
 position = Vector2(248, -79)
+=======
+[node name="Door3" type="Sprite2D" parent="."]
+position = Vector2(1003, -172)
+scale = Vector2(1.81481, 1.81481)
+texture = ExtResource("8_rr0vp")
+>>>>>>> master
