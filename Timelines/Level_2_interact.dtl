@@ -1,0 +1,6 @@
+[signal arg="start_dialog"]
+Do you wish to proceed to the abandoned ruin?
+- Yes
+	[signal arg="enter_level_2"]
+- No
+[signal arg="end_dialog"]

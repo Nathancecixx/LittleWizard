@@ -6,7 +6,7 @@ var scene_change_triggered = false  # Flag to track if scene change has been tri
 func _ready() -> void:
 	match Global.portals_entered:
 		0:
-			target_scene = "res://Scenes/Levels/Level_1.tscn"
+			target_scene = "res://Scenes/Levels/Level_Selection.tscn"
 		1:
 			target_scene = "res://Scenes/Levels/Level_Selection.tscn"
 		2:

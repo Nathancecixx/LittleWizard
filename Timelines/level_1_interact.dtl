@@ -1,5 +1,5 @@
 [signal arg="start_dialog"]
-Do you wish to proceed?
+Do you wish to proceed to the enchanted forest?
 - Yes
 	[signal arg="enter_level_1"]
 - No
