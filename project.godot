@@ -26,8 +26,30 @@ Global="*res://global.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
+}
+directories/dtl_directory={
+"Level_2_interact": "res://Timelines/Level_2_interact.dtl",
+"bug1_npc": "res://Timelines/bug1_npc.dtl",
+"bug1_retalk": "res://Timelines/bug1_retalk.dtl",
+"bug2_npc": "res://Timelines/bug2_npc.dtl",
+"bug2_retalk": "res://Timelines/bug2_retalk.dtl",
+"bug3_npc": "res://bug3_npc.dtl",
+"bug3_retalk": "res://bug3_retalk.dtl",
+"cant_enter": "res://Timelines/cant_enter.dtl",
+"gate": "res://gate.dtl",
+"gate_closed": "res://gate_closed.dtl",
+"gatekeeper_done": "res://gatekeeper_done.dtl",
+"gatekeeper_finished": "res://gatekeeper_finished.dtl",
+"gatekeeper_npc": "res://gatekeeper_npc.dtl",
+"gatekeeper_opened": "res://gatekeeper_opened.dtl",
+"level_1_interact": "res://Timelines/level_1_interact.dtl",
+"level_3_interact": "res://level_3_interact.dtl",
+"test_timeline": "res://Timelines/test_timeline.dtl",
+"wizard_npc": "res://Timelines/wizard_npc.dtl",
+"wizard_retalk": "res://Timelines/wizard_retalk.dtl"
+}
 layout/style_list=[]
 layout/default_style=""
 extensions_folder="res://addons/dialogic_additions"
