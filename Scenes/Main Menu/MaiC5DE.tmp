@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://ci2tunx07nfbf"]
+[gd_scene load_steps=10 format=3 uid="uid://ci2tunx07nfbf"]
 
 [ext_resource type="Script" path="res://Scenes/Main Menu/main_menu.gd" id="1_7d1jr"]
 [ext_resource type="Texture2D" uid="uid://c0656hmte7hc1" path="res://Resources/Backgrounds/MenuBackground.png" id="2_7kese"]
 [ext_resource type="AudioStream" uid="uid://iedju3ep3okg" path="res://Resources/AudioFiles/TinyWizGame.mp3" id="3_naax7"]
 [ext_resource type="AudioStream" uid="uid://birexq1kf5iyg" path="res://Resources/AudioFiles/click.wav" id="4_ggcut"]
-[ext_resource type="Script" path="res://Scripts/Menus/AudioSlider.gd" id="5_pbyre"]
 
 [sub_resource type="SystemFont" id="SystemFont_jvhe2"]
 font_names = PackedStringArray("Impact")
@@ -1919,29 +1918,25 @@ volume_db = 8.914
 [node name="VolumeSlider" type="Control" parent="."]
 layout_mode = 2
 anchors_preset = 0
-offset_left = 1000.0
-offset_top = 660.0
-offset_right = 1040.0
-offset_bottom = 700.0
+offset_left = 25.0
+offset_top = 100.0
+offset_right = 65.0009
+offset_bottom = 140.0
 
 [node name="Label" type="Label" parent="VolumeSlider"]
 layout_mode = 2
-offset_top = -70.0
+offset_top = -89.0
 offset_right = 120.0
-offset_bottom = -47.0
+offset_bottom = -66.0
 text = "Volume"
 label_settings = SubResource("LabelSettings_jlu5s")
 horizontal_alignment = 1
-vertical_alignment = 2
 
-[node name="Slider" type="HSlider" parent="VolumeSlider"]
+[node name="HSlider" type="HSlider" parent="VolumeSlider"]
 layout_mode = 2
 offset_top = -41.0
 offset_right = 120.0
 offset_bottom = -25.0
-min_value = -80.0
-max_value = 0.0
-script = ExtResource("5_pbyre")
 
 [connection signal="pressed" from="MarginContainer2/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer2/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -1,6 +1,7 @@
 extends Control
 
 var isBgOn = true
+
 func _on_play_pressed() -> void:
 
 	$AudioStreamPlayer2D.stop()

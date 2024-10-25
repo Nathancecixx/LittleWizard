@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cy4oehvekuyse"]
+[gd_scene load_steps=39 format=3 uid="uid://cy4oehvekuyse"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/level_3.gd" id="1_ywxet"]
 [ext_resource type="PackedScene" uid="uid://jbiekkpdku2k" path="res://Scenes/Objects/Cave/Blocks/Background/Back_Back.tscn" id="2_1jjcy"]
@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dkdt7laxsgj5u" path="res://Scenes/Objects/Ruins/Ruin_Spikes.tscn" id="12_54lex"]
 [ext_resource type="PackedScene" uid="uid://c1800wig78vko" path="res://Scenes/Objects/Cave/Plants/Plant_Down_7.tscn" id="12_xloa3"]
 [ext_resource type="PackedScene" uid="uid://dwtlpn7qto3an" path="res://Scenes/Objects/Cave/Plants/Plant_Down_2.tscn" id="13_8dneg"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="13_tpoui"]
+[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="13_tpoui"]
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="14_cvfp7"]
 [ext_resource type="PackedScene" uid="uid://ddxo2v4e3t121" path="res://Scenes/Objects/Cave/Plants/Plant_Down_6.tscn" id="14_ha3yw"]
 [ext_resource type="PackedScene" uid="uid://7wgueynbp7pc" path="res://Scenes/Objects/Cave/Plants/Plant_Up_1.tscn" id="15_pej0w"]
@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="28_f1f8j"]
 [ext_resource type="Texture2D" uid="uid://ubu3bskucnw3" path="res://Resources/Sprites/NPCs/NPC_Bug_Idle_Sheet.png" id="29_nx2fc"]
 [ext_resource type="Script" path="res://Scripts/npc_play_idle.gd" id="30_splf5"]
+[ext_resource type="AudioStream" uid="uid://bnkmgtqw1oaff" path="res://Resources/AudioFiles/Animations/Soft_Cave.mp3" id="35_5r0x7"]
 
 [sub_resource type="Animation" id="Animation_fvy3n"]
 length = 0.001
@@ -3203,3 +3204,10 @@ position = Vector2(4470, -1078)
 
 [node name="player" parent="." instance=ExtResource("4_p8n4a")]
 position = Vector2(96, -96)
+
+[node name="Audio" type="Node2D" parent="player"]
+position = Vector2(-96, 96)
+
+[node name="Ambient" type="AudioStreamPlayer2D" parent="player/Audio"]
+stream = ExtResource("35_5r0x7")
+autoplay = true
