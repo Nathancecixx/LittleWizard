@@ -1,7 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://gc50v3b5j1o4"]
+[gd_scene load_steps=9 format=3 uid="uid://gc50v3b5j1o4"]
 
-[ext_resource type="Texture2D" uid="uid://yov0lv2obu0" path="res://Resources/Sprites/Objects/Blue_Portal_Placeholder.png" id="1_nrdvu"]
 [ext_resource type="Script" path="res://Scripts/Blue_Portal.gd" id="1_sediw"]
+[ext_resource type="Texture2D" uid="uid://dnfa5tq3h8bct" path="res://Resources/Sprites/Objects/Blue_Portal.png" id="2_sbegs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojwdx"]
+atlas = ExtResource("2_sbegs")
+region = Rect2(0, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yj5sc"]
+atlas = ExtResource("2_sbegs")
+region = Rect2(64, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uxmc"]
+atlas = ExtResource("2_sbegs")
+region = Rect2(128, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3yjm"]
+atlas = ExtResource("2_sbegs")
+region = Rect2(192, 0, 64, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rsykh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojwdx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yj5sc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4uxmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3yjm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hbij3"]
 radius = 33.0
@@ -10,10 +46,11 @@ height = 102.0
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_sediw")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-77, -11)
 scale = Vector2(0.615, 0.865216)
-texture = ExtResource("1_nrdvu")
+sprite_frames = SubResource("SpriteFrames_rsykh")
+frame_progress = 0.795898
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-77, -11)
