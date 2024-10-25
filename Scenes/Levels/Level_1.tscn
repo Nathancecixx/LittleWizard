@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dhqjewca2bevq"]
+[gd_scene load_steps=34 format=3 uid="uid://dhqjewca2bevq"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/level_1.gd" id="1_6belh"]
 [ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="2_ki128"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c5kdkn67gd2w6" path="res://Scenes/Objects/burnable.tscn" id="13_6wsn0"]
 [ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="14_ek438"]
 [ext_resource type="Texture2D" uid="uid://6o7ekobii1gc" path="res://Resources/Backgrounds/background_0.png" id="15_j6yns"]
+[ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="16_fs8wg"]
 [ext_resource type="Texture2D" uid="uid://c4621iwxj3xne" path="res://Resources/Forest_Tileset.png" id="16_h3vgo"]
 [ext_resource type="PackedScene" uid="uid://cqdglkm0c0qjv" path="res://Scenes/Objects/Forest/Bush_Small.tscn" id="17_2nv8d"]
 [ext_resource type="PackedScene" uid="uid://c8b51q2qpso6h" path="res://Scenes/Objects/Forest/Bush_Large.tscn" id="18_y45kr"]
@@ -26,17 +27,53 @@
 [ext_resource type="PackedScene" uid="uid://bms21hcff31ep" path="res://Scenes/Objects/Forest/Rock_Large.tscn" id="24_jnmvg"]
 [ext_resource type="PackedScene" uid="uid://bk68fusogfc8g" path="res://Scenes/Objects/Forest/Rock_Small.tscn" id="25_dpaph"]
 [ext_resource type="PackedScene" uid="uid://bb1kkke8ltdc4" path="res://Scenes/Objects/Forest/Grass_Over_1.tscn" id="26_aj5y7"]
+[ext_resource type="Texture2D" uid="uid://ubu3bskucnw3" path="res://Resources/Sprites/NPCs/NPC_Bug_Idle_Sheet.png" id="28_wobjs"]
+[ext_resource type="Script" path="res://Scripts/npc_play_idle.gd" id="29_pao0s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ufvkk"]
 atlas = ExtResource("16_h3vgo")
 region = Rect2(176, 8, 104, 136)
 
+[sub_resource type="Animation" id="Animation_5lbb1"]
+resource_name = "idle"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_fvy3n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gutbx"]
+_data = {
+"RESET": SubResource("Animation_fvy3n"),
+"idle": SubResource("Animation_5lbb1")
+}
+
 [node name="Level1" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_6belh")
-
-[node name="player" parent="." instance=ExtResource("2_ki128")]
-position = Vector2(129, -90)
 
 [node name="Borders" type="Node2D" parent="."]
 
@@ -577,3 +614,20 @@ position = Vector2(4876, -502)
 
 [node name="GrassUnder38" parent="Decorations" instance=ExtResource("23_31jrn")]
 position = Vector2(5422, -506)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(318, -89)
+texture = ExtResource("28_wobjs")
+hframes = 4
+script = ExtResource("29_pao0s")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_gutbx")
+}
+
+[node name="NPC_Dialog" parent="." instance=ExtResource("16_fs8wg")]
+position = Vector2(316, -95)
+
+[node name="player" parent="." instance=ExtResource("2_ki128")]
+position = Vector2(129, -90)
