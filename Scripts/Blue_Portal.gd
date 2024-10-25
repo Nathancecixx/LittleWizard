@@ -4,6 +4,7 @@ var target_scene = "res://Scenes/Levels/Level_Selection.tscn" # Scene to transit
 var scene_change_triggered = false  # Flag to track if scene change has been triggered
 
 func _ready() -> void:
+	$AnimatedSprite2D.play()
 	match Global.portals_entered:
 		0:
 			target_scene = "res://Scenes/Levels/Level_Selection.tscn"
