@@ -1,11 +1,16 @@
-[gd_scene load_steps=39 format=3 uid="uid://cmidmjvl506hw"]
+[gd_scene load_steps=44 format=3 uid="uid://cmidmjvl506hw"]
 
 [ext_resource type="Script" path="res://Scripts/Animations/CastleOutro.gd" id="1_28k26"]
+[ext_resource type="AudioStream" uid="uid://beu0oexb36e7w" path="res://Resources/AudioFiles/Animations/BirdsChirping.mp3" id="2_0txsg"]
 [ext_resource type="Texture2D" uid="uid://d2lhw71mfgud7" path="res://Resources/Backgrounds/Forest_Entry2.png" id="2_exb12"]
 [ext_resource type="Texture2D" uid="uid://cp1mag8hcedlq" path="res://Resources/Backgrounds/Cave2.png" id="3_5q8yt"]
+[ext_resource type="AudioStream" uid="uid://bnkmgtqw1oaff" path="res://Resources/AudioFiles/Animations/Soft_Cave.mp3" id="3_rl80s"]
 [ext_resource type="Texture2D" uid="uid://dwtnu35ysywpj" path="res://Resources/Sprites/Objects/Dialogue_Box_Sheet.png" id="4_1nf3d"]
+[ext_resource type="AudioStream" uid="uid://bojodjc68yjfe" path="res://Resources/AudioFiles/Animations/Grunt.mp3" id="4_rumf6"]
+[ext_resource type="AudioStream" uid="uid://b0i0anophutwv" path="res://Resources/AudioFiles/Animations/GroundRumble.mp3" id="5_7nrj2"]
 [ext_resource type="Texture2D" uid="uid://boipuxyfh7l5t" path="res://Resources/Sprites/Objects/ExclamationMark.png" id="5_vqrpc"]
 [ext_resource type="Texture2D" uid="uid://cnvv1p22hhu4a" path="res://Resources/Sprites/Player/Wizard_Eat_Sheet.png" id="6_4tf7j"]
+[ext_resource type="AudioStream" uid="uid://cev8b4yyowtmy" path="res://Resources/AudioFiles/Animations/Crunch.mp3" id="6_db3fi"]
 [ext_resource type="Texture2D" uid="uid://dndk8b1nl5y58" path="res://Resources/Sprites/Player/Wizard_Idle.png" id="7_7dn6m"]
 [ext_resource type="Texture2D" uid="uid://csaw3hslv16ok" path="res://Resources/Sprites/Player/Wizard_walk.png" id="8_a18py"]
 [ext_resource type="Texture2D" uid="uid://cug13d2i4h1ij" path="res://Resources/Sprites/Objects/Mushroom_Shaken_Sheet.png" id="9_w7qax"]
@@ -398,6 +403,65 @@ tracks/12/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Audio/CaveAmbience")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Audio/Grunt")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Audio/GroundRumble")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(9.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Audio/Crunch")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_6uakt"]
 resource_name = "Forest_Scene"
@@ -463,6 +527,23 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Audio/Chirping")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_d08uj"]
@@ -585,6 +666,30 @@ _data = {
 
 [node name="Caveoutro" type="Node2D"]
 script = ExtResource("1_28k26")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -145.0
+offset_top = -95.0
+offset_right = 148.0
+offset_bottom = 104.0
+color = Color(0, 0, 0, 1)
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="Chirping" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("2_0txsg")
+
+[node name="CaveAmbience" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("3_rl80s")
+
+[node name="Grunt" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("4_rumf6")
+
+[node name="GroundRumble" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("5_7nrj2")
+
+[node name="Crunch" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("6_db3fi")
 
 [node name="ForestScene" type="Node2D" parent="."]
 
