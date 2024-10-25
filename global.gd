@@ -7,3 +7,4 @@ var is_talking = false
 var talked_to_wizard = false
 var level_1_complete = false
 var level_2_complete = false
+var level_3_complete = false
