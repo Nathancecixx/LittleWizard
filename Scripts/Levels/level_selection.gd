@@ -13,6 +13,10 @@ func _ready() -> void:
 	$Level_3_Door_Interaction.remove_timeline_signal = "null"
 	$NPC_Dialog.timeline = "wizard_retalk"
 	$NPC_Dialog.remove_timeline_signal = "null"
+	$NPC_Gatekeeper_Dialog.timeline = "gatekeeper_npc"
+	$NPC_Gatekeeper_Dialog.remove_timeline_signal = "null"
+	$Gate_Dialog.timeline = "gate_closed"
+	$Gate_Dialog.remove_timeline_signal = "null"
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	
 	if (!Global.level_1_complete && !Global.level_2_complete && !Global.level_3_complete):
@@ -21,6 +25,8 @@ func _ready() -> void:
 		$Level_2_Door_Interaction.timeline = "Level_2_interact"
 	if (Global.level_1_complete && Global.level_2_complete && !Global.level_3_complete):
 		$Level_3_Door_Interaction.timeline = "level_3_interact"
+	if (Global.level_1_complete && Global.level_2_complete && Global.level_3_complete):
+		$NPC_Gatekeeper_Dialog.timeline = "gatekeeper_finished"
 	if (Global.talked_to_wizard):
 		$NPC_Dialog.timeline = "wizard_retalk"
 
@@ -40,5 +46,11 @@ func _on_dialogic_signal(argument: String):
 	if (argument=="end_wizard_intro"):
 		Global.talked_to_wizard = true
 		$NPC_Dialog.timeline = "wizard_retalk"
+	if (argument=="open"):
+		$NPC_Gatekeeper_Dialog.timeline = "gatekeeper_opened"
+		$Gate_Closed.visible = false
+		$Gate_Dialog.timeline = "gate"
+	if (argument=="end_game"):
+		get_tree().change_scene_to_file("res://Scenes/Animations/EndManager.tscn")
 		
 	

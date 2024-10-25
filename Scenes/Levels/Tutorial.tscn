@@ -1,4 +1,6 @@
+
 [gd_scene load_steps=16 format=3 uid="uid://dij0phkm2pes4"]
+
 
 [ext_resource type="Script" path="res://Scripts/Levels/demo_scene.gd" id="1_50j63"]
 [ext_resource type="AudioStream" uid="uid://frmh50hqnuyl" path="res://Resources/AudioFiles/Animations/Thunder1.mp3" id="2_72njg"]
@@ -7,7 +9,9 @@
 [ext_resource type="Script" path="res://Scripts/Levels/TrainingPortal.gd" id="3_tu50t"]
 [ext_resource type="AudioStream" uid="uid://xxfl5mn7gn2v" path="res://Resources/AudioFiles/Animations/Thunder2.mp3" id="3_wll52"]
 [ext_resource type="AudioStream" uid="uid://ys6a0mqd6wkp" path="res://Resources/AudioFiles/Animations/Rain.mp3" id="4_fpmaq"]
+
 [ext_resource type="Texture2D" uid="uid://hqd6d1r8dchn" path="res://Resources/Backgrounds/Castle_Background.png" id="5_cds1j"]
+
 [ext_resource type="Texture2D" uid="uid://ciprtelthov22" path="res://Resources/Sprites/NPCs/NPC_Wizard_Idle_Sheet.png" id="5_pw8ar"]
 [ext_resource type="Script" path="res://Scripts/npc_play_idle.gd" id="6_o3se6"]
 [ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="7_j5taw"]

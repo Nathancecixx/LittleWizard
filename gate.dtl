@@ -1,0 +1,6 @@
+[signal arg="start_dialog"]
+Proceed through the gate?
+- Yes
+	[signal arg="end_game"]
+- No
+[signal arg="end_dialog"]

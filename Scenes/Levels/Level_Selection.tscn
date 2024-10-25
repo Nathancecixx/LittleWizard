@@ -1,15 +1,24 @@
-[gd_scene load_steps=15 format=3 uid="uid://cgxnufilggt3b"]
+[gd_scene load_steps=20 format=3 uid="uid://cgxnufilggt3b"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/level_selection.gd" id="1_l1eys"]
 [ext_resource type="Texture2D" uid="uid://6o7ekobii1gc" path="res://Resources/Backgrounds/background_0.png" id="2_7i7sk"]
 [ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="2_8lr3s"]
 [ext_resource type="PackedScene" uid="uid://cbepccfer7xkg" path="res://Scenes/Objects/Platforms And Ground/Grass_Ground.tscn" id="3_mf38k"]
 [ext_resource type="Texture2D" uid="uid://c4621iwxj3xne" path="res://Resources/Tilesets/Forest_Tileset.png" id="4_3cbh0"]
+
+[ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="6_r4h28"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="7_mdg8j"]
+
 [ext_resource type="AudioStream" uid="uid://cu5nbcitkriuc" path="res://Resources/AudioFiles/Crickets.mp3" id="7_rptxg"]
+
 [ext_resource type="Texture2D" uid="uid://da2evg462utta" path="res://Resources/Sprites/Objects/Door.png" id="8_rr0vp"]
 [ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="9_piu7l"]
+[ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="10_ywf5r"]
 [ext_resource type="Texture2D" uid="uid://ciprtelthov22" path="res://Resources/Sprites/NPCs/NPC_Wizard_Idle_Sheet.png" id="11_q6ek0"]
 [ext_resource type="Script" path="res://Scripts/npc_play_idle.gd" id="12_4frrx"]
+[ext_resource type="Texture2D" uid="uid://b0y3es0i08qx2" path="res://Resources/Sprites/NPCs/NPC_Gatekeeper_Idle_Sheet.png" id="13_hvn4v"]
+[ext_resource type="Texture2D" uid="uid://555nojqxt35i" path="res://Resources/Sprites/Objects/Gate_Closed.png" id="14_pvl2q"]
+[ext_resource type="Texture2D" uid="uid://bejir6fb0gibx" path="res://Resources/Sprites/Objects/Gate_Open.png" id="15_ctwjr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_brq78"]
 atlas = ExtResource("4_3cbh0")
@@ -24,7 +33,7 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(-0.0666667),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
@@ -126,9 +135,11 @@ position = Vector2(1797, -404)
 scale = Vector2(5, 5)
 texture = SubResource("AtlasTexture_brq78")
 
-[node name="player" parent="." instance=ExtResource("2_8lr3s")]
-z_index = 30
-position = Vector2(81, -92)
+[node name="Area2D" parent="." instance=ExtResource("6_r4h28")]
+position = Vector2(-766, -617)
+
+[node name="KeyFragment" parent="." instance=ExtResource("7_mdg8j")]
+position = Vector2(-755, -607)
 
 [node name="Ambience" type="AudioStreamPlayer2D" parent="player"]
 position = Vector2(-81, 92)
@@ -146,6 +157,9 @@ position = Vector2(622, -104)
 [node name="Level_2_Door_Interaction" parent="." instance=ExtResource("9_piu7l")]
 position = Vector2(1003, -96)
 
+[node name="Area2D2" parent="." instance=ExtResource("10_ywf5r")]
+position = Vector2(-861, -549)
+
 [node name="Wizard_NPC" type="Sprite2D" parent="."]
 position = Vector2(387, -91)
 texture = ExtResource("11_q6ek0")
@@ -160,5 +174,50 @@ libraries = {
 [node name="NPC_Dialog" parent="." instance=ExtResource("9_piu7l")]
 position = Vector2(385, -96)
 
+[node name="Gatekeeper_NPC" type="Sprite2D" parent="."]
+position = Vector2(2107, -92)
+texture = ExtResource("13_hvn4v")
+hframes = 4
+script = ExtResource("12_4frrx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gatekeeper_NPC"]
+libraries = {
+"": SubResource("AnimationLibrary_cejyd")
+}
+
+[node name="NPC_Gatekeeper_Dialog" parent="." instance=ExtResource("9_piu7l")]
+position = Vector2(2105, -97)
+
 [node name="Level_3_Door_Interaction" parent="." instance=ExtResource("9_piu7l")]
 position = Vector2(1352, -95)
+
+[node name="Gate_Closed" type="Sprite2D" parent="."]
+position = Vector2(2415, -250)
+scale = Vector2(3.71875, 3.71875)
+texture = ExtResource("14_pvl2q")
+
+[node name="Wizard_NPC2" type="Sprite2D" parent="."]
+position = Vector2(387, -91)
+texture = ExtResource("11_q6ek0")
+hframes = 4
+script = ExtResource("12_4frrx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Wizard_NPC2"]
+libraries = {
+"": SubResource("AnimationLibrary_cejyd")
+}
+
+[node name="NPC_Dialog2" parent="." instance=ExtResource("9_piu7l")]
+position = Vector2(-476, -245)
+
+[node name="Gate_Open" type="Sprite2D" parent="."]
+position = Vector2(2415, -250)
+scale = Vector2(3.71875, 3.71875)
+texture = ExtResource("15_ctwjr")
+
+[node name="Gate_Dialog" parent="." instance=ExtResource("9_piu7l")]
+position = Vector2(2417, -98)
+
+[node name="player" parent="." instance=ExtResource("2_8lr3s")]
+z_index = 30
+position = Vector2(81, -92)
