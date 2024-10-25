@@ -1,9 +1,15 @@
+
 [gd_scene load_steps=12 format=3 uid="uid://dij0phkm2pes4"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/demo_scene.gd" id="1_50j63"]
+[ext_resource type="AudioStream" uid="uid://frmh50hqnuyl" path="res://Resources/AudioFiles/Animations/Thunder1.mp3" id="2_72njg"]
 [ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="2_200d1"]
 [ext_resource type="Texture2D" uid="uid://djm7d8dw8nsqn" path="res://Resources/Backgrounds/Castle_BackgroundTwo.png" id="2_il38a"]
 [ext_resource type="Script" path="res://Scripts/Levels/TrainingPortal.gd" id="3_tu50t"]
+
+[ext_resource type="AudioStream" uid="uid://xxfl5mn7gn2v" path="res://Resources/AudioFiles/Animations/Thunder2.mp3" id="3_wll52"]
+[ext_resource type="AudioStream" uid="uid://ys6a0mqd6wkp" path="res://Resources/AudioFiles/Animations/Rain.mp3" id="4_fpmaq"]
+
 [ext_resource type="Texture2D" uid="uid://ciprtelthov22" path="res://Resources/Sprites/NPCs/NPC_Wizard_Idle_Sheet.png" id="5_pw8ar"]
 [ext_resource type="Script" path="res://Scripts/npc_play_idle.gd" id="6_o3se6"]
 [ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="7_j5taw"]
@@ -50,6 +56,20 @@ _data = {
 [node name="Starting Room" type="Node2D"]
 position = Vector2(99, -715)
 script = ExtResource("1_50j63")
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="Thunder" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("2_72njg")
+autoplay = true
+
+[node name="Thunder2" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("3_wll52")
+autoplay = true
+
+[node name="Rain" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("4_fpmaq")
+autoplay = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -294.0

@@ -1,6 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnlolpm2g7jd1"]
+
+[gd_scene load_steps=5 format=3 uid="uid://drl8fdnyhb35k"]
+
 
 [ext_resource type="Script" path="res://Scripts/Animations/IntroManager.gd" id="1_noer4"]
+[ext_resource type="AudioStream" uid="uid://frmh50hqnuyl" path="res://Resources/AudioFiles/Animations/Thunder1.mp3" id="2_hxsib"]
+[ext_resource type="AudioStream" uid="uid://xxfl5mn7gn2v" path="res://Resources/AudioFiles/Animations/Thunder2.mp3" id="3_5klng"]
+[ext_resource type="AudioStream" uid="uid://ys6a0mqd6wkp" path="res://Resources/AudioFiles/Animations/Rain.mp3" id="4_tephs"]
 
 [node name="IntroManager" type="Node2D"]
 script = ExtResource("1_noer4")
+
+[node name="Thunder" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_hxsib")
+autoplay = true
+
+[node name="Thunder2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_5klng")
+autoplay = true
+
+[node name="Rain" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_tephs")
+autoplay = true

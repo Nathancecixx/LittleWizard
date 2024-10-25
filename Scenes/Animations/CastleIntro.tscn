@@ -1,13 +1,20 @@
-[gd_scene load_steps=45 format=3 uid="uid://duq4wq4ee2u6l"]
+[gd_scene load_steps=52 format=3 uid="uid://duq4wq4ee2u6l"]
 
 [ext_resource type="Texture2D" uid="uid://72fhpl7dqvrc" path="res://Resources/Sprites/Images/Castle_Background_Animation-Sheet.png" id="1_1w3li"]
 [ext_resource type="Script" path="res://Scripts/Animations/CastleIntro.gd" id="1_h2ajs"]
 [ext_resource type="Texture2D" uid="uid://dndk8b1nl5y58" path="res://Resources/Sprites/Player/Wizard_Idle.png" id="2_thxsb"]
 [ext_resource type="Script" path="res://Scripts/Animations/AnimationCamera.gd" id="2_vogtk"]
+[ext_resource type="AudioStream" uid="uid://frmh50hqnuyl" path="res://Resources/AudioFiles/Animations/Thunder1.mp3" id="2_xjhoq"]
+[ext_resource type="AudioStream" uid="uid://xxfl5mn7gn2v" path="res://Resources/AudioFiles/Animations/Thunder2.mp3" id="3_dwxol"]
 [ext_resource type="Texture2D" uid="uid://csaw3hslv16ok" path="res://Resources/Sprites/Player/Wizard_walk.png" id="3_or8mr"]
+[ext_resource type="AudioStream" uid="uid://q1hihj2tay36" path="res://Resources/AudioFiles/Animations/Bubbling.mp3" id="3_xmyxg"]
+[ext_resource type="AudioStream" uid="uid://c3rbuvk7ogyva" path="res://Resources/AudioFiles/Animations/flapping.mp3" id="5_r5mhp"]
 [ext_resource type="Texture2D" uid="uid://d3d8uq6aol5em" path="res://Resources/Sprites/Objects/Bat_Fly_Sheet.png" id="5_s7w1m"]
 [ext_resource type="Texture2D" uid="uid://cpp0sj5fefti6" path="res://Resources/Sprites/Objects/sprite.png" id="6_j23l2"]
+[ext_resource type="AudioStream" uid="uid://b0i0anophutwv" path="res://Resources/AudioFiles/Animations/GroundRumble.mp3" id="6_wjxym"]
+[ext_resource type="AudioStream" uid="uid://bi1grjv08isun" path="res://Resources/AudioFiles/Animations/Splash.mp3" id="7_6y0dg"]
 [ext_resource type="Texture2D" uid="uid://dwtnu35ysywpj" path="res://Resources/Sprites/Objects/Dialogue_Box_Sheet.png" id="7_vjbpc"]
+[ext_resource type="AudioStream" uid="uid://bdvtf46batrax" path="res://Resources/AudioFiles/Animations/Shrink.mp3" id="8_tw7c5"]
 [ext_resource type="Texture2D" uid="uid://b877bg7x6bn17" path="res://Resources/Sprites/Images/SmokeOverlay.png" id="9_4466j"]
 [ext_resource type="Texture2D" uid="uid://3rsey1y58nms" path="res://Resources/Sprites/Objects/Burgar_Idle_sheet.png" id="10_oywic"]
 [ext_resource type="Texture2D" uid="uid://boipuxyfh7l5t" path="res://Resources/Sprites/Objects/ExclamationMark.png" id="11_40isv"]
@@ -423,6 +430,108 @@ tracks/17/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/18/type = "method"
+tracks/18/imported = false
+tracks/18/enabled = false
+tracks/18/path = NodePath("Sounds/Thunder1")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/19/type = "method"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Sounds/Bubbling")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/20/type = "method"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Sounds/Thunder2")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/21/type = "method"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Sounds/Flapping")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(9, 10, 11, 12, 13, 14, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/22/type = "method"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Sounds/Splash")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(12.9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/23/type = "method"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Sounds/Rumble")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(14.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_gnkqi"]
 resource_name = "Scene2"
@@ -612,6 +721,48 @@ tracks/12/keys = {
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [&"Castle_Cauldren", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Sounds/Rumble")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Sounds/Bubbling")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Sounds/Shrink")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
 "method": &"play"
 }]
 }
@@ -839,6 +990,29 @@ animations = [{
 [node name="CastleIntro" type="Node2D"]
 script = ExtResource("1_h2ajs")
 
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="Thunder1" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("2_xjhoq")
+
+[node name="Thunder2" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("3_dwxol")
+
+[node name="Bubbling" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("3_xmyxg")
+
+[node name="Flapping" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("5_r5mhp")
+
+[node name="Rumble" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("6_wjxym")
+
+[node name="Splash" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("7_6y0dg")
+
+[node name="Shrink" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("8_tw7c5")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -145.0
 offset_top = -95.0
@@ -851,8 +1025,6 @@ zoom = Vector2(5.975, 5.975)
 script = ExtResource("2_vogtk")
 randomStrength = 5.0
 shakeFade = 2.0
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
