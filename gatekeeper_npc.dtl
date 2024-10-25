@@ -1,0 +1,6 @@
+[signal arg="start_dialog"]
+You must collect all 3 key fragments and combine them to open this gate!
+Do you have the all the fragments?
+- No
+	Well then, come back when you have aquired all 3 fragments.
+[signal arg="end_dialog"]

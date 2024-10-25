@@ -32,4 +32,13 @@ func _first_anim_finished(anim_name):
 func _second_anim_finished(anim_name):
 	if anim_name == "Cave_Scene":
 		# Once Scene2 animation is done, transition to the next scene
+		Global.reputation = 0.1
+		Global.key_fragment_count = 0
+		Global.portals_entered = 0
+		Global.is_talking = false
+		Global.talked_to_wizard = false
+		Global.level_1_complete = false
+		Global.level_2_complete = false
+		Global.level_3_complete = false
 		get_tree().change_scene_to_file("res://Scenes/Main Menu/Main_menu.tscn")
+		

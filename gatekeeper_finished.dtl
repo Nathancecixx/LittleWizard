@@ -1,0 +1,17 @@
+[signal arg="start_dialog"]
+You must collect all 3 key fragments and combine them to open this gate!
+Do you have the all the fragments?
+- Yes
+	Ahh congratulations on aquiring them all, beyond this door lies the magical mushroom that will return you back to normal!
+	Do want me to make the key for you?
+	- Sure
+		[signal arg="good"]
+		The key is made and I will open the gate for you! Until we meet again.
+		[signal arg="open"]
+	- I can do it myself
+		[signal arg="bad"]
+		Go along then.
+		[signal arg="open"]
+- No
+	Well then, come back when you have aquired all 3 fragments.
+[signal arg="end_dialog"]

@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=5 format=3 uid="uid://drl8fdnyhb35k"]
-
+[gd_scene load_steps=5 format=3 uid="uid://cnlolpm2g7jd1"]
 
 [ext_resource type="Script" path="res://Scripts/Animations/IntroManager.gd" id="1_noer4"]
 [ext_resource type="AudioStream" uid="uid://frmh50hqnuyl" path="res://Resources/AudioFiles/Animations/Thunder1.mp3" id="2_hxsib"]

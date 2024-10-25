@@ -3190,9 +3190,6 @@ libraries = {
 "": SubResource("AnimationLibrary_gutbx")
 }
 
-[node name="player" parent="." instance=ExtResource("4_p8n4a")]
-position = Vector2(96, -96)
-
 [node name="KeyFragment" parent="." instance=ExtResource("13_tpoui")]
 position = Vector2(4576, -416)
 
@@ -3203,3 +3200,6 @@ position = Vector2(6216, -384)
 
 [node name="Blue" parent="Portals" instance=ExtResource("10_ffjbh")]
 position = Vector2(4470, -1078)
+
+[node name="player" parent="." instance=ExtResource("4_p8n4a")]
+position = Vector2(96, -96)
