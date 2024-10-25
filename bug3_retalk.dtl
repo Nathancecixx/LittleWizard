@@ -1,0 +1,3 @@
+[signal arg="start_dialog"]
+Well this is goodbye! Good luck finishing your journey!
+[signal arg="end_dialog"]
