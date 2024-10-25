@@ -446,8 +446,10 @@ func _on_dialogic_signal(argument: String):
 
 	if (argument=="start_dialog"):
 		stop_inputs=true
+		Global.is_talking=true
 	elif (argument=="end_dialog"):
 		stop_inputs=false
+		Global.is_talking=false
 
 	## Arguments for losing/gaining reputation
 	elif (argument=="bad"):
