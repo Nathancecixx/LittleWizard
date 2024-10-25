@@ -1013,6 +1013,13 @@ stream = ExtResource("7_6y0dg")
 [node name="Shrink" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("8_tw7c5")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -145.0
+offset_top = -95.0
+offset_right = 148.0
+offset_bottom = 104.0
+color = Color(0, 0, 0, 1)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5.975, 5.975)
 script = ExtResource("2_vogtk")

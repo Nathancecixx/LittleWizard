@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://j833sk3xh2ra"]
+
+[ext_resource type="Texture2D" uid="uid://c4i7ullbbsgrn" path="res://Resources/Tilesets/cave_tileset.png" id="1_ajb30"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_av8m2"]
+atlas = ExtResource("1_ajb30")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2qt4"]
+size = Vector2(64, 64)
+
+[node name="Block" type="StaticBody2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_av8m2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_m2qt4")

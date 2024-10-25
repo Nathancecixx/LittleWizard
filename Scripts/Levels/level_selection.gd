@@ -9,7 +9,7 @@ func _ready() -> void:
 	$Level_1_Door_Interaction.remove_timeline_signal = "null"
 	$Level_2_Door_Interaction.timeline = "cant_enter"
 	$Level_2_Door_Interaction.remove_timeline_signal = "null"
-	$NPC_Dialog.timeline = "wizard_npc"
+	$NPC_Dialog.timeline = "wizard_retalk"
 	$NPC_Dialog.remove_timeline_signal = "null"
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	

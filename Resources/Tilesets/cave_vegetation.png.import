@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c07g2pv1o1aqn"
-path="res://.godot/imported/desert-ruins.png-cde7a6e1c389a3ed5e03f262a34f46ed.ctex"
+uid="uid://bpdye53xlk7w1"
+path="res://.godot/imported/cave_vegetation.png-0f4339fad5c872b929ffcf8cd6f39216.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/desert-ruins.png"
-dest_files=["res://.godot/imported/desert-ruins.png-cde7a6e1c389a3ed5e03f262a34f46ed.ctex"]
+source_file="res://Resources/Tilesets/cave_vegetation.png"
+dest_files=["res://.godot/imported/cave_vegetation.png-0f4339fad5c872b929ffcf8cd6f39216.ctex"]
 
 [params]
 

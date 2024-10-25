@@ -1,0 +1,3151 @@
+[gd_scene load_steps=32 format=3 uid="uid://codikb1xv5ru8"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/level_3.gd" id="1_ywxet"]
+[ext_resource type="PackedScene" uid="uid://jbiekkpdku2k" path="res://Scenes/Objects/Cave/Blocks/Background/Back_Back.tscn" id="2_1jjcy"]
+[ext_resource type="PackedScene" uid="uid://j833sk3xh2ra" path="res://Scenes/Objects/Cave/Blocks/Block.tscn" id="2_rpeix"]
+[ext_resource type="PackedScene" uid="uid://j0kkvpoo1xyx" path="res://Scenes/Objects/Cave/Blocks/Block_Corner_Inner.tscn" id="3_ob5ud"]
+[ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="4_p8n4a"]
+[ext_resource type="PackedScene" uid="uid://d37cg4sppgw1m" path="res://Scenes/Objects/Cave/Blocks/Block_Corner_Outer.tscn" id="5_2xg3m"]
+[ext_resource type="PackedScene" uid="uid://bj5lg3jvcwcxa" path="res://Scenes/Objects/Cave/Blocks/Background/Back_Block.tscn" id="5_q4ssh"]
+[ext_resource type="PackedScene" uid="uid://kbci5at53ewv" path="res://Scenes/Objects/Cave/Blocks/Background/Back_Corner_Outer.tscn" id="6_0y6wa"]
+[ext_resource type="PackedScene" uid="uid://c62ngykqavyls" path="res://Scenes/Objects/Cave/Blocks/Block_Inner.tscn" id="6_t38u4"]
+[ext_resource type="PackedScene" uid="uid://15npjap67ddk" path="res://Scenes/Objects/Cave/Blocks/Background/Back_Corner_Inner.tscn" id="7_i0a7e"]
+[ext_resource type="PackedScene" uid="uid://dn75ykpqc14w8" path="res://Scenes/Objects/Cave/Blocks/Background/Back_Block_Inner.tscn" id="7_ujk1w"]
+[ext_resource type="PackedScene" uid="uid://t37xoexgtj50" path="res://Scenes/Objects/Cave/Plants/Plant_Down_1.tscn" id="8_qjrj6"]
+[ext_resource type="PackedScene" uid="uid://en31my4sejtc" path="res://Scenes/Objects/Cave/Plants/Plant_Down_3.tscn" id="9_rusiw"]
+[ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="10_ffjbh"]
+[ext_resource type="PackedScene" uid="uid://dp08287j5vxo3" path="res://Scenes/Objects/Cave/Plants/Plant_Down_4.tscn" id="10_m7fyw"]
+[ext_resource type="PackedScene" uid="uid://c5kdkn67gd2w6" path="res://Scenes/Objects/burnable.tscn" id="11_iujge"]
+[ext_resource type="PackedScene" uid="uid://dr3nr7oljd67d" path="res://Scenes/Objects/Cave/Plants/Plant_Down_5.tscn" id="11_sbkia"]
+[ext_resource type="PackedScene" uid="uid://dkdt7laxsgj5u" path="res://Scenes/Objects/Ruins/Ruin_Spikes.tscn" id="12_54lex"]
+[ext_resource type="PackedScene" uid="uid://c1800wig78vko" path="res://Scenes/Objects/Cave/Plants/Plant_Down_7.tscn" id="12_xloa3"]
+[ext_resource type="PackedScene" uid="uid://dwtlpn7qto3an" path="res://Scenes/Objects/Cave/Plants/Plant_Down_2.tscn" id="13_8dneg"]
+[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="13_tpoui"]
+[ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="14_cvfp7"]
+[ext_resource type="PackedScene" uid="uid://ddxo2v4e3t121" path="res://Scenes/Objects/Cave/Plants/Plant_Down_6.tscn" id="14_ha3yw"]
+[ext_resource type="PackedScene" uid="uid://7wgueynbp7pc" path="res://Scenes/Objects/Cave/Plants/Plant_Up_1.tscn" id="15_pej0w"]
+[ext_resource type="PackedScene" uid="uid://cfdwuxssmqqxb" path="res://Scenes/Objects/Cave/Plants/Plant_Up_2.tscn" id="16_v88g3"]
+[ext_resource type="PackedScene" uid="uid://bwuectilp80li" path="res://Scenes/Objects/Cave/Plants/Plant_Up_3.tscn" id="17_hjp1k"]
+[ext_resource type="PackedScene" uid="uid://c87fijb0x4wac" path="res://Scenes/Objects/Cave/Plants/Plant_Up_4.tscn" id="18_yrfbp"]
+[ext_resource type="PackedScene" uid="uid://2i5ym817r0ha" path="res://Scenes/Objects/Cave/Plants/Plant_Up_5.tscn" id="19_3ffp4"]
+[ext_resource type="PackedScene" uid="uid://3eghnhlgl6xp" path="res://Scenes/Objects/Cave/Plants/Plant_Up_6.tscn" id="20_x0s8h"]
+[ext_resource type="PackedScene" uid="uid://d2mai2du1sehn" path="res://Scenes/Objects/Cave/Plants/Plant_Up_7.tscn" id="21_nw4ev"]
+[ext_resource type="PackedScene" uid="uid://b6e8t50l1ktk0" path="res://Scenes/Objects/Cave/Plants/Plant_Up_8.tscn" id="22_nmsyj"]
+
+[node name="Level3" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_ywxet")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="BackBack" parent="Background" instance=ExtResource("2_1jjcy")]
+position = Vector2(3232, -744)
+scale = Vector2(100, 25)
+
+[node name="BlockInner" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(96, -736)
+scale = Vector2(5, 10)
+
+[node name="BlockInner2" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(928, -32)
+scale = Vector2(12, 4)
+
+[node name="BackBlock" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(96, -224)
+
+[node name="BackBlock2" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(160, -224)
+
+[node name="BackCornerOuter" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(224, -224)
+rotation = 1.5708
+
+[node name="BackBlockInner" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(96, -160)
+
+[node name="BackBlockInner2" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(160, -160)
+
+[node name="BackBlockInner3" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(96, -96)
+
+[node name="BackBlockInner4" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(160, -96)
+
+[node name="BackBlock3" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(224, -160)
+rotation = 1.5708
+
+[node name="BackBlock4" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(224, -96)
+rotation = 1.5708
+
+[node name="BackBlock5" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(416, -96)
+rotation = -1.5708
+
+[node name="BackBlock6" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(416, -160)
+rotation = -1.5708
+
+[node name="BackBlock7" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(416, -224)
+rotation = -1.5708
+
+[node name="BackBlock8" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(416, -288)
+rotation = -1.5708
+
+[node name="BackBlock9" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(416, -352)
+rotation = -1.5708
+
+[node name="BackBlock10" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(480, -416)
+
+[node name="BackBlock11" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(544, -416)
+
+[node name="BackBlock12" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(608, -416)
+
+[node name="BackBlock13" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(672, -416)
+
+[node name="BackCornerOuter2" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(416, -416)
+
+[node name="BackCornerOuter3" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(736, -416)
+rotation = 1.5708
+
+[node name="BackBlockInner5" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(608, -224)
+scale = Vector2(5, 5)
+
+[node name="BlockInner3" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(928, -224)
+scale = Vector2(8, 2)
+
+[node name="BackBlock14" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(736, -352)
+rotation = 1.5708
+
+[node name="BlockInner4" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(928, -608)
+
+[node name="BlockInner5" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(736, -800)
+scale = Vector2(1, 3)
+
+[node name="BlockInner6" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(928, -672)
+
+[node name="BlockInner7" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(288, -544)
+scale = Vector2(1, 3)
+
+[node name="BlockInner8" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(160, -1248)
+scale = Vector2(7, 7)
+
+[node name="BlockInner9" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(1056, -928)
+scale = Vector2(3, 1)
+
+[node name="BlockInner10" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(544, -1440)
+scale = Vector2(7, 1)
+
+[node name="BlockInner11" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(480, -1376)
+scale = Vector2(3, 1)
+
+[node name="BlockInner12" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(3168, -1504)
+scale = Vector2(100, 1)
+
+[node name="BlockInner13" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(1504, -992)
+scale = Vector2(14, 4)
+
+[node name="BlockInner14" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(1568, -800)
+scale = Vector2(11, 2)
+
+[node name="BlockInner15" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(1248, -736)
+
+[node name="BlockInner16" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(1696, -1120)
+scale = Vector2(19, 1)
+
+[node name="BlockInner17" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(2016, -1056)
+scale = Vector2(3, 1)
+
+[node name="BlockInner18" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(1952, -992)
+
+[node name="BlockInner19" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(1824, -608)
+scale = Vector2(6, 4)
+
+[node name="BlockInner20" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5792, -32)
+scale = Vector2(9, 3)
+
+[node name="BlockInner21" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5664, -160)
+scale = Vector2(1, 3)
+
+[node name="BlockInner22" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(4576, -32)
+scale = Vector2(8, 5)
+
+[node name="BlockInner23" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(4576, -224)
+scale = Vector2(7, 1)
+
+[node name="BlockInner24" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(4576, -288)
+
+[node name="BlockInner25" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(4832, -160)
+
+[node name="BlockInner26" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(4896, -32)
+scale = Vector2(3, 4)
+
+[node name="BlockInner27" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5024, -32)
+scale = Vector2(3, 2)
+
+[node name="BlockInner28" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(2592, -736)
+scale = Vector2(5, 1)
+
+[node name="BlockInner29" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(4256, -672)
+scale = Vector2(3, 1)
+
+[node name="BlockInner30" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(4896, -928)
+
+[node name="BlockInner31" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5408, -1248)
+
+[node name="BlockInner32" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5408, -864)
+
+[node name="BlockInner33" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5408, -928)
+
+[node name="BlockInner34" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5344, -416)
+
+[node name="BlockInner35" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5408, -416)
+scale = Vector2(1, 3)
+
+[node name="BlockInner36" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5344, -352)
+
+[node name="BlockInner37" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5408, -544)
+
+[node name="BlockInner38" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(1632, -608)
+scale = Vector2(1, 4)
+
+[node name="BlockInner39" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(1888, -480)
+scale = Vector2(7, 1)
+
+[node name="BlockInner40" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(1824, -416)
+
+[node name="BlockInner41" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(2144, -416)
+scale = Vector2(3, 1)
+
+[node name="BlockInner42" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(2016, -544)
+scale = Vector2(3, 1)
+
+[node name="BlockInner43" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(2848, -1376)
+scale = Vector2(50, 5)
+
+[node name="BlockInner44" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(2784, -1184)
+scale = Vector2(48, 1)
+
+[node name="BlockInner45" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(3424, -1120)
+scale = Vector2(3, 1)
+
+[node name="BlockInner46" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(2720, -1056)
+scale = Vector2(3, 1)
+
+[node name="BlockInner47" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(2784, -1120)
+scale = Vector2(9, 1)
+
+[node name="BlockInner48" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(4448, -1376)
+scale = Vector2(3, 3)
+
+[node name="BlockInner49" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5408, -1440)
+scale = Vector2(30, 3)
+
+[node name="BlockInner50" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(4896, -1312)
+
+[node name="BlockInner51" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(4128, -1120)
+scale = Vector2(5, 1)
+
+[node name="BlockInner52" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(4192, -1056)
+
+[node name="BlockInner53" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(4256, -1056)
+
+[node name="BlockInner54" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5728, -1312)
+scale = Vector2(18, 1)
+
+[node name="BlockInner55" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(5728, -864)
+scale = Vector2(9, 14)
+
+[node name="BlockInner56" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(6176, -928)
+scale = Vector2(5, 13)
+
+[node name="BlockInner57" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(6240, -96)
+scale = Vector2(5, 5)
+
+[node name="BlockInner58" parent="Background" instance=ExtResource("6_t38u4")]
+position = Vector2(3744, -1120)
+
+[node name="BackBlock15" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(352, -864)
+
+[node name="BackBlock16" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(416, -864)
+
+[node name="BackBlock17" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(480, -864)
+
+[node name="BackBlock18" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(544, -864)
+
+[node name="BackBlock19" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(608, -864)
+
+[node name="BackBlock20" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(608, -800)
+rotation = 3.14159
+
+[node name="BackBlock21" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(544, -800)
+rotation = 3.14159
+
+[node name="BackBlock22" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(480, -800)
+rotation = 3.14159
+
+[node name="BackBlock23" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(416, -800)
+rotation = 3.14159
+
+[node name="BackBlock24" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(352, -800)
+rotation = 3.14159
+
+[node name="BackBlock25" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(800, -1248)
+rotation = -1.5708
+
+[node name="BackBlockCorner" parent="Background" instance=ExtResource("7_i0a7e")]
+position = Vector2(800, -1312)
+rotation = 1.5708
+
+[node name="BackCornerOuter4" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(736, -1312)
+rotation = -1.5708
+
+[node name="BackBlockInner6" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(800, -1376)
+
+[node name="BackBlock26" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(928, -1248)
+rotation = 1.5708
+
+[node name="BackBlock27" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(928, -1312)
+rotation = 1.5708
+
+[node name="BackBlock28" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(928, -1376)
+rotation = 1.5708
+
+[node name="BackBlockInner7" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(864, -1248)
+
+[node name="BackBlockInner8" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(864, -1312)
+
+[node name="BackBlockInner9" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(864, -1376)
+
+[node name="BackBlock29" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(1248, -416)
+
+[node name="BackCornerOuter5" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(1184, -416)
+
+[node name="BackBlock30" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(1184, -352)
+rotation = -1.5708
+
+[node name="BackBlock31" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(1312, -416)
+
+[node name="BackBlockCorner2" parent="Background" instance=ExtResource("7_i0a7e")]
+position = Vector2(1376, -416)
+rotation = -3.14159
+
+[node name="BackCornerOuter6" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(1376, -480)
+
+[node name="BackBlock32" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(1440, -480)
+
+[node name="BackBlock33" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(1504, -480)
+
+[node name="BackBlockInner10" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(1248, -352)
+
+[node name="BackBlockInner11" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(1312, -352)
+
+[node name="BackBlockInner12" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(1376, -352)
+
+[node name="BackBlockInner13" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(1440, -416)
+
+[node name="BackBlockInner14" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(1504, -416)
+
+[node name="BackBlock34" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(1248, -288)
+rotation = 3.14159
+
+[node name="BackBlock35" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(1312, -288)
+rotation = 3.14159
+
+[node name="BackBlock36" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(1376, -288)
+rotation = 3.14159
+
+[node name="BackCornerOuter7" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(1440, -288)
+rotation = -3.14159
+
+[node name="BackBlockCorner3" parent="Background" instance=ExtResource("7_i0a7e")]
+position = Vector2(1440, -352)
+
+[node name="BackBlock37" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(1504, -352)
+rotation = -3.14159
+
+[node name="BackCornerOuter8" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(1568, -352)
+rotation = -3.14159
+
+[node name="BackBlockCorner4" parent="Background" instance=ExtResource("7_i0a7e")]
+position = Vector2(1568, -416)
+
+[node name="BackBlock38" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(2272, -96)
+rotation = -1.5708
+
+[node name="BackBlock39" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(2272, -160)
+rotation = -1.5708
+
+[node name="BackBlock40" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(2272, -224)
+rotation = -1.5708
+
+[node name="BackBlock41" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(2272, -288)
+rotation = -1.5708
+
+[node name="BackCornerOuter9" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(2272, -608)
+
+[node name="BackBlockCorner5" parent="Background" instance=ExtResource("7_i0a7e")]
+position = Vector2(2400, -608)
+rotation = -3.14159
+
+[node name="BackBlock42" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(2336, -608)
+
+[node name="BackBlock43" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(2272, -544)
+rotation = -1.5708
+
+[node name="BackBlock44" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(2464, -608)
+rotation = 1.5708
+
+[node name="BackBlock45" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(2464, -544)
+rotation = 1.5708
+
+[node name="BackBlock46" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(2464, -480)
+rotation = 1.5708
+
+[node name="BackBlock47" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(2464, -416)
+rotation = 1.5708
+
+[node name="BackBlock48" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(2464, -352)
+rotation = 1.5708
+
+[node name="BackBlockInner15" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(2336, -544)
+
+[node name="BackBlockInner16" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(2400, -544)
+
+[node name="BackBlockInner17" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(2336, -480)
+
+[node name="BackBlockInner18" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(2400, -480)
+
+[node name="BackBlockInner19" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(2336, -416)
+
+[node name="BackBlockInner20" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(2400, -416)
+
+[node name="BackBlockInner21" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(2336, -352)
+
+[node name="BackBlockInner22" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(2400, -352)
+
+[node name="BackBlockInner23" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(2336, -288)
+
+[node name="BackBlockInner24" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(2400, -288)
+
+[node name="BackBlockInner25" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(2336, -224)
+
+[node name="BackBlockInner26" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(2400, -224)
+
+[node name="BackBlock49" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3552, 32)
+rotation = -1.5708
+
+[node name="BackBlock50" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3552, -32)
+rotation = -1.5708
+
+[node name="BackBlock51" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3616, -96)
+
+[node name="BackCornerOuter10" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(3552, -96)
+
+[node name="BackCornerOuter11" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(3872, -96)
+rotation = 1.5708
+
+[node name="BackBlock52" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3808, -96)
+
+[node name="BackBlock53" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3872, -32)
+rotation = 1.5708
+
+[node name="BackBlock54" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3872, 32)
+rotation = 1.5708
+
+[node name="BackBlockInner27" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(3616, -32)
+
+[node name="BackBlockInner28" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(3808, -32)
+
+[node name="BackBlock55" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3296, -32)
+rotation = -1.5708
+
+[node name="BackBlock56" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3296, -96)
+rotation = -1.5708
+
+[node name="BackBlock57" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3296, -160)
+rotation = -1.5708
+
+[node name="BackBlock58" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3296, -224)
+rotation = -1.5708
+
+[node name="BackBlock59" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3296, -288)
+rotation = -1.5708
+
+[node name="BackBlock60" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3296, -352)
+rotation = -1.5708
+
+[node name="BackBlock61" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3296, -416)
+rotation = -1.5708
+
+[node name="BackBlock62" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3296, -480)
+rotation = -1.5708
+
+[node name="BackBlock63" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3360, -544)
+
+[node name="BackCornerOuter12" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(3296, -544)
+
+[node name="BackCornerOuter13" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(3424, -544)
+rotation = 1.5708
+
+[node name="BackBlock64" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3424, -480)
+rotation = 1.5708
+
+[node name="BackBlock65" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3424, -416)
+rotation = 1.5708
+
+[node name="BackBlock66" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3424, -352)
+rotation = 1.5708
+
+[node name="BackBlock67" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3424, -288)
+rotation = 1.5708
+
+[node name="BackBlock68" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3424, -224)
+rotation = 1.5708
+
+[node name="BackBlock69" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3424, -160)
+rotation = 1.5708
+
+[node name="BackBlock70" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3424, -96)
+rotation = 1.5708
+
+[node name="BackBlock71" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(3424, -32)
+rotation = 1.5708
+
+[node name="BackBlockInner29" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(3360, -480)
+
+[node name="BackBlockInner30" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(3360, -416)
+
+[node name="BackBlockInner31" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(3360, -352)
+
+[node name="BackBlockInner32" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(3360, -288)
+
+[node name="BackBlockInner33" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(3360, -224)
+
+[node name="BackBlockInner34" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(3360, -160)
+
+[node name="BackBlockInner35" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(3360, -96)
+
+[node name="BackBlockInner36" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(3360, -32)
+
+[node name="BackBlock72" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4640, -416)
+rotation = -1.5708
+
+[node name="BackBlock73" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4704, -352)
+rotation = 1.5708
+
+[node name="BackBlock74" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4704, -416)
+rotation = 1.5708
+
+[node name="BackBlock75" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4640, -480)
+rotation = -1.5708
+
+[node name="BackBlock76" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4640, -544)
+rotation = -1.5708
+
+[node name="BackBlock77" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4576, -608)
+rotation = 3.14159
+
+[node name="BackBlock78" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4512, -608)
+rotation = 3.14159
+
+[node name="BackBlock79" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4704, -480)
+rotation = 1.5708
+
+[node name="BackBlock80" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4704, -544)
+rotation = 1.5708
+
+[node name="BackBlock81" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4704, -608)
+rotation = 1.5708
+
+[node name="BackBlock82" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4768, -672)
+rotation = -3.14159
+
+[node name="BackBlock83" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4832, -672)
+rotation = -3.14159
+
+[node name="BackBlock84" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4832, -800)
+
+[node name="BackBlock85" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4768, -800)
+
+[node name="BackBlock86" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4704, -800)
+
+[node name="BackBlock87" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4640, -800)
+
+[node name="BackBlock88" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4512, -736)
+
+[node name="BackBlock89" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4448, -736)
+
+[node name="BackBlockInner37" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(4448, -672)
+
+[node name="BackBlockInner38" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(4512, -672)
+
+[node name="BackBlockInner39" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(4576, -672)
+
+[node name="BackBlockInner40" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(4640, -672)
+
+[node name="BackBlockInner41" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(4640, -736)
+
+[node name="BackBlockInner42" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(4704, -736)
+
+[node name="BackBlockInner43" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(4768, -736)
+
+[node name="BackBlockInner44" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(4832, -736)
+
+[node name="BackBlockCorner6" parent="Background" instance=ExtResource("7_i0a7e")]
+position = Vector2(4704, -672)
+
+[node name="BackBlockCorner7" parent="Background" instance=ExtResource("7_i0a7e")]
+position = Vector2(4640, -608)
+rotation = 1.5708
+
+[node name="BackBlockCorner8" parent="Background" instance=ExtResource("7_i0a7e")]
+position = Vector2(4576, -736)
+rotation = 3.14159
+
+[node name="BackCornerOuter14" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(4576, -800)
+
+[node name="BackBlock90" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4256, -288)
+rotation = -3.14159
+
+[node name="BackCornerOuter15" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(4192, -288)
+rotation = -1.5708
+
+[node name="BackBlockCorner9" parent="Background" instance=ExtResource("7_i0a7e")]
+position = Vector2(4192, -352)
+rotation = 1.5708
+
+[node name="BackCornerOuter16" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(4128, -352)
+rotation = -1.5708
+
+[node name="BackBlock91" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4128, -416)
+rotation = -1.5708
+
+[node name="BackBlockCorner10" parent="Background" instance=ExtResource("7_i0a7e")]
+position = Vector2(4128, -480)
+rotation = 1.5708
+
+[node name="BackCornerOuter17" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(4064, -480)
+rotation = -1.5708
+
+[node name="BackBlock92" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4064, -544)
+rotation = -1.5708
+
+[node name="BackBlock93" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4064, -608)
+rotation = -1.5708
+
+[node name="BackBlock94" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4064, -672)
+rotation = -1.5708
+
+[node name="BackCornerOuter18" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(4320, -352)
+rotation = 1.5708
+
+[node name="BackBlockCorner11" parent="Background" instance=ExtResource("7_i0a7e")]
+position = Vector2(4256, -352)
+rotation = -1.5708
+
+[node name="BackCornerOuter19" parent="Background" instance=ExtResource("6_0y6wa")]
+position = Vector2(4256, -416)
+rotation = 1.5708
+
+[node name="BackBlockCorner12" parent="Background" instance=ExtResource("7_i0a7e")]
+position = Vector2(4192, -416)
+rotation = -1.5708
+
+[node name="BackBlock95" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4192, -480)
+rotation = 1.5708
+
+[node name="BackBlock96" parent="Background" instance=ExtResource("5_q4ssh")]
+position = Vector2(4192, -544)
+rotation = 1.5708
+
+[node name="BackBlockInner45" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(4128, -544)
+
+[node name="BackBlockInner46" parent="Background" instance=ExtResource("7_ujk1w")]
+position = Vector2(4128, -608)
+
+[node name="Decorations" type="Node2D" parent="."]
+
+[node name="PlantDown1" parent="Decorations" instance=ExtResource("8_qjrj6")]
+position = Vector2(160, -360)
+
+[node name="PlantDown3" parent="Decorations" instance=ExtResource("9_rusiw")]
+position = Vector2(672, -616)
+
+[node name="PlantDown4" parent="Decorations" instance=ExtResource("10_m7fyw")]
+position = Vector2(864, -488)
+
+[node name="PlantDown5" parent="Decorations" instance=ExtResource("11_sbkia")]
+position = Vector2(480, -744)
+
+[node name="PlantDown7" parent="Decorations" instance=ExtResource("12_xloa3")]
+position = Vector2(352, -360)
+
+[node name="PlantDown6" parent="Decorations" instance=ExtResource("11_sbkia")]
+position = Vector2(544, -1256)
+
+[node name="PlantDown8" parent="Decorations" instance=ExtResource("9_rusiw")]
+position = Vector2(672, -1320)
+
+[node name="PlantDown2" parent="Decorations" instance=ExtResource("13_8dneg")]
+position = Vector2(1056, -1384)
+
+[node name="PlantDown9" parent="Decorations" instance=ExtResource("14_ha3yw")]
+position = Vector2(1056, -808)
+
+[node name="PlantDown10" parent="Decorations" instance=ExtResource("12_xloa3")]
+position = Vector2(1440, -680)
+
+[node name="PlantDown11" parent="Decorations" instance=ExtResource("14_ha3yw")]
+position = Vector2(1568, -424)
+
+[node name="PlantDown12" parent="Decorations" instance=ExtResource("13_8dneg")]
+position = Vector2(1440, -232)
+
+[node name="PlantDown13" parent="Decorations" instance=ExtResource("8_qjrj6")]
+position = Vector2(1760, -296)
+
+[node name="PlantDown14" parent="Decorations" instance=ExtResource("12_xloa3")]
+position = Vector2(2144, -296)
+
+[node name="PlantDown15" parent="Decorations" instance=ExtResource("14_ha3yw")]
+position = Vector2(2592, -616)
+
+[node name="PlantDown16" parent="Decorations" instance=ExtResource("11_sbkia")]
+position = Vector2(2336, -680)
+
+[node name="PlantDown17" parent="Decorations" instance=ExtResource("8_qjrj6")]
+position = Vector2(2016, -872)
+
+[node name="PlantDown18" parent="Decorations" instance=ExtResource("11_sbkia")]
+position = Vector2(2400, -1064)
+
+[node name="PlantDown19" parent="Decorations" instance=ExtResource("14_ha3yw")]
+position = Vector2(2272, -1000)
+
+[node name="PlantDown20" parent="Decorations" instance=ExtResource("10_m7fyw")]
+position = Vector2(2656, -936)
+
+[node name="PlantDown21" parent="Decorations" instance=ExtResource("10_m7fyw")]
+position = Vector2(3296, -1000)
+
+[node name="PlantDown22" parent="Decorations" instance=ExtResource("9_rusiw")]
+position = Vector2(3040, -936)
+
+[node name="PlantDown23" parent="Decorations" instance=ExtResource("8_qjrj6")]
+position = Vector2(3104, -552)
+
+[node name="PlantDown24" parent="Decorations" instance=ExtResource("11_sbkia")]
+position = Vector2(3424, -680)
+
+[node name="PlantDown25" parent="Decorations" instance=ExtResource("12_xloa3")]
+position = Vector2(3744, -680)
+
+[node name="PlantDown26" parent="Decorations" instance=ExtResource("8_qjrj6")]
+position = Vector2(3808, -680)
+
+[node name="PlantDown27" parent="Decorations" instance=ExtResource("13_8dneg")]
+position = Vector2(4192, -552)
+
+[node name="PlantDown28" parent="Decorations" instance=ExtResource("14_ha3yw")]
+position = Vector2(4064, -424)
+
+[node name="PlantDown29" parent="Decorations" instance=ExtResource("11_sbkia")]
+position = Vector2(4512, -552)
+
+[node name="PlantDown30" parent="Decorations" instance=ExtResource("9_rusiw")]
+position = Vector2(4960, -616)
+
+[node name="PlantDown31" parent="Decorations" instance=ExtResource("8_qjrj6")]
+position = Vector2(5088, -552)
+
+[node name="PlantDown32" parent="Decorations" instance=ExtResource("10_m7fyw")]
+position = Vector2(3680, -1000)
+
+[node name="PlantDown33" parent="Decorations" instance=ExtResource("9_rusiw")]
+position = Vector2(4000, -1000)
+
+[node name="PlantDown34" parent="Decorations" instance=ExtResource("13_8dneg")]
+position = Vector2(4640, -1256)
+
+[node name="PlantDown35" parent="Decorations" instance=ExtResource("11_sbkia")]
+position = Vector2(4896, -1192)
+
+[node name="PlantDown36" parent="Decorations" instance=ExtResource("14_ha3yw")]
+position = Vector2(5024, -1256)
+
+[node name="PlantDown37" parent="Decorations" instance=ExtResource("13_8dneg")]
+position = Vector2(5280, -744)
+
+[node name="PlantDown38" parent="Decorations" instance=ExtResource("14_ha3yw")]
+position = Vector2(5472, -232)
+
+[node name="PlantDown39" parent="Decorations" instance=ExtResource("13_8dneg")]
+position = Vector2(5856, -232)
+
+[node name="PlantDown40" parent="Decorations" instance=ExtResource("12_xloa3")]
+position = Vector2(6048, -360)
+
+[node name="PlantUp1" parent="Decorations" instance=ExtResource("15_pej0w")]
+position = Vector2(544, -208)
+
+[node name="PlantUp2" parent="Decorations" instance=ExtResource("16_v88g3")]
+position = Vector2(736, -336)
+
+[node name="PlantUp3" parent="Decorations" instance=ExtResource("17_hjp1k")]
+position = Vector2(416, -528)
+
+[node name="PlantUp4" parent="Decorations" instance=ExtResource("18_yrfbp")]
+position = Vector2(1056, -336)
+
+[node name="PlantUp5" parent="Decorations" instance=ExtResource("19_3ffp4")]
+position = Vector2(800, -336)
+
+[node name="PlantUp6" parent="Decorations" instance=ExtResource("20_x0s8h")]
+position = Vector2(352, -720)
+
+[node name="PlantUp7" parent="Decorations" instance=ExtResource("21_nw4ev")]
+position = Vector2(480, -912)
+
+[node name="PlantUp8" parent="Decorations" instance=ExtResource("21_nw4ev")]
+position = Vector2(672, -976)
+
+[node name="PlantUp9" parent="Decorations" instance=ExtResource("22_nmsyj")]
+position = Vector2(608, -464)
+
+[node name="PlantUp10" parent="Decorations" instance=ExtResource("22_nmsyj")]
+position = Vector2(928, -784)
+
+[node name="PlantUp11" parent="Decorations" instance=ExtResource("19_3ffp4")]
+position = Vector2(928, -1040)
+
+[node name="PlantUp12" parent="Decorations" instance=ExtResource("20_x0s8h")]
+position = Vector2(480, -1168)
+
+[node name="PlantUp13" parent="Decorations" instance=ExtResource("15_pej0w")]
+position = Vector2(544, -1168)
+
+[node name="PlantUp14" parent="Decorations" instance=ExtResource("17_hjp1k")]
+position = Vector2(736, -1232)
+
+[node name="PlantUp15" parent="Decorations" instance=ExtResource("18_yrfbp")]
+position = Vector2(1120, -1232)
+
+[node name="PlantUp16" parent="Decorations" instance=ExtResource("21_nw4ev")]
+position = Vector2(992, -1040)
+
+[node name="PlantUp17" parent="Decorations" instance=ExtResource("19_3ffp4")]
+position = Vector2(1184, -464)
+
+[node name="PlantUp18" parent="Decorations" instance=ExtResource("21_nw4ev")]
+position = Vector2(1440, -528)
+
+[node name="PlantUp19" parent="Decorations" instance=ExtResource("15_pej0w")]
+position = Vector2(1312, -464)
+
+[node name="PlantUp20" parent="Decorations" instance=ExtResource("21_nw4ev")]
+position = Vector2(1888, -80)
+
+[node name="PlantUp21" parent="Decorations" instance=ExtResource("15_pej0w")]
+position = Vector2(1696, -80)
+
+[node name="PlantUp22" parent="Decorations" instance=ExtResource("17_hjp1k")]
+position = Vector2(2336, -208)
+
+[node name="PlantUp23" parent="Decorations" instance=ExtResource("20_x0s8h")]
+position = Vector2(2528, -336)
+
+[node name="PlantUp24" parent="Decorations" instance=ExtResource("21_nw4ev")]
+position = Vector2(2208, -528)
+
+[node name="PlantUp25" parent="Decorations" instance=ExtResource("22_nmsyj")]
+position = Vector2(2336, -848)
+
+[node name="PlantUp26" parent="Decorations" instance=ExtResource("18_yrfbp")]
+position = Vector2(3040, -848)
+
+[node name="PlantUp27" parent="Decorations" instance=ExtResource("16_v88g3")]
+position = Vector2(2720, -848)
+
+[node name="PlantUp28" parent="Decorations" instance=ExtResource("18_yrfbp")]
+position = Vector2(3296, -592)
+
+[node name="PlantUp29" parent="Decorations" instance=ExtResource("21_nw4ev")]
+position = Vector2(3616, -144)
+
+[node name="PlantUp30" parent="Decorations" instance=ExtResource("17_hjp1k")]
+position = Vector2(3104, -336)
+
+[node name="PlantUp31" parent="Decorations" instance=ExtResource("15_pej0w")]
+position = Vector2(2912, -592)
+
+[node name="PlantUp32" parent="Decorations" instance=ExtResource("22_nmsyj")]
+position = Vector2(3488, -848)
+
+[node name="PlantUp33" parent="Decorations" instance=ExtResource("21_nw4ev")]
+position = Vector2(4320, -784)
+
+[node name="PlantUp34" parent="Decorations" instance=ExtResource("17_hjp1k")]
+position = Vector2(4896, -1040)
+
+[node name="PlantUp35" parent="Decorations" instance=ExtResource("19_3ffp4")]
+position = Vector2(5280, -912)
+
+[node name="PlantUp36" parent="Decorations" instance=ExtResource("21_nw4ev")]
+position = Vector2(5088, -784)
+
+[node name="PlantUp37" parent="Decorations" instance=ExtResource("18_yrfbp")]
+position = Vector2(4832, -272)
+
+[node name="PlantUp38" parent="Decorations" instance=ExtResource("20_x0s8h")]
+position = Vector2(5024, -208)
+
+[node name="PlantUp39" parent="Decorations" instance=ExtResource("21_nw4ev")]
+position = Vector2(5344, -80)
+
+[node name="PlantUp40" parent="Decorations" instance=ExtResource("17_hjp1k")]
+position = Vector2(4384, -336)
+
+[node name="PlantUp41" parent="Decorations" instance=ExtResource("16_v88g3")]
+position = Vector2(4512, -784)
+
+[node name="PlantUp42" parent="Decorations" instance=ExtResource("21_nw4ev")]
+position = Vector2(4704, -848)
+
+[node name="PlantUp43" parent="Decorations" instance=ExtResource("16_v88g3")]
+position = Vector2(5600, -336)
+
+[node name="PlantUp44" parent="Decorations" instance=ExtResource("18_yrfbp")]
+position = Vector2(5728, -336)
+
+[node name="PlantUp45" parent="Decorations" instance=ExtResource("19_3ffp4")]
+position = Vector2(5792, -208)
+
+[node name="PlantUp46" parent="Decorations" instance=ExtResource("21_nw4ev")]
+position = Vector2(6112, -336)
+
+[node name="Blocks" type="Node2D" parent="."]
+
+[node name="Block" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(160, -32)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(32, -96)
+rotation = 1.5708
+
+[node name="Block3" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(32, -160)
+rotation = 1.5708
+
+[node name="BlockCornerInner" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(32, -32)
+rotation = -1.5708
+
+[node name="Block4" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(224, -32)
+
+[node name="Block5" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(288, -32)
+
+[node name="Block6" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(416, -32)
+
+[node name="Block7" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(544, -96)
+rotation = -1.5708
+
+[node name="Block8" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(672, -224)
+rotation = -1.5708
+
+[node name="BlockCornerOuter" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(672, -288)
+
+[node name="BlockCornerInner2" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(32, -416)
+
+[node name="Block9" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(32, -288)
+rotation = 1.5708
+
+[node name="Block10" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(96, -416)
+rotation = -3.14159
+
+[node name="Block11" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(32, -352)
+rotation = 1.5708
+
+[node name="Block12" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(160, -416)
+rotation = -3.14159
+
+[node name="Block13" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(32, -224)
+rotation = 1.5708
+
+[node name="Block14" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(224, -416)
+rotation = -3.14159
+
+[node name="Block15" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(96, -32)
+
+[node name="Block16" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(352, -32)
+
+[node name="Block17" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(352, -416)
+rotation = -3.14159
+
+[node name="Block18" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(288, -800)
+rotation = 1.5708
+
+[node name="Block19" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(352, -608)
+rotation = 1.5708
+
+[node name="Block20" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(288, -736)
+rotation = 1.5708
+
+[node name="Block21" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(864, -288)
+
+[node name="BlockCornerInner3" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(544, -32)
+rotation = -3.14159
+
+[node name="Block22" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(480, -32)
+
+[node name="Block23" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(800, -288)
+
+[node name="Block24" parent="Blocks" instance=ExtResource("2_rpeix")]
+texture_repeat = 2
+position = Vector2(736, -288)
+
+[node name="BlockCornerInner4" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(672, -160)
+rotation = -3.14159
+
+[node name="BlockCornerOuter3" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(544, -160)
+
+[node name="Block25" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(608, -160)
+
+[node name="Block26" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(928, -288)
+
+[node name="Block27" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(992, -288)
+
+[node name="Block28" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1056, -288)
+
+[node name="Block29" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1120, -288)
+
+[node name="Block30" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1184, -224)
+rotation = 1.5708
+
+[node name="Block31" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1312, -96)
+rotation = 1.5708
+
+[node name="Block32" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1248, -160)
+
+[node name="BlockCornerInner5" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1184, -160)
+rotation = -1.5708
+
+[node name="BlockCornerOuter4" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1184, -288)
+rotation = 1.5708
+
+[node name="BlockCornerOuter5" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1312, -160)
+rotation = 1.5708
+
+[node name="BlockCornerInner6" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1312, -32)
+rotation = -1.5708
+
+[node name="Block34" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(928, -544)
+rotation = 3.14159
+
+[node name="BlockCornerOuter6" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(864, -544)
+rotation = -1.5708
+
+[node name="BlockCornerOuter7" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(992, -544)
+rotation = 3.14159
+
+[node name="Block35" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(864, -608)
+rotation = -1.5708
+
+[node name="Block36" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(800, -672)
+rotation = -3.14159
+
+[node name="Block37" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(416, -416)
+rotation = -3.14159
+
+[node name="Block38" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(416, -480)
+
+[node name="BlockCornerInner8" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(352, -480)
+rotation = -1.5708
+
+[node name="BlockCornerInner9" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(864, -672)
+rotation = 1.5708
+
+[node name="BlockCornerInner10" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(992, -672)
+
+[node name="Block39" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(992, -608)
+rotation = 1.5708
+
+[node name="BlockCornerOuter8" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(480, -480)
+rotation = 1.5708
+
+[node name="BlockCornerOuter9" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(480, -416)
+rotation = 3.14159
+
+[node name="BlockCornerInner7" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(288, -672)
+rotation = -1.5708
+
+[node name="BlockCornerOuter10" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(352, -672)
+rotation = 1.5708
+
+[node name="Block40" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(288, -416)
+rotation = -3.14159
+
+[node name="Block41" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(352, -544)
+rotation = 1.5708
+
+[node name="Block43" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(736, -672)
+rotation = 3.14159
+
+[node name="Block44" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(672, -672)
+rotation = 3.14159
+
+[node name="BlockCornerOuter12" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(608, -672)
+rotation = -1.5708
+
+[node name="BlockCornerOuter13" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(608, -736)
+
+[node name="BlockCornerInner11" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(672, -736)
+rotation = -3.14159
+
+[node name="Block45" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(672, -800)
+rotation = -1.5708
+
+[node name="Block46" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(672, -864)
+rotation = -1.5708
+
+[node name="Block47" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(736, -992)
+rotation = -1.5708
+
+[node name="BlockCornerOuter14" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(672, -928)
+
+[node name="Block48" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(288, -864)
+rotation = 1.5708
+
+[node name="Block49" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(288, -928)
+rotation = 1.5708
+
+[node name="BlockCornerInner12" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(288, -992)
+
+[node name="Block50" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(352, -992)
+rotation = 3.14159
+
+[node name="BlockCornerOuter15" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(416, -992)
+rotation = 3.14159
+
+[node name="Block51" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(480, -1120)
+
+[node name="Block52" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(480, -1056)
+rotation = 3.14159
+
+[node name="BlockCornerInner13" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(736, -928)
+rotation = -3.14159
+
+[node name="BlockCornerOuter16" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(544, -1056)
+rotation = 3.14159
+
+[node name="BlockCornerOuter17" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(544, -1120)
+rotation = 1.5708
+
+[node name="BlockCornerInner14" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(416, -1056)
+
+[node name="BlockCornerInner15" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(416, -1120)
+rotation = -1.5708
+
+[node name="Block53" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(416, -1184)
+rotation = 1.5708
+
+[node name="Block54" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(416, -1248)
+rotation = 1.5708
+
+[node name="Block55" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(480, -1312)
+rotation = -3.14159
+
+[node name="BlockCornerInner16" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(416, -1312)
+
+[node name="Block56" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(672, -1376)
+rotation = 3.14159
+
+[node name="Block57" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(608, -1376)
+rotation = 3.14159
+
+[node name="Block58" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(736, -1056)
+rotation = -1.5708
+
+[node name="Block59" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(736, -1120)
+rotation = -1.5708
+
+[node name="BlockCornerOuter18" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(736, -1184)
+
+[node name="BlockCornerOuter19" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(544, -1312)
+rotation = 3.14159
+
+[node name="BlockCornerInner17" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(544, -1376)
+
+[node name="Block60" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(800, -1184)
+
+[node name="Block61" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(864, -1184)
+
+[node name="Block62" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1248, -1312)
+rotation = -1.5708
+
+[node name="Block63" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(800, -1440)
+rotation = 3.14159
+
+[node name="Block64" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(864, -1440)
+rotation = 3.14159
+
+[node name="Block65" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(928, -1440)
+rotation = 3.14159
+
+[node name="Block66" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1056, -864)
+rotation = 3.14159
+
+[node name="Block67" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(864, -1120)
+rotation = 3.14159
+
+[node name="BlockCornerInner18" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(800, -1120)
+
+[node name="Block68" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(800, -1056)
+rotation = 1.5708
+
+[node name="Block69" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(800, -992)
+rotation = 1.5708
+
+[node name="Block70" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(800, -928)
+rotation = 1.5708
+
+[node name="Block71" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(800, -864)
+rotation = 1.5708
+
+[node name="Block72" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(800, -800)
+rotation = 1.5708
+
+[node name="BlockCornerInner19" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(800, -736)
+rotation = -1.5708
+
+[node name="Block73" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(864, -736)
+
+[node name="Block74" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(928, -736)
+
+[node name="Block75" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(992, -736)
+
+[node name="Block76" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(992, -992)
+
+[node name="Block77" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1056, -1056)
+rotation = -1.5708
+
+[node name="Block78" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1056, -1120)
+rotation = -1.5708
+
+[node name="Block79" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1248, -1248)
+rotation = -1.5708
+
+[node name="Block80" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(928, -928)
+rotation = -1.5708
+
+[node name="BlockCornerOuter20" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(928, -992)
+
+[node name="BlockCornerOuter21" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(928, -864)
+rotation = -1.5708
+
+[node name="Block81" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(992, -864)
+rotation = 3.14159
+
+[node name="BlockCornerOuter22" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(928, -1184)
+rotation = 1.5708
+
+[node name="BlockCornerInner20" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(736, -1440)
+
+[node name="BlockCornerOuter23" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(736, -1376)
+rotation = -3.14159
+
+[node name="Block82" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1120, -1184)
+
+[node name="Block83" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1248, -1376)
+rotation = -1.5708
+
+[node name="Block84" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1184, -1184)
+
+[node name="BlockCornerOuter24" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1056, -1184)
+
+[node name="BlockCornerInner21" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1248, -1184)
+rotation = 3.14159
+
+[node name="BlockCornerInner22" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1248, -1440)
+rotation = 1.5708
+
+[node name="Block85" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(992, -1440)
+rotation = 3.14159
+
+[node name="Block86" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1056, -1440)
+rotation = 3.14159
+
+[node name="Block87" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1120, -1440)
+rotation = 3.14159
+
+[node name="Block88" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1184, -1440)
+rotation = 3.14159
+
+[node name="BlockCornerOuter25" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(928, -1120)
+rotation = -3.14159
+
+[node name="Block33" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1760, -32)
+
+[node name="BlockCornerOuter2" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1376, -32)
+rotation = 1.5708
+
+[node name="Block42" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1824, -32)
+
+[node name="BlockCornerOuter11" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1696, -32)
+
+[node name="Block89" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1376, -736)
+rotation = 3.14159
+
+[node name="Block90" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1440, -736)
+rotation = 3.14159
+
+[node name="Block91" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1504, -736)
+rotation = 3.14159
+
+[node name="BlockCornerInner23" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1568, -736)
+rotation = 1.5708
+
+[node name="Block92" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1568, -672)
+rotation = -1.5708
+
+[node name="Block93" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1568, -608)
+rotation = -1.5708
+
+[node name="Block94" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1568, -544)
+rotation = -1.5708
+
+[node name="BlockCornerOuter26" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1568, -480)
+rotation = -1.5708
+
+[node name="BlockCornerOuter27" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1632, -416)
+rotation = -1.5708
+
+[node name="BlockCornerInner24" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1632, -480)
+rotation = 1.5708
+
+[node name="Block95" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1696, -416)
+rotation = 3.14159
+
+[node name="Block96" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1824, -352)
+rotation = 3.14159
+
+[node name="BlockCornerInner25" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1760, -416)
+rotation = 1.5708
+
+[node name="BlockCornerOuter28" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1760, -352)
+rotation = -1.5708
+
+[node name="BlockCornerOuter29" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1888, -352)
+rotation = 3.14159
+
+[node name="BlockCornerOuter30" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1888, -32)
+rotation = 1.5708
+
+[node name="BlockCornerOuter31" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2208, -32)
+
+[node name="Block97" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2272, -32)
+
+[node name="BlockCornerInner26" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2336, -32)
+rotation = 3.14159
+
+[node name="Block98" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2336, -96)
+rotation = -1.5708
+
+[node name="Block99" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2400, -160)
+
+[node name="BlockCornerOuter32" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2336, -160)
+
+[node name="Block100" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1952, -416)
+rotation = 3.14159
+
+[node name="BlockCornerInner27" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1888, -416)
+
+[node name="Block101" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2016, -416)
+rotation = 3.14159
+
+[node name="Block102" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2272, -416)
+rotation = 1.5708
+
+[node name="BlockCornerInner28" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1056, -992)
+rotation = 3.14159
+
+[node name="BlockCornerOuter33" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1056, -736)
+rotation = 1.5708
+
+[node name="BlockCornerOuter34" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1056, -672)
+rotation = -3.14159
+
+[node name="BlockCornerInner29" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1184, -864)
+rotation = 1.5708
+
+[node name="Block103" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1120, -864)
+rotation = 3.14159
+
+[node name="Block104" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1184, -800)
+rotation = -1.5708
+
+[node name="Block105" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1184, -736)
+rotation = -1.5708
+
+[node name="Block106" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1248, -672)
+rotation = 3.14159
+
+[node name="BlockCornerOuter35" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1184, -672)
+rotation = -1.5708
+
+[node name="BlockCornerOuter36" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(1312, -672)
+rotation = -3.14159
+
+[node name="BlockCornerInner30" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1312, -736)
+
+[node name="BlockCornerInner31" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2464, -160)
+rotation = 3.14159
+
+[node name="Block107" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2464, -224)
+rotation = -1.5708
+
+[node name="Block108" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2528, -288)
+
+[node name="Block109" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2592, -352)
+rotation = -1.5708
+
+[node name="Block110" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2656, -416)
+
+[node name="BlockCornerInner32" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2592, -288)
+rotation = 3.14159
+
+[node name="BlockCornerOuter37" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2464, -288)
+
+[node name="BlockCornerOuter38" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2592, -416)
+
+[node name="Block111" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2144, -352)
+rotation = 3.14159
+
+[node name="Block112" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2208, -352)
+rotation = 3.14159
+
+[node name="Block113" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2208, -480)
+
+[node name="BlockCornerOuter39" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2272, -480)
+rotation = 1.5708
+
+[node name="BlockCornerOuter40" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2272, -352)
+rotation = 3.14159
+
+[node name="BlockCornerOuter41" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2080, -352)
+rotation = -1.5708
+
+[node name="BlockCornerInner33" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2080, -416)
+rotation = 1.5708
+
+[node name="Block114" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2720, -480)
+rotation = -1.5708
+
+[node name="Block115" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2720, -544)
+rotation = -1.5708
+
+[node name="Block116" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2720, -608)
+rotation = -1.5708
+
+[node name="Block117" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2656, -672)
+rotation = 3.14159
+
+[node name="Block118" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2592, -672)
+rotation = 3.14159
+
+[node name="Block119" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2528, -672)
+rotation = 3.14159
+
+[node name="Block120" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2464, -672)
+rotation = 3.14159
+
+[node name="Block121" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2400, -800)
+
+[node name="Block122" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2080, -608)
+
+[node name="BlockCornerOuter42" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2144, -608)
+rotation = 1.5708
+
+[node name="BlockCornerOuter43" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2016, -736)
+rotation = 1.5708
+
+[node name="BlockCornerInner34" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2016, -608)
+rotation = -1.5708
+
+[node name="BlockCornerInner35" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2144, -480)
+rotation = -1.5708
+
+[node name="BlockCornerOuter44" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2016, -928)
+rotation = 3.14159
+
+[node name="Block123" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1952, -800)
+rotation = 1.5708
+
+[node name="Block124" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1952, -864)
+rotation = 1.5708
+
+[node name="BlockCornerInner36" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1952, -736)
+rotation = -1.5708
+
+[node name="BlockCornerInner37" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(1952, -928)
+
+[node name="Block125" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2016, -672)
+rotation = 1.5708
+
+[node name="Block126" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2144, -544)
+rotation = 1.5708
+
+[node name="BlockCornerInner38" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2016, -992)
+
+[node name="Block127" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2080, -992)
+rotation = 3.14159
+
+[node name="Block128" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2208, -1056)
+rotation = 3.14159
+
+[node name="BlockCornerOuter45" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2144, -992)
+rotation = 3.14159
+
+[node name="BlockCornerInner39" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2144, -1056)
+
+[node name="Block129" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2272, -1056)
+rotation = 3.14159
+
+[node name="Block130" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2464, -800)
+
+[node name="BlockCornerOuter46" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2400, -672)
+rotation = -1.5708
+
+[node name="BlockCornerInner40" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2400, -736)
+rotation = 1.5708
+
+[node name="BlockCornerOuter47" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2336, -736)
+rotation = -1.5708
+
+[node name="BlockCornerOuter48" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2336, -800)
+
+[node name="Block131" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1376, 32)
+rotation = 1.5708
+
+[node name="Block132" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1696, 32)
+rotation = -1.5708
+
+[node name="Block133" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(1888, 32)
+rotation = 1.5708
+
+[node name="Block134" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2208, 32)
+rotation = -1.5708
+
+[node name="BlockCornerInner41" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2720, -416)
+rotation = -3.14159
+
+[node name="BlockCornerInner42" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2720, -672)
+rotation = 1.5708
+
+[node name="Block135" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2528, -800)
+
+[node name="Block136" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2592, -800)
+
+[node name="Block137" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2656, -800)
+
+[node name="Block138" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2720, -800)
+
+[node name="BlockCornerOuter49" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2784, -800)
+rotation = 1.5708
+
+[node name="Block139" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2784, -736)
+rotation = 1.5708
+
+[node name="BlockCornerInner43" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2784, -672)
+rotation = -1.5708
+
+[node name="BlockCornerOuter50" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2848, -672)
+rotation = 1.5708
+
+[node name="Block140" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2848, -608)
+rotation = 1.5708
+
+[node name="BlockCornerInner44" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2848, -544)
+rotation = -1.5708
+
+[node name="BlockCornerOuter51" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2912, -544)
+rotation = 1.5708
+
+[node name="Block141" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2912, -480)
+rotation = 1.5708
+
+[node name="BlockCornerInner45" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2912, -416)
+rotation = -1.5708
+
+[node name="BlockCornerOuter52" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2976, -416)
+rotation = 1.5708
+
+[node name="Block142" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3104, -800)
+
+[node name="BlockCornerOuter53" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3040, -800)
+
+[node name="BlockCornerInner46" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(3104, -736)
+rotation = 1.5708
+
+[node name="BlockCornerOuter54" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3040, -736)
+rotation = -1.5708
+
+[node name="Block143" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3104, -672)
+rotation = -1.5708
+
+[node name="BlockCornerOuter55" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3104, -608)
+rotation = -1.5708
+
+[node name="Block145" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2976, -352)
+rotation = 1.5708
+
+[node name="Block146" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3040, -288)
+
+[node name="BlockCornerInner47" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2976, -288)
+rotation = -1.5708
+
+[node name="Block147" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3168, -736)
+rotation = 1.5708
+
+[node name="Block148" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3104, -224)
+rotation = 1.5708
+
+[node name="Block149" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3104, -160)
+rotation = 1.5708
+
+[node name="Block150" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3104, -96)
+rotation = 1.5708
+
+[node name="Block151" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3104, -32)
+rotation = 1.5708
+
+[node name="Block152" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3104, 32)
+rotation = 1.5708
+
+[node name="BlockCornerOuter56" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3104, -288)
+rotation = 1.5708
+
+[node name="Block153" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3680, 32)
+rotation = -1.5708
+
+[node name="Block154" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3680, -32)
+rotation = -1.5708
+
+[node name="Block155" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3680, -96)
+rotation = -1.5708
+
+[node name="Block156" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3680, -160)
+rotation = -1.5708
+
+[node name="Block157" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3680, -224)
+rotation = -1.5708
+
+[node name="BlockCornerOuter57" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3680, -288)
+
+[node name="Block158" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3744, 32)
+rotation = -1.5708
+scale = Vector2(-1, -1)
+
+[node name="Block159" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3744, -32)
+rotation = -1.5708
+scale = Vector2(-1, -1)
+
+[node name="Block160" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3744, -96)
+rotation = -1.5708
+scale = Vector2(-1, -1)
+
+[node name="Block161" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3744, -160)
+rotation = -1.5708
+scale = Vector2(-1, -1)
+
+[node name="Block162" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3744, -224)
+rotation = -1.5708
+scale = Vector2(-1, -1)
+
+[node name="BlockCornerOuter58" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3744, -288)
+rotation = -1.5708
+scale = Vector2(-1, -1)
+
+[node name="BlockCornerOuter60" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3424, -800)
+
+[node name="BlockCornerOuter61" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3424, -736)
+rotation = 4.71239
+
+[node name="BlockCornerOuter62" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3488, -800)
+rotation = 1.5708
+
+[node name="BlockCornerOuter63" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3488, -736)
+rotation = -3.14159
+
+[node name="BlockCornerOuter64" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3744, -800)
+
+[node name="BlockCornerOuter65" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3744, -736)
+rotation = -1.5708
+
+[node name="BlockCornerOuter66" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3808, -736)
+rotation = -3.14159
+
+[node name="BlockCornerOuter67" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3808, -800)
+rotation = 1.5708
+
+[node name="Block163" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4320, 32)
+rotation = -1.5708
+
+[node name="Block164" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4320, -32)
+rotation = -1.5708
+
+[node name="Block165" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4320, -96)
+rotation = -1.5708
+
+[node name="Block166" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4320, -160)
+rotation = -1.5708
+
+[node name="Block167" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4320, -224)
+rotation = -1.5708
+
+[node name="Block168" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4384, -288)
+
+[node name="BlockCornerOuter59" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4320, -288)
+
+[node name="BlockCornerOuter68" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4064, -736)
+rotation = -1.5708
+
+[node name="BlockCornerOuter69" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4064, -800)
+
+[node name="BlockCornerOuter70" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4192, -800)
+rotation = 1.5708
+
+[node name="Block169" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4128, -800)
+
+[node name="BlockCornerInner48" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4128, -736)
+rotation = 1.5708
+
+[node name="Block170" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4384, -672)
+rotation = 1.5708
+
+[node name="BlockCornerOuter71" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4128, -672)
+rotation = -1.5708
+
+[node name="BlockCornerInner49" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4192, -736)
+rotation = -1.5708
+
+[node name="Block171" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4256, -736)
+
+[node name="BlockCornerInner50" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4192, -672)
+rotation = 1.5708
+
+[node name="BlockCornerOuter72" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4192, -608)
+rotation = -1.5708
+
+[node name="Block173" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4256, -608)
+rotation = -3.14159
+
+[node name="BlockCornerInner51" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4320, -608)
+rotation = 1.5708
+
+[node name="Block174" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4384, -544)
+rotation = -3.14159
+
+[node name="BlockCornerOuter73" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4320, -544)
+rotation = -1.5708
+
+[node name="BlockCornerOuter74" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4448, -544)
+rotation = -3.14159
+
+[node name="BlockCornerOuter75" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4448, -608)
+rotation = 1.5708
+
+[node name="Block175" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4448, -288)
+
+[node name="BlockCornerOuter76" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4512, -352)
+
+[node name="BlockCornerInner52" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4512, -288)
+rotation = -3.14159
+
+[node name="Block176" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4320, -736)
+
+[node name="BlockCornerOuter77" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4384, -736)
+rotation = 1.5708
+
+[node name="BlockCornerOuter78" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4640, -352)
+rotation = 1.5708
+
+[node name="BlockCornerInner53" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4640, -288)
+rotation = -1.5708
+
+[node name="Block177" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4576, -352)
+
+[node name="Block178" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4704, -288)
+
+[node name="Block179" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4832, -224)
+
+[node name="Block180" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4960, -160)
+
+[node name="BlockCornerInner54" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4896, -160)
+rotation = -1.5708
+
+[node name="BlockCornerInner57" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4768, -224)
+rotation = -1.5708
+
+[node name="BlockCornerOuter81" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4768, -288)
+rotation = 1.5708
+
+[node name="BlockCornerOuter82" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4896, -224)
+rotation = 1.5708
+
+[node name="Block181" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5088, -96)
+
+[node name="Block182" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5216, -32)
+
+[node name="BlockCornerInner55" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5024, -96)
+rotation = -1.5708
+
+[node name="BlockCornerInner56" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5152, -32)
+rotation = -1.5708
+
+[node name="BlockCornerOuter79" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5024, -160)
+rotation = 1.5708
+
+[node name="BlockCornerOuter80" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5152, -96)
+rotation = 1.5708
+
+[node name="Block183" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5280, -32)
+
+[node name="Block184" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5344, -32)
+
+[node name="Block185" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5280, -224)
+rotation = -1.5708
+
+[node name="BlockCornerOuter83" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5280, -160)
+rotation = -1.5708
+
+[node name="BlockCornerOuter84" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5344, -160)
+rotation = -3.14159
+
+[node name="BlockCornerInner58" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5472, -32)
+rotation = -3.14159
+
+[node name="Block186" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5408, -32)
+
+[node name="Block187" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5472, -96)
+rotation = -1.5708
+
+[node name="BlockCornerOuter85" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5472, -160)
+
+[node name="Block188" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5536, -160)
+
+[node name="Block189" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5600, -224)
+rotation = -1.5708
+
+[node name="Block190" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5664, -288)
+
+[node name="BlockCornerOuter86" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5600, -288)
+
+[node name="BlockCornerInner59" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5728, -160)
+rotation = -1.5708
+
+[node name="BlockCornerOuter87" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5728, -288)
+rotation = 1.5708
+
+[node name="Block191" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5728, -224)
+rotation = 1.5708
+
+[node name="Block192" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5792, -160)
+
+[node name="Block193" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5856, -160)
+
+[node name="Block194" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5920, -160)
+
+[node name="Block195" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5984, -160)
+
+[node name="Block196" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(6048, -224)
+rotation = -1.5708
+
+[node name="Block197" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(6112, -288)
+
+[node name="BlockCornerInner60" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(6048, -160)
+rotation = -3.14159
+
+[node name="BlockCornerOuter88" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(6048, -288)
+
+[node name="BlockCornerInner61" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5600, -160)
+rotation = -3.14159
+
+[node name="Block198" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5344, -224)
+rotation = 1.5708
+
+[node name="Block199" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5408, -288)
+rotation = -3.14159
+
+[node name="BlockCornerOuter89" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5472, -288)
+rotation = -3.14159
+
+[node name="BlockCornerInner62" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5472, -416)
+
+[node name="BlockCornerInner63" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5856, -416)
+rotation = 1.5708
+
+[node name="BlockCornerOuter90" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5856, -288)
+rotation = -1.5708
+
+[node name="BlockCornerOuter91" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5920, -288)
+rotation = -3.14159
+
+[node name="BlockCornerInner64" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5920, -416)
+
+[node name="Block200" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5984, -416)
+rotation = -3.14159
+
+[node name="BlockCornerOuter92" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(6048, -416)
+rotation = -3.14159
+
+[node name="BlockCornerInner65" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(6048, -480)
+
+[node name="Block201" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(6176, -288)
+
+[node name="Block202" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(6240, -288)
+
+[node name="Block203" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(6304, -352)
+rotation = -1.5708
+
+[node name="Block204" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(6304, -416)
+rotation = -1.5708
+
+[node name="Block205" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(6112, -480)
+rotation = -3.14159
+
+[node name="Block206" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(6176, -480)
+rotation = -3.14159
+
+[node name="Block207" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(6240, -480)
+rotation = -3.14159
+
+[node name="BlockCornerInner66" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(6304, -288)
+rotation = -3.14159
+
+[node name="BlockCornerInner67" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(6304, -480)
+rotation = 1.5708
+
+[node name="Block208" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5856, -352)
+rotation = -1.5708
+
+[node name="Block209" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5920, -352)
+rotation = 1.5708
+
+[node name="Block210" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5792, -416)
+rotation = -3.14159
+
+[node name="Block211" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5728, -416)
+rotation = -3.14159
+
+[node name="Block212" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5664, -416)
+rotation = -3.14159
+
+[node name="Block213" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5600, -416)
+rotation = -3.14159
+
+[node name="Block214" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5536, -416)
+rotation = -3.14159
+
+[node name="Block215" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5472, -352)
+rotation = 1.5708
+
+[node name="BlockCornerInner68" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5280, -288)
+rotation = 1.5708
+
+[node name="Block216" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5216, -288)
+rotation = -3.14159
+
+[node name="Block217" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5216, -352)
+
+[node name="BlockCornerOuter93" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5152, -288)
+rotation = -1.5708
+
+[node name="BlockCornerInner69" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5344, -288)
+
+[node name="BlockCornerOuter94" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5152, -352)
+
+[node name="Block218" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3168, -672)
+rotation = 1.5708
+
+[node name="BlockCornerOuter95" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3168, -800)
+rotation = 1.5708
+
+[node name="BlockCornerInner70" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5280, -352)
+rotation = -3.14159
+
+[node name="Block219" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5280, -416)
+rotation = -1.5708
+
+[node name="BlockCornerOuter97" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5280, -480)
+
+[node name="BlockCornerInner71" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5344, -480)
+rotation = -3.14159
+
+[node name="Block220" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5344, -544)
+rotation = -1.5708
+
+[node name="BlockCornerOuter98" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5344, -608)
+
+[node name="BlockCornerInner72" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5408, -608)
+rotation = -3.14159
+
+[node name="Block221" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5408, -672)
+rotation = -1.5708
+
+[node name="Block222" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5408, -736)
+rotation = -1.5708
+
+[node name="BlockCornerInner73" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5408, -800)
+rotation = 1.5708
+
+[node name="Block223" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5344, -800)
+rotation = -3.14159
+
+[node name="BlockCornerOuter99" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5280, -800)
+rotation = -1.5708
+
+[node name="Block224" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5024, -736)
+
+[node name="BlockCornerOuter100" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5152, -672)
+rotation = 1.5708
+
+[node name="BlockCornerOuter101" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5152, -608)
+rotation = -3.14159
+
+[node name="Block225" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5088, -608)
+rotation = -3.14159
+
+[node name="BlockCornerOuter102" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5024, -608)
+rotation = -1.5708
+
+[node name="BlockCornerInner74" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5088, -672)
+rotation = -1.5708
+
+[node name="BlockCornerInner75" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5024, -672)
+rotation = 1.5708
+
+[node name="Block226" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4960, -672)
+rotation = -3.14159
+
+[node name="BlockCornerOuter103" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4896, -672)
+rotation = -1.5708
+
+[node name="Block227" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4896, -736)
+rotation = -1.5708
+
+[node name="Block228" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4896, -800)
+rotation = -1.5708
+
+[node name="Block229" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4832, -928)
+rotation = -1.5708
+
+[node name="BlockCornerInner76" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4960, -736)
+rotation = -1.5708
+
+[node name="Block230" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4960, -800)
+rotation = 1.5708
+
+[node name="Block231" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4960, -864)
+rotation = 1.5708
+
+[node name="BlockCornerOuter104" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5088, -736)
+rotation = 1.5708
+
+[node name="BlockCornerOuter105" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5280, -864)
+
+[node name="BlockCornerInner77" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5344, -864)
+rotation = -3.14159
+
+[node name="BlockCornerOuter106" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5344, -992)
+
+[node name="Block232" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5344, -928)
+rotation = -1.5708
+
+[node name="BlockCornerInner78" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4960, -928)
+
+[node name="Block233" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5024, -928)
+rotation = -3.14159
+
+[node name="BlockCornerOuter107" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5088, -928)
+rotation = -3.14159
+
+[node name="BlockCornerOuter108" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5088, -992)
+rotation = 1.5708
+
+[node name="BlockCornerInner79" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5024, -992)
+rotation = -1.5708
+
+[node name="Block235" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4384, -992)
+
+[node name="Block236" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4384, -928)
+rotation = -3.14159
+
+[node name="Block237" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4320, -1056)
+rotation = 1.5708
+
+[node name="BlockCornerInner80" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4320, -992)
+rotation = -1.5708
+
+[node name="BlockCornerOuter109" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4256, -928)
+rotation = -1.5708
+
+[node name="Block238" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4320, -928)
+rotation = -3.14159
+
+[node name="Block239" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3168, -1120)
+rotation = -3.14159
+
+[node name="Block240" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4064, -1056)
+rotation = -3.14159
+
+[node name="Block241" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4192, -992)
+rotation = -3.14159
+
+[node name="BlockCornerInner81" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4256, -992)
+rotation = 1.5708
+
+[node name="BlockCornerInner82" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4128, -1056)
+rotation = 1.5708
+
+[node name="BlockCornerOuter110" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4128, -992)
+rotation = -1.5708
+
+[node name="Block242" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3936, -1120)
+rotation = -3.14159
+
+[node name="Block243" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3872, -1120)
+rotation = -3.14159
+
+[node name="Block244" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3744, -1056)
+rotation = -3.14159
+
+[node name="Block245" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3616, -1120)
+rotation = -3.14159
+
+[node name="Block246" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3424, -1056)
+rotation = -3.14159
+
+[node name="Block247" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3488, -1056)
+rotation = -3.14159
+
+[node name="Block248" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3360, -1056)
+rotation = -3.14159
+
+[node name="Block249" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3232, -1120)
+rotation = -3.14159
+
+[node name="BlockCornerInner83" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(3296, -1120)
+rotation = 1.5708
+
+[node name="BlockCornerInner84" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(3552, -1120)
+
+[node name="BlockCornerInner85" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(3680, -1120)
+rotation = 1.5708
+
+[node name="BlockCornerInner86" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(3808, -1120)
+
+[node name="BlockCornerOuter111" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3296, -1056)
+rotation = -1.5708
+
+[node name="BlockCornerOuter112" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3552, -1056)
+rotation = -3.14159
+
+[node name="BlockCornerOuter113" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3680, -1056)
+rotation = -1.5708
+
+[node name="BlockCornerOuter114" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3808, -1056)
+rotation = -3.14159
+
+[node name="BlockCornerInner87" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4000, -1120)
+rotation = 1.5708
+
+[node name="BlockCornerOuter115" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4000, -1056)
+rotation = -1.5708
+
+[node name="BlockCornerOuter116" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3104, -992)
+rotation = -3.14159
+
+[node name="BlockCornerOuter117" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3040, -992)
+rotation = -1.5708
+
+[node name="BlockCornerInner88" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(3104, -1120)
+
+[node name="BlockCornerInner89" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(3040, -1056)
+rotation = 1.5708
+
+[node name="Block250" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2976, -1056)
+rotation = -3.14159
+
+[node name="Block251" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2912, -1056)
+rotation = -3.14159
+
+[node name="Block252" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2784, -992)
+rotation = -3.14159
+
+[node name="Block253" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2720, -992)
+rotation = -3.14159
+
+[node name="Block254" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2656, -992)
+rotation = -3.14159
+
+[node name="Block255" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2528, -1056)
+rotation = -3.14159
+
+[node name="Block256" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(2400, -1120)
+rotation = -3.14159
+
+[node name="BlockCornerInner90" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2336, -1120)
+
+[node name="BlockCornerInner91" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2464, -1120)
+rotation = 1.5708
+
+[node name="BlockCornerInner92" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2592, -1056)
+rotation = 1.5708
+
+[node name="BlockCornerInner93" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(2848, -1056)
+
+[node name="BlockCornerOuter118" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2848, -992)
+rotation = -3.14159
+
+[node name="Block257" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(3104, -1056)
+rotation = 1.5708
+
+[node name="BlockCornerOuter119" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2592, -992)
+rotation = -1.5708
+
+[node name="BlockCornerOuter120" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2464, -1056)
+rotation = -1.5708
+
+[node name="BlockCornerOuter121" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(2336, -1056)
+rotation = -3.14159
+
+[node name="BlockCornerOuter122" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4960, -1056)
+
+[node name="BlockCornerInner94" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4960, -992)
+rotation = 3.14159
+
+[node name="Block258" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4896, -992)
+
+[node name="BlockCornerOuter123" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4832, -992)
+
+[node name="BlockCornerOuter124" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4832, -864)
+rotation = -1.5708
+
+[node name="BlockCornerInner95" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4896, -864)
+rotation = 1.5708
+
+[node name="Block259" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4448, -992)
+
+[node name="BlockCornerOuter125" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4512, -992)
+rotation = 1.5708
+
+[node name="BlockCornerOuter126" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4512, -928)
+rotation = -3.14159
+
+[node name="Block260" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4448, -928)
+rotation = -3.14159
+
+[node name="Block261" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4320, -1120)
+rotation = 1.5708
+
+[node name="Block262" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4384, -1184)
+rotation = -3.14159
+
+[node name="BlockCornerOuter127" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4448, -1184)
+rotation = 3.14159
+
+[node name="BlockCornerInner96" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4448, -1248)
+
+[node name="BlockCornerInner97" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4320, -1184)
+
+[node name="Block263" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4512, -1248)
+rotation = -3.14159
+
+[node name="Block264" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4640, -1312)
+rotation = -3.14159
+
+[node name="BlockCornerOuter128" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4576, -1248)
+rotation = -3.14159
+
+[node name="BlockCornerInner98" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4576, -1312)
+
+[node name="Block265" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4704, -1312)
+rotation = -3.14159
+
+[node name="Block266" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4768, -1312)
+rotation = -3.14159
+
+[node name="BlockCornerInner99" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4832, -1312)
+rotation = 1.5708
+
+[node name="BlockCornerOuter129" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4832, -1248)
+rotation = -1.5708
+
+[node name="Block267" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(4896, -1248)
+rotation = -3.14159
+
+[node name="BlockCornerOuter96" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5344, -1184)
+rotation = -1.5708
+
+[node name="BlockCornerInner100" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5408, -1184)
+rotation = 1.5708
+
+[node name="BlockCornerInner101" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5408, -992)
+rotation = -3.14159
+
+[node name="Block268" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5408, -1056)
+rotation = -1.5708
+
+[node name="Block270" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5408, -1120)
+rotation = -1.5708
+
+[node name="BlockCornerInner102" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5344, -1248)
+rotation = 1.5708
+
+[node name="Block271" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5280, -1248)
+rotation = -3.14159
+
+[node name="Block272" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5216, -1248)
+rotation = -3.14159
+
+[node name="Block273" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5024, -1312)
+rotation = -3.14159
+
+[node name="Block274" parent="Blocks" instance=ExtResource("2_rpeix")]
+position = Vector2(5088, -1312)
+rotation = -3.14159
+
+[node name="BlockCornerInner103" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4960, -1312)
+
+[node name="BlockCornerInner104" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(5152, -1312)
+rotation = 1.5708
+
+[node name="BlockCornerOuter130" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(4960, -1248)
+rotation = -3.14159
+
+[node name="BlockCornerOuter131" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5152, -1248)
+rotation = -1.5708
+
+[node name="BlockCornerOuter132" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(3168, -608)
+rotation = -3.14159
+
+[node name="BlockCornerInner105" parent="Blocks" instance=ExtResource("3_ob5ud")]
+position = Vector2(4384, -608)
+rotation = -1.5708
+
+[node name="BlockCornerOuter133" parent="Blocks" instance=ExtResource("5_2xg3m")]
+position = Vector2(5024, -1056)
+rotation = 1.5708
+
+[node name="Destructables" type="Node2D" parent="."]
+
+[node name="StaticBody2D3" parent="Destructables" instance=ExtResource("11_iujge")]
+position = Vector2(928, -480)
+
+[node name="StaticBody2D" parent="Destructables" instance=ExtResource("11_iujge")]
+position = Vector2(928, -352)
+
+[node name="StaticBody2D2" parent="Destructables" instance=ExtResource("11_iujge")]
+position = Vector2(928, -416)
+
+[node name="StaticBody2D4" parent="Destructables" instance=ExtResource("11_iujge")]
+position = Vector2(3104, -864)
+
+[node name="StaticBody2D5" parent="Destructables" instance=ExtResource("11_iujge")]
+position = Vector2(3104, -928)
+
+[node name="StaticBody2D6" parent="Destructables" instance=ExtResource("11_iujge")]
+position = Vector2(4192, -864)
+
+[node name="Danger" type="Node2D" parent="."]
+
+[node name="Area2D2" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(1504, 32)
+
+[node name="Area2D3" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(1568, 32)
+
+[node name="Area2D4" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(1632, 32)
+
+[node name="Area2D" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(1440, 32)
+
+[node name="Area2D5" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(1952, 32)
+
+[node name="Area2D6" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(2016, 32)
+
+[node name="Area2D7" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(2080, 32)
+
+[node name="Area2D8" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(2144, 32)
+
+[node name="Area2D9" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(3168, 32)
+
+[node name="Area2D10" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(3232, 32)
+
+[node name="Area2D11" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(3296, 32)
+
+[node name="Area2D12" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(3360, 32)
+
+[node name="Area2D13" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(3424, 32)
+
+[node name="Area2D14" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(3488, 32)
+
+[node name="Area2D15" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(3552, 32)
+
+[node name="Area2D16" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(3616, 32)
+
+[node name="Area2D17" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(3808, 32)
+
+[node name="Area2D18" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(3872, 32)
+
+[node name="Area2D19" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(3936, 32)
+
+[node name="Area2D20" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(4000, 32)
+
+[node name="Area2D21" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(4064, 32)
+
+[node name="Area2D22" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(4128, 32)
+
+[node name="Area2D23" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(4192, 32)
+
+[node name="Area2D24" parent="Danger" instance=ExtResource("12_54lex")]
+position = Vector2(4256, 32)
+
+[node name="player" parent="." instance=ExtResource("4_p8n4a")]
+position = Vector2(96, -96)
+
+[node name="KeyFragment" parent="." instance=ExtResource("13_tpoui")]
+position = Vector2(4576, -416)
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="Red" parent="Portals" instance=ExtResource("14_cvfp7")]
+position = Vector2(6216, -384)
+
+[node name="Blue" parent="Portals" instance=ExtResource("10_ffjbh")]
+position = Vector2(4470, -1078)
