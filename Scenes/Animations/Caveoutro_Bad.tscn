@@ -1,13 +1,19 @@
-[gd_scene load_steps=39 format=3 uid="uid://mms8limaxt08"]
+[gd_scene load_steps=45 format=3 uid="uid://mms8limaxt08"]
 
 [ext_resource type="Texture2D" uid="uid://idngxegd4jv2" path="res://Resources/Backgrounds/Forest_Entry1.png" id="1_aqyvq"]
 [ext_resource type="Script" path="res://Scripts/Animations/CastleOutro.gd" id="1_b6wmw"]
 [ext_resource type="Texture2D" uid="uid://dndk8b1nl5y58" path="res://Resources/Sprites/Player/Wizard_Idle.png" id="2_r6mdc"]
+[ext_resource type="AudioStream" uid="uid://gt55pwc36xbw" path="res://Resources/AudioFiles/Animations/Scary_Cave.mp3" id="3_8xlkg"]
 [ext_resource type="Texture2D" uid="uid://c5u54vujs6dnf" path="res://Resources/Backgrounds/Cave1.png" id="3_bakbu"]
 [ext_resource type="Texture2D" uid="uid://csaw3hslv16ok" path="res://Resources/Sprites/Player/Wizard_walk.png" id="3_mw4r5"]
+[ext_resource type="AudioStream" uid="uid://bmbi2nl4nrwa2" path="res://Resources/AudioFiles/Animations/Scary__Woods.mp3" id="3_nxq7l"]
 [ext_resource type="Texture2D" uid="uid://dwtnu35ysywpj" path="res://Resources/Sprites/Objects/Dialogue_Box_Sheet.png" id="4_bcqcg"]
+[ext_resource type="AudioStream" uid="uid://dwa8y5b0s6qaa" path="res://Resources/AudioFiles/Animations/WizardLaugh.mp3" id="4_td6dk"]
 [ext_resource type="Texture2D" uid="uid://cnvv1p22hhu4a" path="res://Resources/Sprites/Player/Wizard_Eat_Sheet.png" id="4_wtg58"]
 [ext_resource type="Texture2D" uid="uid://boipuxyfh7l5t" path="res://Resources/Sprites/Objects/ExclamationMark.png" id="5_5hxhk"]
+[ext_resource type="AudioStream" uid="uid://b0i0anophutwv" path="res://Resources/AudioFiles/Animations/GroundRumble.mp3" id="5_yt7jm"]
+[ext_resource type="AudioStream" uid="uid://bojodjc68yjfe" path="res://Resources/AudioFiles/Animations/Grunt.mp3" id="6_i77ha"]
+[ext_resource type="AudioStream" uid="uid://cev8b4yyowtmy" path="res://Resources/AudioFiles/Animations/Crunch.mp3" id="7_1ptxg"]
 [ext_resource type="Texture2D" uid="uid://cug13d2i4h1ij" path="res://Resources/Sprites/Objects/Mushroom_Shaken_Sheet.png" id="7_3vly6"]
 [ext_resource type="Script" path="res://Scripts/Animations/AnimationCamera.gd" id="10_pdefd"]
 [ext_resource type="Texture2D" uid="uid://1txmckhnhuds" path="res://Resources/Sprites/Images/Complete_Overlay.png" id="11_2swu8"]
@@ -398,6 +404,76 @@ tracks/12/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Audio/SpookyCave")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Audio/WizardLaugh")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(10.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Audio/GroundRumble")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(9.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Audio/Grunt")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/17/type = "method"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Audio/Crunch")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_6uakt"]
 resource_name = "Forest_Scene"
@@ -463,6 +539,23 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Audio/SpookyWoods")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_d08uj"]
@@ -585,6 +678,34 @@ _data = {
 
 [node name="Caveoutro" type="Node2D"]
 script = ExtResource("1_b6wmw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -145.0
+offset_top = -95.0
+offset_right = 148.0
+offset_bottom = 104.0
+color = Color(0, 0, 0, 1)
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="SpookyWoods" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("3_nxq7l")
+volume_db = 0.75
+
+[node name="SpookyCave" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("3_8xlkg")
+
+[node name="WizardLaugh" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("4_td6dk")
+
+[node name="GroundRumble" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("5_yt7jm")
+
+[node name="Grunt" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("6_i77ha")
+
+[node name="Crunch" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("7_1ptxg")
 
 [node name="ForestScene" type="Node2D" parent="."]
 
