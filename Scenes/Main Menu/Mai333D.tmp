@@ -1939,8 +1939,7 @@ layout_mode = 2
 offset_top = -41.0
 offset_right = 120.0
 offset_bottom = -25.0
-min_value = -80.0
-max_value = 0.0
+value = 100.0
 script = ExtResource("5_pbyre")
 
 [connection signal="pressed" from="MarginContainer2/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]

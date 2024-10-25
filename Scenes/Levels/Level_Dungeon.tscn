@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://brben7n0m3jo6"]
+[gd_scene load_steps=44 format=3 uid="uid://brben7n0m3jo6"]
 
 [ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="1_l2gwo"]
 [ext_resource type="PackedScene" uid="uid://dy3qsbj7ropcf" path="res://Scenes/Objects/Ruins/Ruin_Wall_Top.tscn" id="2_uw4e6"]
@@ -39,6 +39,7 @@
 [ext_resource type="Script" path="res://Scripts/npc_play_idle.gd" id="37_4petp"]
 [ext_resource type="PackedScene" uid="uid://r1hkfrypvj5r" path="res://Scenes/Objects/Ruins/Ruin_Background_Ceiling.tscn" id="38_0k2f4"]
 [ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="39_qsotv"]
+[ext_resource type="AudioStream" uid="uid://dkyyujixlm0cq" path="res://Resources/AudioFiles/DungeonAir.mp3" id="39_rlc62"]
 
 [sub_resource type="Animation" id="Animation_fvy3n"]
 length = 0.001
@@ -2464,6 +2465,12 @@ libraries = {
 
 [node name="player" parent="." instance=ExtResource("1_l2gwo")]
 position = Vector2(192, -84)
+
+[node name="Audio" type="Node2D" parent="player"]
+
+[node name="Ambience" type="AudioStreamPlayer2D" parent="player/Audio"]
+stream = ExtResource("39_rlc62")
+autoplay = true
 
 [node name="NPC_Dialog" parent="." instance=ExtResource("39_qsotv")]
 position = Vector2(375, -89)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://duq4wq4ee2u6l"]
+[gd_scene load_steps=53 format=3 uid="uid://duq4wq4ee2u6l"]
 
 [ext_resource type="Texture2D" uid="uid://72fhpl7dqvrc" path="res://Resources/Sprites/Images/Castle_Background_Animation-Sheet.png" id="1_1w3li"]
 [ext_resource type="Script" path="res://Scripts/Animations/CastleIntro.gd" id="1_h2ajs"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dwtnu35ysywpj" path="res://Resources/Sprites/Objects/Dialogue_Box_Sheet.png" id="7_vjbpc"]
 [ext_resource type="AudioStream" uid="uid://bdvtf46batrax" path="res://Resources/AudioFiles/Animations/Shrink.mp3" id="8_tw7c5"]
 [ext_resource type="Texture2D" uid="uid://b877bg7x6bn17" path="res://Resources/Sprites/Images/SmokeOverlay.png" id="9_4466j"]
+[ext_resource type="AudioStream" uid="uid://bojodjc68yjfe" path="res://Resources/AudioFiles/Animations/Grunt.mp3" id="9_apj82"]
 [ext_resource type="Texture2D" uid="uid://3rsey1y58nms" path="res://Resources/Sprites/Objects/Burgar_Idle_sheet.png" id="10_oywic"]
 [ext_resource type="Texture2D" uid="uid://boipuxyfh7l5t" path="res://Resources/Sprites/Objects/ExclamationMark.png" id="11_40isv"]
 
@@ -766,6 +767,20 @@ tracks/15/keys = {
 "method": &"play"
 }]
 }
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Sounds/Grunt")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gdgqs"]
 _data = {
@@ -1012,6 +1027,9 @@ stream = ExtResource("7_6y0dg")
 
 [node name="Shrink" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("8_tw7c5")
+
+[node name="Grunt" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("9_apj82")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -145.0

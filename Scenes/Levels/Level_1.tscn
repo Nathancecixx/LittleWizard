@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dhqjewca2bevq"]
+[gd_scene load_steps=35 format=3 uid="uid://dhqjewca2bevq"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/level_1.gd" id="1_6belh"]
 [ext_resource type="PackedScene" uid="uid://cav6x5jkkvacs" path="res://Scenes/Objects/Character.tscn" id="2_ki128"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="11_rceal"]
 [ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="12_seek5"]
 [ext_resource type="PackedScene" uid="uid://c5kdkn67gd2w6" path="res://Scenes/Objects/burnable.tscn" id="13_6wsn0"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="14_ek438"]
+[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="14_ek438"]
 [ext_resource type="Texture2D" uid="uid://6o7ekobii1gc" path="res://Resources/Backgrounds/background_0.png" id="15_j6yns"]
 [ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="16_fs8wg"]
 [ext_resource type="Texture2D" uid="uid://c4621iwxj3xne" path="res://Resources/Tilesets/Forest_Tileset.png" id="16_h3vgo"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://bb1kkke8ltdc4" path="res://Scenes/Objects/Forest/Grass_Over_1.tscn" id="26_aj5y7"]
 [ext_resource type="Texture2D" uid="uid://ubu3bskucnw3" path="res://Resources/Sprites/NPCs/NPC_Bug_Idle_Sheet.png" id="28_wobjs"]
 [ext_resource type="Script" path="res://Scripts/npc_play_idle.gd" id="29_pao0s"]
+[ext_resource type="AudioStream" uid="uid://cu5nbcitkriuc" path="res://Resources/AudioFiles/Crickets.mp3" id="30_miiwg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ufvkk"]
 atlas = ExtResource("16_h3vgo")
@@ -631,3 +632,10 @@ position = Vector2(316, -95)
 
 [node name="player" parent="." instance=ExtResource("2_ki128")]
 position = Vector2(129, -90)
+
+[node name="Audio" type="Node2D" parent="player"]
+position = Vector2(-129, 90)
+
+[node name="Ambient" type="AudioStreamPlayer2D" parent="player/Audio"]
+stream = ExtResource("30_miiwg")
+autoplay = true
