@@ -1,0 +1,6 @@
+[signal arg="start_dialog"]
+Do you wish to proceed to the mysterious cavern?
+- Yes
+	[signal arg="enter_level_3"]
+- No
+[signal arg="end_dialog"]

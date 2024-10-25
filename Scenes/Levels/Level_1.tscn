@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="14_ek438"]
 [ext_resource type="Texture2D" uid="uid://6o7ekobii1gc" path="res://Resources/Backgrounds/background_0.png" id="15_j6yns"]
 [ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="16_fs8wg"]
-[ext_resource type="Texture2D" uid="uid://c4621iwxj3xne" path="res://Resources/Forest_Tileset.png" id="16_h3vgo"]
+[ext_resource type="Texture2D" uid="uid://c4621iwxj3xne" path="res://Resources/Tilesets/Forest_Tileset.png" id="16_h3vgo"]
 [ext_resource type="PackedScene" uid="uid://cqdglkm0c0qjv" path="res://Scenes/Objects/Forest/Bush_Small.tscn" id="17_2nv8d"]
 [ext_resource type="PackedScene" uid="uid://c8b51q2qpso6h" path="res://Scenes/Objects/Forest/Bush_Large.tscn" id="18_y45kr"]
 [ext_resource type="PackedScene" uid="uid://hupmm75t6vea" path="res://Scenes/Objects/Forest/Grass_Under_1.tscn" id="19_53wyc"]
