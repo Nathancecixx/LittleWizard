@@ -12,5 +12,6 @@ func _process(_delta: float) -> void:
 
 func _on_body_entered(_body: Node2D) -> void:
 	Global.key_fragment_count += 1
+	$CollectSound.play()
 	print(Global.key_fragment_count)
 	queue_free()

@@ -198,9 +198,11 @@ shape = SubResource("RectangleShape2D_4s41e")
 
 [node name="Jump_SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_sqbw6")
+volume_db = -25.0
 
 [node name="Fire_Ball_SFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_c24eh")
+volume_db = 0.75
 attenuation = 0.535886
 
 [connection signal="timeout" from="Fireball_Timer" to="." method="_on_fireball_timer_timeout"]

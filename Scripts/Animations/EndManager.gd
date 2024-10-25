@@ -8,6 +8,8 @@ var AnimPlayer: AnimationPlayer
 
 func _ready():
 	
+	Global.reputation = -2
+	
 	if Global.reputation > 0 && CAVE_OUTRO_GOOD_SCENE:
 		OutroScene = CAVE_OUTRO_GOOD_SCENE.instantiate()
 		add_child(OutroScene)
