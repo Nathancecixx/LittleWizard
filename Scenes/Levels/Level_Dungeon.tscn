@@ -34,7 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://gc50v3b5j1o4" path="res://Scenes/Objects/Blue_Portal.tscn" id="34_tlda0"]
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="35_0gn53"]
 [ext_resource type="Texture2D" uid="uid://ubu3bskucnw3" path="res://Resources/Sprites/NPCs/NPC_Bug_Idle_Sheet.png" id="36_j5nsy"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="36_j7ipk"]
+[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="36_j7ipk"]
 [ext_resource type="PackedScene" uid="uid://oqdthwq8tl54" path="res://Scenes/Objects/Ruins/Ruin_Background_Ceiling_Skulls.tscn" id="37_1dru5"]
 [ext_resource type="Script" path="res://Scripts/npc_play_idle.gd" id="37_4petp"]
 [ext_resource type="PackedScene" uid="uid://r1hkfrypvj5r" path="res://Scenes/Objects/Ruins/Ruin_Background_Ceiling.tscn" id="38_0k2f4"]
@@ -776,7 +776,7 @@ position = Vector2(3335, -203)
 position = Vector2(3393, -203)
 
 [node name="KeyFragment" parent="." instance=ExtResource("36_j7ipk")]
-position = Vector2(2638, -487)
+position = Vector2(2639, -496)
 
 [node name="RuinWallTop50" parent="." instance=ExtResource("2_uw4e6")]
 position = Vector2(2755, -841)
