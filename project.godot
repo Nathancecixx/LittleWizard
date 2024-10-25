@@ -35,8 +35,11 @@ directories/dtl_directory={
 "bug1_retalk": "res://Timelines/bug1_retalk.dtl",
 "bug2_npc": "res://Timelines/bug2_npc.dtl",
 "bug2_retalk": "res://Timelines/bug2_retalk.dtl",
+"bug3_npc": "res://bug3_npc.dtl",
+"bug3_retalk": "res://bug3_retalk.dtl",
 "cant_enter": "res://Timelines/cant_enter.dtl",
 "level_1_interact": "res://Timelines/level_1_interact.dtl",
+"level_3_interact": "res://level_3_interact.dtl",
 "test_timeline": "res://Timelines/test_timeline.dtl",
 "wizard_npc": "res://Timelines/wizard_npc.dtl",
 "wizard_retalk": "res://Timelines/wizard_retalk.dtl"

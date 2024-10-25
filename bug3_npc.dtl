@@ -1,0 +1,9 @@
+[signal arg="start_dialog"]
+This is IT! The final stop for me, go get that key fragment!
+- I couldn’t have done it without your help, thank you for being here along the way!
+	[signal arg="good"]
+	Anytime, now go find that last fragment and return back to your normal size!
+- Finally I don’t have to see you again, good riddance
+	[signal arg="bad"]
+	Good riddance to you too!
+[signal arg="end_dialog"]

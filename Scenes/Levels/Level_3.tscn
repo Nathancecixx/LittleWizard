@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://codikb1xv5ru8"]
+[gd_scene load_steps=38 format=3 uid="uid://cy4oehvekuyse"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/level_3.gd" id="1_ywxet"]
 [ext_resource type="PackedScene" uid="uid://jbiekkpdku2k" path="res://Scenes/Objects/Cave/Blocks/Background/Back_Back.tscn" id="2_1jjcy"]
@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dkdt7laxsgj5u" path="res://Scenes/Objects/Ruins/Ruin_Spikes.tscn" id="12_54lex"]
 [ext_resource type="PackedScene" uid="uid://c1800wig78vko" path="res://Scenes/Objects/Cave/Plants/Plant_Down_7.tscn" id="12_xloa3"]
 [ext_resource type="PackedScene" uid="uid://dwtlpn7qto3an" path="res://Scenes/Objects/Cave/Plants/Plant_Down_2.tscn" id="13_8dneg"]
-[ext_resource type="PackedScene" uid="uid://dgnwhcifi15tl" path="res://Scenes/Objects/Key_Fragment.tscn" id="13_tpoui"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/Key_Fragment.tscn" id="13_tpoui"]
 [ext_resource type="PackedScene" uid="uid://c5pqw0kpu5l4n" path="res://Scenes/Objects/Red_Portal.tscn" id="14_cvfp7"]
 [ext_resource type="PackedScene" uid="uid://ddxo2v4e3t121" path="res://Scenes/Objects/Cave/Plants/Plant_Down_6.tscn" id="14_ha3yw"]
 [ext_resource type="PackedScene" uid="uid://7wgueynbp7pc" path="res://Scenes/Objects/Cave/Plants/Plant_Up_1.tscn" id="15_pej0w"]
@@ -31,6 +31,46 @@
 [ext_resource type="PackedScene" uid="uid://3eghnhlgl6xp" path="res://Scenes/Objects/Cave/Plants/Plant_Up_6.tscn" id="20_x0s8h"]
 [ext_resource type="PackedScene" uid="uid://d2mai2du1sehn" path="res://Scenes/Objects/Cave/Plants/Plant_Up_7.tscn" id="21_nw4ev"]
 [ext_resource type="PackedScene" uid="uid://b6e8t50l1ktk0" path="res://Scenes/Objects/Cave/Plants/Plant_Up_8.tscn" id="22_nmsyj"]
+[ext_resource type="PackedScene" uid="uid://c2qva6six3ws4" path="res://Scenes/Objects/Dialog_Area.tscn" id="28_f1f8j"]
+[ext_resource type="Texture2D" uid="uid://ubu3bskucnw3" path="res://Resources/Sprites/NPCs/NPC_Bug_Idle_Sheet.png" id="29_nx2fc"]
+[ext_resource type="Script" path="res://Scripts/npc_play_idle.gd" id="30_splf5"]
+
+[sub_resource type="Animation" id="Animation_fvy3n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_5lbb1"]
+resource_name = "idle"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gutbx"]
+_data = {
+"RESET": SubResource("Animation_fvy3n"),
+"idle": SubResource("Animation_5lbb1")
+}
 
 [node name="Level3" type="Node2D"]
 texture_filter = 1
@@ -3135,6 +3175,20 @@ position = Vector2(4192, 32)
 
 [node name="Area2D24" parent="Danger" instance=ExtResource("12_54lex")]
 position = Vector2(4256, 32)
+
+[node name="NPC_Dialog" parent="." instance=ExtResource("28_f1f8j")]
+position = Vector2(318, -95)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, -89)
+texture = ExtResource("29_nx2fc")
+hframes = 4
+script = ExtResource("30_splf5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_gutbx")
+}
 
 [node name="player" parent="." instance=ExtResource("4_p8n4a")]
 position = Vector2(96, -96)

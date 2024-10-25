@@ -9,14 +9,18 @@ func _ready() -> void:
 	$Level_1_Door_Interaction.remove_timeline_signal = "null"
 	$Level_2_Door_Interaction.timeline = "cant_enter"
 	$Level_2_Door_Interaction.remove_timeline_signal = "null"
+	$Level_3_Door_Interaction.timeline = "cant_enter"
+	$Level_3_Door_Interaction.remove_timeline_signal = "null"
 	$NPC_Dialog.timeline = "wizard_retalk"
 	$NPC_Dialog.remove_timeline_signal = "null"
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	
-	if (!Global.level_1_complete && !Global.level_2_complete):
+	if (!Global.level_1_complete && !Global.level_2_complete && !Global.level_3_complete):
 		$Level_1_Door_Interaction.timeline = "level_1_interact"
-	if (Global.level_1_complete && !Global.level_2_complete):
+	if (Global.level_1_complete && !Global.level_2_complete && !Global.level_3_complete):
 		$Level_2_Door_Interaction.timeline = "Level_2_interact"
+	if (Global.level_1_complete && Global.level_2_complete && !Global.level_3_complete):
+		$Level_3_Door_Interaction.timeline = "level_3_interact"
 	if (Global.talked_to_wizard):
 		$NPC_Dialog.timeline = "wizard_retalk"
 
@@ -31,6 +35,8 @@ func _on_dialogic_signal(argument: String):
 		get_tree().change_scene_to_file("res://Scenes/Levels/Level_1.tscn")
 	if (argument=="enter_level_2"):
 		get_tree().change_scene_to_file("res://Scenes/Levels/Level_Dungeon.tscn")
+	if (argument=="enter_level_3"):
+		get_tree().change_scene_to_file("res://Scenes/Levels/Level_3.tscn")
 	if (argument=="end_wizard_intro"):
 		Global.talked_to_wizard = true
 		$NPC_Dialog.timeline = "wizard_retalk"
